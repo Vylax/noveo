@@ -72,7 +72,7 @@ export function Header({ dict, lang }: HeaderProps) {
           {/* Language Switcher & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <LanguageSwitcher currentLang={lang} />
-            <Button asChild variant="noveo" size="default">
+            <Button asChild variant="noveo_accent" size="default">
               <Link href={`/${lang}/contact`}>
                 {dict.header.cta}
               </Link>
@@ -107,7 +107,7 @@ export function Header({ dict, lang }: HeaderProps) {
               ))}
               <div className="flex items-center justify-between px-3 py-2 space-x-4">
                 <LanguageSwitcher currentLang={lang} />
-                <Button asChild variant="noveo" size="sm">
+                <Button asChild variant="noveo_accent" size="sm">
                   <Link
                     href={`/${lang}/contact`}
                     onClick={() => setIsMenuOpen(false)}

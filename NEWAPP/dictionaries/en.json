@@ -237,14 +237,45 @@
       "items": ["AEO", "IATA CASS", "Sustainable commitment"]
     },
     "team": {
-      "title": "Our team"
+      "title": "Our team",
+      "subtitle": "A team of experts dedicated to your success",
+      "description": "Our logistics specialists combine technical expertise and deep knowledge of Europe-Asia markets to offer you excellent service.",
+      "stats": {
+        "experience": {
+          "value": "15+",
+          "label": "Years of average experience"
+        },
+        "support": {
+          "value": "24/7",
+          "label": "Customer support"
+        },
+        "satisfaction": {
+          "value": "100%",
+          "label": "Customer satisfaction"
+        }
+      }
     },
     "sites": {
       "title": "Our strategic sites",
+      "description": "Strategic office",
       "locations": {
         "paris": "Paris",
         "hongkong": "Hong Kong",
         "guangzhou": "Guangzhou"
+      }
+    },
+    "hero_stats": {
+      "founded": {
+        "value": "2020",
+        "label": "Year founded"
+      },
+      "offices": {
+        "value": "3",
+        "label": "Strategic offices"
+      },
+      "clients": {
+        "value": "250+",
+        "label": "Satisfied clients"
       }
     },
     "timeline": {
@@ -371,6 +402,28 @@
         "Registered Customs Representative"
       ]
     },
+    "advantages": {
+      "title": "Why choose Noveo Logistics?",
+      "subtitle": "Recognized expertise and innovative solutions for your supply chain",
+      "items": [
+        {
+          "title": "Guaranteed security",
+          "description": "Secure transport and comprehensive insurance"
+        },
+        {
+          "title": "Global network",
+          "description": "+500 ports served worldwide"
+        },
+        {
+          "title": "Responsiveness",
+          "description": "15 min average response time"
+        },
+        {
+          "title": "Certified expertise",
+          "description": "AEO, IATA, RDE certifications"
+        }
+      ]
+    },
     "cta": {
       "title": "Ready to optimize your logistics?",
       "description": "Contact our experts for a personalized study of your needs",
@@ -431,10 +484,10 @@
     "allArticles": "All articles",
     "readMore": "Read more",
     "newsletter": {
-      "title": "Stay informed",
-      "description": "Receive our latest news and logistics tips",
+      "title": "Need a logistics solution?",
+      "description": "Contact our experts for a personalized quote and optimize your supply chain",
       "placeholder": "Your email address",
-      "cta": "Subscribe"
+      "cta": "Request a free quote"
     },
     "noArticles": "No articles available",
     "posts": [
@@ -493,6 +546,28 @@
     "subtitle": "Expert logistics solutions for each sector of activity",
     "challenges": "Sector challenges",
     "solutions": "Our solutions",
+    "stats": {
+      "title": "Recognized expertise",
+      "subtitle": "Figures that demonstrate our sector expertise",
+      "items": [
+        {
+          "value": "7",
+          "label": "Areas of expertise"
+        },
+        {
+          "value": "98%",
+          "label": "Satisfaction rate"
+        },
+        {
+          "value": "15+",
+          "label": "Years of experience"
+        },
+        {
+          "value": "500+",
+          "label": "Clients supported"
+        }
+      ]
+    },
     "ctaTitle": "Does your sector require specific expertise?",
     "ctaDescription": "Our sector experts are here to support you",
     "ctaButton": "Contact our experts",

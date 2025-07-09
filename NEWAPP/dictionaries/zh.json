@@ -237,14 +237,45 @@
       "items": ["AEO", "IATA CASS", "可持续承诺"]
     },
     "team": {
-      "title": "我们的团队"
+      "title": "我们的团队",
+      "subtitle": "专业团队致力于您的成功",
+      "description": "我们的物流专家结合技术专长和对欧亚市场的深入了解，为您提供卓越的服务。",
+      "stats": {
+        "experience": {
+          "value": "15+",
+          "label": "平均经验年数"
+        },
+        "support": {
+          "value": "24/7",
+          "label": "客户支持"
+        },
+        "satisfaction": {
+          "value": "100%",
+          "label": "客户满意度"
+        }
+      }
     },
     "sites": {
       "title": "我们的战略站点",
+      "description": "战略办公室",
       "locations": {
         "paris": "巴黎",
         "hongkong": "香港",
         "guangzhou": "广州"
+      }
+    },
+    "hero_stats": {
+      "founded": {
+        "value": "2020",
+        "label": "成立年份"
+      },
+      "offices": {
+        "value": "3",
+        "label": "战略办公室"
+      },
+      "clients": {
+        "value": "250+",
+        "label": "满意客户"
       }
     },
     "timeline": {
@@ -371,6 +402,28 @@
         "注册海关代表"
       ]
     },
+    "advantages": {
+      "title": "为什么选择Noveo Logistics？",
+      "subtitle": "公认的专业知识和创新的供应链解决方案",
+      "items": [
+        {
+          "title": "安全保障",
+          "description": "安全运输和全面保险"
+        },
+        {
+          "title": "全球网络",
+          "description": "全球+500个服务港口"
+        },
+        {
+          "title": "响应迅速",
+          "description": "15分钟平均响应时间"
+        },
+        {
+          "title": "认证专业",
+          "description": "AEO、IATA、RDE认证"
+        }
+      ]
+    },
     "cta": {
       "title": "准备优化您的物流？",
       "description": "联系我们的专家进行个性化需求研究",
@@ -431,10 +484,10 @@
     "allArticles": "所有文章",
     "readMore": "阅读更多",
     "newsletter": {
-      "title": "保持知情",
-      "description": "接收我们的最新新闻和物流提示",
+      "title": "需要物流解决方案？",
+      "description": "联系我们的专家获取个性化报价，优化您的供应链",
       "placeholder": "您的邮箱地址",
-      "cta": "订阅"
+      "cta": "申请免费报价"
     },
     "noArticles": "暂无文章",
     "posts": [
@@ -493,6 +546,28 @@
     "subtitle": "每个活动领域的专家物流解决方案",
     "challenges": "行业挑战",
     "solutions": "我们的解决方案",
+    "stats": {
+      "title": "公认的专业知识",
+      "subtitle": "证明我们行业专业知识的数据",
+      "items": [
+        {
+          "value": "7",
+          "label": "专业领域"
+        },
+        {
+          "value": "98%",
+          "label": "满意度"
+        },
+        {
+          "value": "15+",
+          "label": "年经验"
+        },
+        {
+          "value": "500+",
+          "label": "服务客户"
+        }
+      ]
+    },
     "ctaTitle": "您的行业需要特定的专业知识吗？",
     "ctaDescription": "我们的行业专家在此为您提供支持",
     "ctaButton": "联系我们的专家",

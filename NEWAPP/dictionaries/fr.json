@@ -237,14 +237,45 @@
       "items": ["OEA", "IATA CASS", "Engagement durable"]
     },
     "team": {
-      "title": "Notre équipe"
+      "title": "Notre équipe",
+      "subtitle": "Une équipe d'experts dédiée à votre succès",
+      "description": "Nos spécialistes logistiques combinent expertise technique et connaissance approfondie des marchés Europe-Asie pour vous offrir un service d'excellence.",
+      "stats": {
+        "experience": {
+          "value": "15+",
+          "label": "Années d'expérience moyenne"
+        },
+        "support": {
+          "value": "24/7",
+          "label": "Support client"
+        },
+        "satisfaction": {
+          "value": "100%",
+          "label": "Satisfaction client"
+        }
+      }
     },
     "sites": {
       "title": "Nos sites stratégiques",
+      "description": "Bureau stratégique",
       "locations": {
         "paris": "Paris",
         "hongkong": "Hong Kong",
         "guangzhou": "Guangzhou"
+      }
+    },
+    "hero_stats": {
+      "founded": {
+        "value": "2020",
+        "label": "Année de création"
+      },
+      "offices": {
+        "value": "3",
+        "label": "Bureaux stratégiques"
+      },
+      "clients": {
+        "value": "250+",
+        "label": "Clients satisfaits"
       }
     },
     "timeline": {
@@ -371,6 +402,28 @@
         "Représentant en Douane Enregistré"
       ]
     },
+    "advantages": {
+      "title": "Pourquoi choisir Noveo Logistics ?",
+      "subtitle": "Une expertise reconnue et des solutions innovantes pour votre supply chain",
+      "items": [
+        {
+          "title": "Sécurité garantie",
+          "description": "Transport sécurisé et assurance complète"
+        },
+        {
+          "title": "Réseau mondial",
+          "description": "+500 ports desservis dans le monde"
+        },
+        {
+          "title": "Réactivité",
+          "description": "15 min de temps de réponse moyen"
+        },
+        {
+          "title": "Expertise certifiée",
+          "description": "Certifications OEA, IATA, RDE"
+        }
+      ]
+    },
     "cta": {
       "title": "Prêt à optimiser votre logistique ?",
       "description": "Contactez nos experts pour une étude personnalisée de vos besoins",
@@ -431,10 +484,10 @@
     "allArticles": "Tous les articles",
     "readMore": "Lire la suite",
     "newsletter": {
-      "title": "Restez informé",
-      "description": "Recevez nos dernières actualités et conseils logistiques",
+      "title": "Besoin d'une solution logistique ?",
+      "description": "Contactez nos experts pour un devis personnalisé et optimisez votre supply chain",
       "placeholder": "Votre adresse email",
-      "cta": "S'abonner"
+      "cta": "Demander un devis gratuit"
     },
     "noArticles": "Aucun article disponible",
     "posts": [
@@ -493,6 +546,28 @@
     "subtitle": "Des solutions logistiques expertes pour chaque secteur d'activité",
     "challenges": "Défis sectoriels",
     "solutions": "Nos solutions",
+    "stats": {
+      "title": "Une expertise reconnue",
+      "subtitle": "Des chiffres qui témoignent de notre savoir-faire sectoriel",
+      "items": [
+        {
+          "value": "7",
+          "label": "Secteurs d'expertise"
+        },
+        {
+          "value": "98%",
+          "label": "Taux de satisfaction"
+        },
+        {
+          "value": "15+",
+          "label": "Années d'expérience"
+        },
+        {
+          "value": "500+",
+          "label": "Clients accompagnés"
+        }
+      ]
+    },
     "ctaTitle": "Votre secteur nécessite une expertise spécifique ?",
     "ctaDescription": "Nos experts sectoriels sont là pour vous accompagner",
     "ctaButton": "Contactez nos experts",
