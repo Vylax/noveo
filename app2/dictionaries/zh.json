@@ -266,24 +266,71 @@
   },
   "solutions": {
     "title": "我们的解决方案",
+    "subtitle": "量身定制的物流解决方案，优化您的供应链",
     "transport": {
       "title": "我们的运输服务",
+      "description": "选择最适合您需求的运输方式",
       "air": {
         "title": "航空运输",
-        "description": "紧急和安全的货运"
+        "description": "紧急和安全的货运",
+        "features": [
+          "24-48小时快递",
+          "合并货运",
+          "危险品",
+          "温度控制"
+        ]
       },
       "sea": {
         "title": "海运",
-        "description": "优化的FCL和LCL"
+        "description": "优化的FCL和LCL",
+        "features": [
+          "FCL（整箱装载）",
+          "LCL（拼箱装载）",
+          "优化拼箱",
+          "实时跟踪"
+        ]
       },
       "multimodal": {
         "title": "多式联运",
-        "description": "智能组合"
+        "description": "智能组合",
+        "features": [
+          "空运+公路",
+          "海运+公路",
+          "铁路+公路",
+          "成本优化"
+        ]
       }
     },
     "customs": {
       "title": "海关与合规：获得流畅性",
-      "description": "受益于我们的注册海关代表(RCR)地位"
+      "description": "受益于我们的注册海关代表(RCR)地位",
+      "features": [
+        {
+          "title": "注册海关代表",
+          "description": "RCR地位处理您的所有手续"
+        },
+        {
+          "title": "法规专业知识",
+          "description": "持续的法规监控"
+        },
+        {
+          "title": "快速清关",
+          "description": "加速处理您的申报"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "我们的认证",
+      "items": [
+        "授权经济运营商(AEO)",
+        "IATA CASS",
+        "注册海关代表"
+      ]
+    },
+    "cta": {
+      "title": "准备优化您的物流？",
+      "description": "联系我们的专家进行个性化需求研究",
+      "button": "申请免费报价"
     }
   },
   "contact": {

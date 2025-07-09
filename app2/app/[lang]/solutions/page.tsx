@@ -1,4 +1,5 @@
 import { getDictionary, type Locale } from '@/lib/get-dictionary'
+import { JsonLd } from '@/components/seo/JsonLd'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -12,10 +13,10 @@ export async function generateMetadata({
   
   return {
     title: dict.solutions.title,
-    description: dict.solutions.transport.air.description,
+    description: dict.solutions.subtitle,
     openGraph: {
       title: dict.solutions.title,
-      description: dict.solutions.transport.air.description,
+      description: dict.solutions.subtitle,
       type: 'website',
     },
   }
@@ -33,34 +34,19 @@ export default async function SolutionsPage({
       title: dict.solutions.transport.air.title,
       description: dict.solutions.transport.air.description,
       icon: '✈️',
-      features: [
-        'Express 24h-48h',
-        'Fret consolidé',
-        'Marchandises dangereuses',
-        'Température contrôlée'
-      ]
+      features: dict.solutions.transport.air.features
     },
     {
       title: dict.solutions.transport.sea.title,
       description: dict.solutions.transport.sea.description,
       icon: '🚢',
-      features: [
-        'FCL (Full Container Load)',
-        'LCL (Less Container Load)',
-        'Groupage optimisé',
-        'Suivi en temps réel'
-      ]
+      features: dict.solutions.transport.sea.features
     },
     {
       title: dict.solutions.transport.multimodal.title,
       description: dict.solutions.transport.multimodal.description,
       icon: '🚛',
-      features: [
-        'Air + Route',
-        'Mer + Route',
-        'Rail + Route',
-        'Optimisation coûts'
-      ]
+      features: dict.solutions.transport.multimodal.features
     }
   ]
 
@@ -74,7 +60,7 @@ export default async function SolutionsPage({
               {dict.solutions.title}
             </h1>
             <p className="text-xl max-w-3xl mx-auto text-gray-200">
-              Des solutions logistiques sur mesure pour optimiser votre chaîne d'approvisionnement
+              {dict.solutions.subtitle}
             </p>
           </div>
         </div>
@@ -88,7 +74,7 @@ export default async function SolutionsPage({
               {dict.solutions.transport.title}
             </h2>
             <p className="text-lg text-dark-gray max-w-3xl mx-auto">
-              Choisissez le mode de transport le plus adapté à vos besoins
+              {dict.solutions.transport.description}
             </p>
           </div>
 
@@ -130,63 +116,33 @@ export default async function SolutionsPage({
                 {dict.solutions.customs.description}
               </p>
               <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-noveo-teal rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                {dict.solutions.customs.features.map((feature, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-noveo-teal rounded-full flex items-center justify-center mt-1">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-noveo-blue">{feature.title}</h4>
+                      <p className="text-dark-gray">{feature.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-noveo-blue">Représentant en Douane Enregistré</h4>
-                    <p className="text-dark-gray">Statut RDE pour toutes vos formalités</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-noveo-teal rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-noveo-blue">Expertise réglementaire</h4>
-                    <p className="text-dark-gray">Veille réglementaire continue</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-noveo-teal rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-noveo-blue">Dédouanement rapide</h4>
-                    <p className="text-dark-gray">Traitement accéléré de vos déclarations</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-noveo-teal to-noveo-blue rounded-lg p-8 text-white">
-                <h3 className="text-xl font-semibold mb-4">Nos certifications</h3>
+                <h3 className="text-xl font-semibold mb-4">{dict.solutions.certifications.title}</h3>
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                      <span className="text-sm font-bold">✓</span>
+                  {dict.solutions.certifications.items.map((certification, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                        <span className="text-sm font-bold">✓</span>
+                      </div>
+                      <span>{certification}</span>
                     </div>
-                    <span>Opérateur Économique Agréé (OEA)</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                      <span className="text-sm font-bold">✓</span>
-                    </div>
-                    <span>IATA CASS</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                      <span className="text-sm font-bold">✓</span>
-                    </div>
-                    <span>Représentant en Douane Enregistré</span>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -198,19 +154,30 @@ export default async function SolutionsPage({
       <section className="section-padding bg-noveo-blue text-white">
         <div className="container-max mx-auto text-center">
           <h2 className="text-h2 font-display font-bold mb-6">
-            Prêt à optimiser votre logistique ?
+            {dict.solutions.cta.title}
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contactez nos experts pour une étude personnalisée de vos besoins
+            {dict.solutions.cta.description}
           </p>
           <Link
             href={`/${params.lang}/contact`}
             className="btn-primary bg-noveo-orange hover:bg-orange-600"
           >
-            Demander un devis gratuit
+            {dict.solutions.cta.button}
           </Link>
         </div>
       </section>
+
+      <JsonLd
+        type="service"
+        lang={params.lang}
+        dict={dict}
+        data={{
+          name: dict.solutions.title,
+          description: dict.solutions.subtitle,
+          serviceType: dict.solutions.transport.title
+        }}
+      />
     </div>
   )
 } 

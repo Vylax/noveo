@@ -266,24 +266,71 @@
   },
   "solutions": {
     "title": "Our solutions",
+    "subtitle": "Tailor-made logistics solutions to optimize your supply chain",
     "transport": {
       "title": "Our transport services",
+      "description": "Choose the transport mode best suited to your needs",
       "air": {
         "title": "Air Transport",
-        "description": "Urgent and secure shipments"
+        "description": "Urgent and secure shipments",
+        "features": [
+          "Express 24h-48h",
+          "Consolidated freight",
+          "Dangerous goods",
+          "Temperature controlled"
+        ]
       },
       "sea": {
         "title": "Sea Transport",
-        "description": "Optimized FCL and LCL"
+        "description": "Optimized FCL and LCL",
+        "features": [
+          "FCL (Full Container Load)",
+          "LCL (Less Container Load)",
+          "Optimized groupage",
+          "Real-time tracking"
+        ]
       },
       "multimodal": {
         "title": "Multimodal Transport",
-        "description": "Smart combinations"
+        "description": "Smart combinations",
+        "features": [
+          "Air + Road",
+          "Sea + Road",
+          "Rail + Road",
+          "Cost optimization"
+        ]
       }
     },
     "customs": {
       "title": "Customs & compliance: gain fluidity",
-      "description": "Benefit from our Registered Customs Representative (RCR) status"
+      "description": "Benefit from our Registered Customs Representative (RCR) status",
+      "features": [
+        {
+          "title": "Registered Customs Representative",
+          "description": "RCR status for all your formalities"
+        },
+        {
+          "title": "Regulatory expertise",
+          "description": "Continuous regulatory watch"
+        },
+        {
+          "title": "Fast customs clearance",
+          "description": "Accelerated processing of your declarations"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Our certifications",
+      "items": [
+        "Authorized Economic Operator (AEO)",
+        "IATA CASS",
+        "Registered Customs Representative"
+      ]
+    },
+    "cta": {
+      "title": "Ready to optimize your logistics?",
+      "description": "Contact our experts for a personalized study of your needs",
+      "button": "Request a free quote"
     }
   },
   "contact": {

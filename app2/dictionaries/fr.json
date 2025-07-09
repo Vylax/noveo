@@ -266,24 +266,71 @@
   },
   "solutions": {
     "title": "Nos solutions",
+    "subtitle": "Des solutions logistiques sur mesure pour optimiser votre chaîne d'approvisionnement",
     "transport": {
       "title": "Nos services de transport",
+      "description": "Choisissez le mode de transport le plus adapté à vos besoins",
       "air": {
         "title": "Transport Aérien",
-        "description": "Expéditions urgentes et sécurisées"
+        "description": "Expéditions urgentes et sécurisées",
+        "features": [
+          "Express 24h-48h",
+          "Fret consolidé",
+          "Marchandises dangereuses",
+          "Température contrôlée"
+        ]
       },
       "sea": {
         "title": "Transport Maritime",
-        "description": "FCL et LCL optimisés"
+        "description": "FCL et LCL optimisés",
+        "features": [
+          "FCL (Full Container Load)",
+          "LCL (Less Container Load)",
+          "Groupage optimisé",
+          "Suivi en temps réel"
+        ]
       },
       "multimodal": {
         "title": "Transport Multimodal",
-        "description": "Combinaisons intelligentes"
+        "description": "Combinaisons intelligentes",
+        "features": [
+          "Air + Route",
+          "Mer + Route",
+          "Rail + Route",
+          "Optimisation coûts"
+        ]
       }
     },
     "customs": {
       "title": "Douanes & conformité : gagnez en fluidité",
-      "description": "Bénéficiez de notre statut de Représentant en Douane Enregistré (RDE)"
+      "description": "Bénéficiez de notre statut de Représentant en Douane Enregistré (RDE)",
+      "features": [
+        {
+          "title": "Représentant en Douane Enregistré",
+          "description": "Statut RDE pour toutes vos formalités"
+        },
+        {
+          "title": "Expertise réglementaire",
+          "description": "Veille réglementaire continue"
+        },
+        {
+          "title": "Dédouanement rapide",
+          "description": "Traitement accéléré de vos déclarations"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Nos certifications",
+      "items": [
+        "Opérateur Économique Agréé (OEA)",
+        "IATA CASS",
+        "Représentant en Douane Enregistré"
+      ]
+    },
+    "cta": {
+      "title": "Prêt à optimiser votre logistique ?",
+      "description": "Contactez nos experts pour une étude personnalisée de vos besoins",
+      "button": "Demander un devis gratuit"
     }
   },
   "contact": {
