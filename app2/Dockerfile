@@ -7,6 +7,13 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json package-lock.json* ./
+RUN npm ci
+
+# Stage 1.5: Production dependencies only
+FROM node:18-alpine AS production-deps
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+COPY package.json package-lock.json* ./
 RUN npm ci --only=production
 
 # Stage 2: Builder
@@ -26,12 +33,19 @@ RUN npm run build
 FROM node:18-alpine AS runner
 WORKDIR /app
 
+# Install curl for health check
+RUN apk add --no-cache curl
+
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
 
 # Create non-root user
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
+
+# Copy production dependencies
+COPY --from=production-deps /app/node_modules ./node_modules
+COPY --from=production-deps /app/package.json ./package.json
 
 # Copy built application
 COPY --from=builder /app/public ./public
