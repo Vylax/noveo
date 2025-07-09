@@ -1,0 +1,501 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About us",
+      "solutions": "Solutions",
+      "industries": "Industries",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "cta": "Request a quote"
+  },
+  "hero": {
+    "title": "Optimize your flows. Spend less. Act better.",
+    "subtitle": "Accelerate your international supply chain",
+    "description": "Noveo Logistics is a new generation freight forwarder, combining digital technologies and business expertise to connect Europe with the rest of the world seamlessly.",
+    "cta": "Request a free logistics flow study"
+  },
+  "expertise": {
+    "title": "Our sectoral expertise",
+    "description": "Noveo Logistics supports demanding players in complex, regulated or strategic sectors.",
+    "sectors": {
+      "energy": "Energy, Oil & Gas",
+      "dangerous": "Dangerous goods",
+      "aerospace": "Aerospace & defense",
+      "wine": "Wine & spirits",
+      "automotive": "Automotive",
+      "ecommerce": "E-commerce",
+      "medical": "Medical devices"
+    }
+  },
+  "mission": {
+    "title": "Streamline your supply chain with the best of technology and human expertise.",
+    "tech": {
+      "title": "An intuitive digital platform",
+      "features": [
+        "Integrated TMS",
+        "Real-time visibility",
+        "Online booking",
+        "Centralized EDM"
+      ]
+    },
+    "human": {
+      "title": "An experienced team",
+      "features": [
+        "Transport expertise",
+        "Customs clearance",
+        "Insurance",
+        "24/7 support"
+      ]
+    },
+    "cta": "Discover our tailor-made logistics solutions"
+  },
+  "platform": {
+    "title": "Benefit from fluid logistics. Centralize your operations, optimize your performance.",
+    "cta": "Schedule a meeting with a Noveo expert"
+  },
+  "kpis": {
+    "ports": "+500 Ports served worldwide",
+    "freight": "+25,000 tons of air freight per year",
+    "response": "15 min average response time",
+    "clients": "+250 shippers trust us"
+  },
+  "testimonials": {
+    "title": "They trust us",
+    "cta": "Discover +10 customer testimonials",
+    "clients": [
+      {
+        "id": 1,
+        "name": "Marie Dubois",
+        "company": "TechCorp Europe",
+        "role": "Supply Chain Director",
+        "content": "Noveo Logistics revolutionized our Asia-Europe supply chain. Their digital platform provides complete visibility and their teams are exceptionally responsive.",
+        "sector": "Technology"
+      },
+      {
+        "id": 2,
+        "name": "Jean-Pierre Martin",
+        "company": "Bordeaux Grands Crus",
+        "role": "Export Manager",
+        "content": "For our wine shipments to China, Noveo perfectly masters customs constraints and cold chain management. A trusted partner for 3 years.",
+        "sector": "Wine & Spirits"
+      },
+      {
+        "id": 3,
+        "name": "Sophie Chen",
+        "company": "MedDevice Solutions",
+        "role": "Logistics Manager",
+        "content": "GDP compliance and serialized traceability are crucial for our medical devices. Noveo exceeds our expectations with impeccable service.",
+        "sector": "Medical Devices"
+      },
+      {
+        "id": 4,
+        "name": "Thomas Schneider",
+        "company": "Auto Parts International",
+        "role": "Logistics Manager",
+        "content": "Their JIT solutions allow us to optimize our inventory and meet production deadlines. Reliability is guaranteed, even during peak activity.",
+        "sector": "Automotive"
+      },
+      {
+        "id": 5,
+        "name": "Isabella Rodriguez",
+        "company": "Fashion Trends EU",
+        "role": "Supply Chain Director",
+        "content": "Noveo perfectly manages our seasonal flows with remarkable flexibility. Their e-commerce expertise saved us 30% in delivery time.",
+        "sector": "E-commerce"
+      },
+      {
+        "id": 6,
+        "name": "David Williams",
+        "company": "Energy Solutions Ltd",
+        "role": "Transportation Manager",
+        "content": "For transporting our energy equipment, Noveo scrupulously respects all ADR regulations. Safety and professionalism guaranteed.",
+        "sector": "Energy"
+      },
+      {
+        "id": 7,
+        "name": "Anna Kowalski",
+        "company": "AeroSpace Components",
+        "role": "Logistics Coordinator",
+        "content": "Their tailor-made solutions for our high-value aerospace parts bring us peace of mind and complete traceability. Excellence in service.",
+        "sector": "Aerospace"
+      },
+      {
+        "id": 8,
+        "name": "Laurent Moreau",
+        "company": "ChemSafe Industries",
+        "role": "Transportation Manager",
+        "content": "Experts in dangerous goods, they perfectly master classifications and documentation. We trust them with our eyes closed.",
+        "sector": "Chemistry"
+      },
+      {
+        "id": 9,
+        "name": "Sarah Johnson",
+        "company": "Global Electronics",
+        "role": "International Trade Manager",
+        "content": "Their integrated TMS platform simplified all our logistics management. Real-time visibility and spectacular productivity gains.",
+        "sector": "Electronics"
+      },
+      {
+        "id": 10,
+        "name": "Philippe Leroy",
+        "company": "BioTech Innovations",
+        "role": "Head of Operations",
+        "content": "For our sensitive products, Noveo ensures perfect cold chain and impeccable regulatory compliance. Essential strategic partner.",
+        "sector": "Biotechnology"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "What is a freight forwarder?",
+        "answer": "A freight forwarder is an intermediary who organizes the transport of goods on behalf of its clients using its own means or those of third-party carriers."
+      },
+      {
+        "question": "What's the difference between a freight forwarder and a customs broker?",
+        "answer": "A freight forwarder acts as the client's agent, while a customs broker acts on their own behalf and assumes responsibility for transport."
+      },
+      {
+        "question": "How to optimize an Incoterm for your imports from China?",
+        "answer": "The choice of Incoterm depends on your experience, volume and risk tolerance. We guide you in this strategic decision."
+      }
+    ]
+  },
+  "final_cta": {
+    "title": "Gain reliability, visibility and performance with Noveo Logistics.",
+    "cta": "Request a free audit of your flows"
+  },
+  "about": {
+    "title": "About Noveo: a group born from the vision of its founders",
+    "description": "Founded by Benjamin Tapiero, Noveo Logistics relies on unique Europe-Asia expertise to revolutionize international logistics.",
+    "engagements": {
+      "title": "Our commitments",
+      "items": [
+        {
+          "title": "Tailor-made logistics",
+          "description": "Solutions adapted to your specific needs"
+        },
+        {
+          "title": "Expert contacts",
+          "description": "A dedicated and experienced team"
+        },
+        {
+          "title": "Compliant and secure solutions",
+          "description": "Compliance with international regulations"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Certifications and sustainable logistics",
+      "items": ["AEO", "IATA CASS", "Sustainable commitment"]
+    },
+    "team": {
+      "title": "Our team"
+    },
+    "sites": {
+      "title": "Our strategic sites",
+      "locations": {
+        "paris": "Paris",
+        "hongkong": "Hong Kong",
+        "guangzhou": "Guangzhou"
+      }
+    },
+    "timeline": {
+      "title": "Our History",
+      "description": "Discover the key milestones of our evolution since our creation",
+      "events": [
+        {
+          "year": "2020",
+          "title": "Foundation of Noveo Logistics",
+          "description": "Benjamin Tapiero founds Noveo Logistics with a clear vision: revolutionizing Europe-Asia logistics."
+        },
+        {
+          "year": "2021",
+          "title": "Expansion in Asia",
+          "description": "Opening of Hong Kong and Guangzhou offices to anchor our presence in Asia."
+        },
+        {
+          "year": "2022",
+          "title": "Launch of digital platform",
+          "description": "Development and deployment of our proprietary TMS for enhanced logistics."
+        },
+        {
+          "year": "2023",
+          "title": "International certifications",
+          "description": "Obtaining AEO, IATA CASS and RCR certifications for recognized expertise."
+        },
+        {
+          "year": "2024",
+          "title": "Sectoral leadership",
+          "description": "Noveo becomes leader in several strategic industrial niches."
+        }
+      ]
+    },
+    "final_cta": "Contact us now to build your supply chain together",
+    "seo": {
+      "description": "New generation freight forwarder, specialized in Europe-Asia logistics",
+      "serviceArea": "Europe-Asia logistics corridor",
+      "services": {
+        "international": "International logistics",
+        "description": "Transport and logistics services Europe-Asia",
+        "catalogue": "Logistics services",
+        "air": "Air transport",
+        "sea": "Sea transport",
+        "customs": "Customs clearance"
+      },
+      "expertise": [
+        "Freight forwarding",
+        "International logistics",
+        "Air freight",
+        "Sea freight",
+        "Customs clearance",
+        "Supply chain management",
+        "Dangerous goods transport",
+        "Medical devices logistics",
+        "Aerospace logistics"
+      ],
+      "certifications": {
+        "customs": "Customs certification",
+        "air": "Air transport certification",
+        "representative": "Customs representative"
+      }
+    }
+  },
+  "solutions": {
+    "title": "Our solutions",
+    "subtitle": "Tailor-made logistics solutions to optimize your supply chain",
+    "transport": {
+      "title": "Our transport services",
+      "description": "Choose the transport mode best suited to your needs",
+      "air": {
+        "title": "Air Transport",
+        "description": "Urgent and secure shipments",
+        "features": [
+          "Express 24h-48h",
+          "Consolidated freight",
+          "Dangerous goods",
+          "Temperature controlled"
+        ]
+      },
+      "sea": {
+        "title": "Sea Transport",
+        "description": "Optimized FCL and LCL",
+        "features": [
+          "FCL (Full Container Load)",
+          "LCL (Less Container Load)",
+          "Optimized groupage",
+          "Real-time tracking"
+        ]
+      },
+      "multimodal": {
+        "title": "Multimodal Transport",
+        "description": "Smart combinations",
+        "features": [
+          "Air + Road",
+          "Sea + Road",
+          "Rail + Road",
+          "Cost optimization"
+        ]
+      }
+    },
+    "customs": {
+      "title": "Customs & compliance: gain fluidity",
+      "description": "Benefit from our Registered Customs Representative (RCR) status",
+      "features": [
+        {
+          "title": "Registered Customs Representative",
+          "description": "RCR status for all your formalities"
+        },
+        {
+          "title": "Regulatory expertise",
+          "description": "Continuous regulatory watch"
+        },
+        {
+          "title": "Fast customs clearance",
+          "description": "Accelerated processing of your declarations"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Our certifications",
+      "items": [
+        "Authorized Economic Operator (AEO)",
+        "IATA CASS",
+        "Registered Customs Representative"
+      ]
+    },
+    "cta": {
+      "title": "Ready to optimize your logistics?",
+      "description": "Contact our experts for a personalized study of your needs",
+      "button": "Request a free quote"
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "We are here to answer your questions",
+    "reassurance": [
+      "Specialist",
+      "Certified",
+      "Digital platform",
+      "Reactivity"
+    ],
+    "form": {
+      "title": "Contact us",
+      "firstname": "First name",
+      "lastname": "Last name",
+      "email": "Email",
+      "company": "Company",
+      "phone": "Phone",
+      "merchandise": "Type of merchandise",
+      "message": "Message",
+      "submit": "Send my request",
+      "submitting": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "offices": {
+      "title": "Our offices",
+      "paris": "Paris, France",
+      "hongkong": "Hong Kong",
+      "guangzhou": "Guangzhou, China",
+      "addresses": {
+        "paris": {
+          "street": "123 Avenue des Champs-Élysées",
+          "city": "75008 Paris, France",
+          "phone": "+33 1 23 45 67 89"
+        },
+        "hongkong": {
+          "street": "Central Plaza",
+          "city": "Hong Kong",
+          "phone": "+852 1234 5678"
+        },
+        "guangzhou": {
+          "street": "Guangzhou International Finance Center",
+          "city": "Guangzhou, China",
+          "phone": "+86 20 1234 5678"
+        }
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "News, insights and trends in international transport and logistics",
+    "featured": "Featured articles",
+    "allArticles": "All articles",
+    "readMore": "Read more",
+    "newsletter": {
+      "title": "Stay informed",
+      "description": "Receive our latest news and logistics tips",
+      "placeholder": "Your email address",
+      "cta": "Subscribe"
+    },
+    "noArticles": "No articles available",
+    "posts": [
+      {
+        "id": 1,
+        "title": "New post-Brexit customs regulations",
+        "excerpt": "Understanding the impacts of Brexit on Europe-UK logistics flows and new customs procedures.",
+        "category": "Regulation",
+        "readTime": "5 min",
+        "featured": true
+      },
+      {
+        "id": 2,
+        "title": "Optimize your supply chain with AI and data",
+        "excerpt": "How new technologies transform logistics and enable better predictability.",
+        "category": "Innovation",
+        "readTime": "8 min",
+        "featured": true
+      },
+      {
+        "id": 3,
+        "title": "Maritime transport: managing demand peaks",
+        "excerpt": "Strategies to anticipate and manage port congestion and capacity variations.",
+        "category": "Transport",
+        "readTime": "6 min",
+        "featured": false
+      },
+      {
+        "id": 4,
+        "title": "Incoterms 2024: what changes for importers",
+        "excerpt": "Analysis of Incoterms evolution and their implications for your import strategies.",
+        "category": "International trade",
+        "readTime": "7 min",
+        "featured": false
+      },
+      {
+        "id": 5,
+        "title": "Sustainable logistics: reducing carbon footprint",
+        "excerpt": "Concrete solutions for a more environmentally friendly supply chain.",
+        "category": "Sustainability",
+        "readTime": "5 min",
+        "featured": false
+      },
+      {
+        "id": 6,
+        "title": "E-commerce in Asia: opportunities and logistics challenges",
+        "excerpt": "Analysis of Asian markets and strategies to succeed in e-commerce logistics.",
+        "category": "E-commerce",
+        "readTime": "9 min",
+        "featured": false
+      }
+    ]
+  },
+  "industries": {
+    "title": "Our Industries",
+    "subtitle": "Expert logistics solutions for each sector of activity",
+    "challenges": "Sector challenges",
+    "solutions": "Our solutions",
+    "ctaTitle": "Does your sector require specific expertise?",
+    "ctaDescription": "Our sector experts are here to support you",
+    "ctaButton": "Contact our experts",
+    "sectors": {
+      "energy": {
+        "description": "Secure transport of energy products, oil and gas with respect for international regulations",
+        "challenges": ["ADR regulations", "Maximum security", "Complete traceability", "Specialized certifications"],
+        "solutions": ["Multimodal transport", "Certified packaging", "Real-time tracking", "Enhanced insurance"]
+      },
+      "dangerous": {
+        "description": "Complete expertise in dangerous goods with ADR, IATA DGR and IMDG certifications",
+        "challenges": ["Complex classifications", "Specific documentations", "Mandatory training", "Strict controls"],
+        "solutions": ["Certified experts", "Validated procedures", "Continuous training", "Quality audit"]
+      },
+      "aerospace": {
+        "description": "Transport of aerospace components and defense equipment with maximum security",
+        "challenges": ["High value parts", "Critical deadlines", "Total traceability", "Enhanced security"],
+        "solutions": ["Specialized packaging", "Priority transport", "GPS tracking", "Complete insurance"]
+      },
+      "wine": {
+        "description": "Specialized logistics for wine and spirits with temperature and humidity control",
+        "challenges": ["Controlled temperature", "Minimal vibrations", "Alcohol regulations", "Complex customs"],
+        "solutions": ["Refrigerated containers", "Cushioned transport", "Customs expertise", "Climate storage"]
+      },
+      "automotive": {
+        "description": "Automotive supply chain with JIT flow management and spare parts",
+        "challenges": ["Tight flows", "Bulky parts", "Tight deadlines", "Constant quality"],
+        "solutions": ["JIT logistics", "Adapted packaging", "Express network", "Quality control"]
+      },
+      "ecommerce": {
+        "description": "E-commerce solutions with fulfillment, cross-docking and last-mile delivery",
+        "challenges": ["Variable volumes", "Short deadlines", "Frequent returns", "Seasonal peaks"],
+        "solutions": ["Flexible fulfillment", "Cross-docking", "Last-mile network", "Returns management"]
+      },
+      "medical": {
+        "description": "Transport of medical devices with respect for GDP standards and complete traceability",
+        "challenges": ["Strict standards", "Total traceability", "Controlled temperature", "Critical deadlines"],
+        "solutions": ["GDP compliance", "Cold chain", "Serialized traceability", "Priority transport"]
+      }
+    }
+  },
+  "footer": {
+    "tagline": "New generation freight forwarder",
+    "sitemap": "Site map",
+    "contact": "Contact",
+    "legal": "Legal notice",
+    "cgv": "Terms & Conditions",
+    "copyright": "© 2025 Noveo Logistics. All rights reserved."
+  }
+} 

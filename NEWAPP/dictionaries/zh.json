@@ -1,0 +1,501 @@
+{
+  "header": {
+    "nav": {
+      "home": "首页",
+      "about": "关于我们",
+      "solutions": "解决方案",
+      "industries": "行业",
+      "blog": "博客",
+      "contact": "联系我们"
+    },
+    "cta": "申请报价"
+  },
+  "hero": {
+    "title": "优化您的流程。减少开支。更高效行动。",
+    "subtitle": "加速您的国际供应链",
+    "description": "Noveo Logistics是新一代货运代理，结合数字技术和业务专长，无缝连接欧洲与世界其他地区。",
+    "cta": "申请免费物流流程研究"
+  },
+  "expertise": {
+    "title": "我们的行业专长",
+    "description": "Noveo Logistics为复杂、受监管或战略性行业的要求苛刻的参与者提供支持。",
+    "sectors": {
+      "energy": "能源、石油天然气",
+      "dangerous": "危险品",
+      "aerospace": "航空航天与国防",
+      "wine": "葡萄酒与烈酒",
+      "automotive": "汽车",
+      "ecommerce": "电商",
+      "medical": "医疗设备"
+    }
+  },
+  "mission": {
+    "title": "通过最优的技术和人力专长简化您的供应链。",
+    "tech": {
+      "title": "直观的数字平台",
+      "features": [
+        "集成TMS",
+        "实时可见性",
+        "在线预订",
+        "集中EDM"
+      ]
+    },
+    "human": {
+      "title": "经验丰富的团队",
+      "features": [
+        "运输专长",
+        "清关",
+        "保险",
+        "24/7支持"
+      ]
+    },
+    "cta": "发现我们的定制物流解决方案"
+  },
+  "platform": {
+    "title": "受益于流畅的物流。集中您的运营，优化您的性能。",
+    "cta": "与Noveo专家安排会议"
+  },
+  "kpis": {
+    "ports": "+500个全球服务港口",
+    "freight": "每年+25,000吨航空货运",
+    "response": "15分钟平均响应时间",
+    "clients": "+250个承运人信任我们"
+  },
+  "testimonials": {
+    "title": "他们信任我们",
+    "cta": "发现+10个客户推荐",
+    "clients": [
+      {
+        "id": 1,
+        "name": "王丽华",
+        "company": "科技欧洲集团",
+        "role": "供应链总监",
+        "content": "Noveo Logistics彻底改变了我们亚欧供应链。他们的数字平台提供完全的可见性，团队反应异常迅速。",
+        "sector": "科技"
+      },
+      {
+        "id": 2,
+        "name": "李建明",
+        "company": "波尔多特级酒庄",
+        "role": "出口经理",
+        "content": "对于我们向中国的葡萄酒出口，Noveo完美掌握海关限制和冷链管理。值得信赖的合作伙伴已有3年。",
+        "sector": "葡萄酒和烈酒"
+      },
+      {
+        "id": 3,
+        "name": "陈小雅",
+        "company": "医疗设备解决方案",
+        "role": "物流经理",
+        "content": "GDP合规性和序列化追溯对我们的医疗设备至关重要。Noveo以无可挑剔的服务超越了我们的期望。",
+        "sector": "医疗设备"
+      },
+      {
+        "id": 4,
+        "name": "张伟强",
+        "company": "国际汽车零部件",
+        "role": "物流经理",
+        "content": "他们的JIT解决方案使我们能够优化库存并满足生产期限。可靠性得到保证，即使在高峰期也是如此。",
+        "sector": "汽车"
+      },
+      {
+        "id": 5,
+        "name": "刘美琪",
+        "company": "时尚潮流欧盟",
+        "role": "供应链总监",
+        "content": "Noveo以卓越的灵活性完美管理我们的季节性流量。他们的电商专业知识为我们节省了30%的交付时间。",
+        "sector": "电商"
+      },
+      {
+        "id": 6,
+        "name": "马志强",
+        "company": "能源解决方案有限公司",
+        "role": "运输经理",
+        "content": "对于我们能源设备的运输，Noveo严格遵守所有ADR法规。安全和专业保证。",
+        "sector": "能源"
+      },
+      {
+        "id": 7,
+        "name": "孙佳音",
+        "company": "航空航天组件",
+        "role": "物流协调员",
+        "content": "他们为我们高价值航空航天零件定制的解决方案带来了安心和完整追溯。卓越的服务。",
+        "sector": "航空航天"
+      },
+      {
+        "id": 8,
+        "name": "赵庆华",
+        "company": "化学安全工业",
+        "role": "运输经理",
+        "content": "危险品专家，他们完美掌握分类和文档。我们完全信任他们。",
+        "sector": "化学"
+      },
+      {
+        "id": 9,
+        "name": "林雅慧",
+        "company": "全球电子",
+        "role": "国际贸易经理",
+        "content": "他们的集成TMS平台简化了我们所有的物流管理。实时可见性和显著的生产力提升。",
+        "sector": "电子"
+      },
+      {
+        "id": 10,
+        "name": "郭文杰",
+        "company": "生物技术创新",
+        "role": "运营总监",
+        "content": "对于我们的敏感产品，Noveo确保完美的冷链和无可挑剔的法规合规。必不可少的战略合作伙伴。",
+        "sector": "生物技术"
+      }
+    ]
+  },
+  "faq": {
+    "title": "常见问题",
+    "questions": [
+      {
+        "question": "什么是货运代理？",
+        "answer": "货运代理是代表客户使用自己的手段或第三方承运人的手段组织货物运输的中介。"
+      },
+      {
+        "question": "货运代理和报关行有什么区别？",
+        "answer": "货运代理作为客户的代理人，而报关行以自己的名义行事并承担运输责任。"
+      },
+      {
+        "question": "如何优化从中国进口的贸易术语？",
+        "answer": "贸易术语的选择取决于您的经验、数量和风险承受能力。我们在这一战略决策中为您提供指导。"
+      }
+    ]
+  },
+  "final_cta": {
+    "title": "通过Noveo Logistics获得可靠性、可见性和性能。",
+    "cta": "申请免费流程审核"
+  },
+  "about": {
+    "title": "关于Noveo：一个由创始人愿景诞生的集团",
+    "description": "由Benjamin Tapiero创立，Noveo Logistics依靠独特的欧亚专长来革新国际物流。",
+    "engagements": {
+      "title": "我们的承诺",
+      "items": [
+        {
+          "title": "定制物流",
+          "description": "适应您特定需求的解决方案"
+        },
+        {
+          "title": "专家联系人",
+          "description": "专业经验丰富的团队"
+        },
+        {
+          "title": "合规安全解决方案",
+          "description": "符合国际法规"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "认证和可持续物流",
+      "items": ["AEO", "IATA CASS", "可持续承诺"]
+    },
+    "team": {
+      "title": "我们的团队"
+    },
+    "sites": {
+      "title": "我们的战略站点",
+      "locations": {
+        "paris": "巴黎",
+        "hongkong": "香港",
+        "guangzhou": "广州"
+      }
+    },
+    "timeline": {
+      "title": "我们的历史",
+      "description": "了解我们自创立以来发展的关键里程碑",
+      "events": [
+        {
+          "year": "2020",
+          "title": "Noveo Logistics成立",
+          "description": "Benjamin Tapiero创立Noveo Logistics，愿景明确：革新欧亚物流。"
+        },
+        {
+          "year": "2021",
+          "title": "亚洲扩张",
+          "description": "香港和广州办事处开业，巩固我们在亚洲的存在。"
+        },
+        {
+          "year": "2022",
+          "title": "数字平台启动",
+          "description": "开发并部署我们专有的TMS，实现增强型物流。"
+        },
+        {
+          "year": "2023",
+          "title": "国际认证",
+          "description": "获得AEO、IATA CASS和RCR认证，专业知识得到认可。"
+        },
+        {
+          "year": "2024",
+          "title": "行业领导地位",
+          "description": "Noveo在多个战略性工业细分领域成为领导者。"
+        }
+      ]
+    },
+    "final_cta": "立即联系我们，共同构建您的供应链",
+    "seo": {
+      "description": "新一代货运代理，专业从事欧亚物流",
+      "serviceArea": "欧亚物流走廊",
+      "services": {
+        "international": "国际物流",
+        "description": "欧亚运输和物流服务",
+        "catalogue": "物流服务",
+        "air": "航空运输",
+        "sea": "海运",
+        "customs": "清关"
+      },
+      "expertise": [
+        "货运代理",
+        "国际物流",
+        "航空货运",
+        "海运货运",
+        "清关",
+        "供应链管理",
+        "危险品运输",
+        "医疗设备物流",
+        "航空航天物流"
+      ],
+      "certifications": {
+        "customs": "海关认证",
+        "air": "航空运输认证",
+        "representative": "海关代表"
+      }
+    }
+  },
+  "solutions": {
+    "title": "我们的解决方案",
+    "subtitle": "量身定制的物流解决方案，优化您的供应链",
+    "transport": {
+      "title": "我们的运输服务",
+      "description": "选择最适合您需求的运输方式",
+      "air": {
+        "title": "航空运输",
+        "description": "紧急和安全的货运",
+        "features": [
+          "24-48小时快递",
+          "合并货运",
+          "危险品",
+          "温度控制"
+        ]
+      },
+      "sea": {
+        "title": "海运",
+        "description": "优化的FCL和LCL",
+        "features": [
+          "FCL（整箱装载）",
+          "LCL（拼箱装载）",
+          "优化拼箱",
+          "实时跟踪"
+        ]
+      },
+      "multimodal": {
+        "title": "多式联运",
+        "description": "智能组合",
+        "features": [
+          "空运+公路",
+          "海运+公路",
+          "铁路+公路",
+          "成本优化"
+        ]
+      }
+    },
+    "customs": {
+      "title": "海关与合规：获得流畅性",
+      "description": "受益于我们的注册海关代表(RCR)地位",
+      "features": [
+        {
+          "title": "注册海关代表",
+          "description": "RCR地位处理您的所有手续"
+        },
+        {
+          "title": "法规专业知识",
+          "description": "持续的法规监控"
+        },
+        {
+          "title": "快速清关",
+          "description": "加速处理您的申报"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "我们的认证",
+      "items": [
+        "授权经济运营商(AEO)",
+        "IATA CASS",
+        "注册海关代表"
+      ]
+    },
+    "cta": {
+      "title": "准备优化您的物流？",
+      "description": "联系我们的专家进行个性化需求研究",
+      "button": "申请免费报价"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "我们在此回答您的问题",
+    "reassurance": [
+      "专家",
+      "认证",
+      "数字平台",
+      "响应性"
+    ],
+    "form": {
+      "title": "联系我们",
+      "firstname": "名字",
+      "lastname": "姓氏",
+      "email": "邮箱",
+      "company": "公司",
+      "phone": "电话",
+      "merchandise": "商品类型",
+      "message": "留言",
+      "submit": "提交我的请求",
+      "submitting": "发送中...",
+      "success": "您的消息已成功发送！",
+      "error": "发生错误，请重试。"
+    },
+    "offices": {
+      "title": "我们的办公室",
+      "paris": "法国巴黎",
+      "hongkong": "香港",
+      "guangzhou": "中国广州",
+      "addresses": {
+        "paris": {
+          "street": "香榭丽舍大街123号",
+          "city": "75008 巴黎，法国",
+          "phone": "+33 1 23 45 67 89"
+        },
+        "hongkong": {
+          "street": "中环广场",
+          "city": "香港",
+          "phone": "+852 1234 5678"
+        },
+        "guangzhou": {
+          "street": "广州国际金融中心",
+          "city": "中国广州",
+          "phone": "+86 20 1234 5678"
+        }
+      }
+    }
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "国际运输和物流的新闻、见解和趋势",
+    "featured": "精选文章",
+    "allArticles": "所有文章",
+    "readMore": "阅读更多",
+    "newsletter": {
+      "title": "保持知情",
+      "description": "接收我们的最新新闻和物流提示",
+      "placeholder": "您的邮箱地址",
+      "cta": "订阅"
+    },
+    "noArticles": "暂无文章",
+    "posts": [
+      {
+        "id": 1,
+        "title": "英国脱欧后的新海关法规",
+        "excerpt": "了解英国脱欧对欧洲-英国物流流量的影响以及新的海关程序。",
+        "category": "法规",
+        "readTime": "5分钟",
+        "featured": true
+      },
+      {
+        "id": 2,
+        "title": "利用人工智能和数据优化供应链",
+        "excerpt": "新技术如何改变物流并实现更好的可预测性。",
+        "category": "创新",
+        "readTime": "8分钟",
+        "featured": true
+      },
+      {
+        "id": 3,
+        "title": "海运：管理需求高峰",
+        "excerpt": "预测和管理港口拥堵和运力变化的策略。",
+        "category": "运输",
+        "readTime": "6分钟",
+        "featured": false
+      },
+      {
+        "id": 4,
+        "title": "2024年国际贸易术语：进口商的变化",
+        "excerpt": "分析国际贸易术语的演变及其对进口策略的影响。",
+        "category": "国际贸易",
+        "readTime": "7分钟",
+        "featured": false
+      },
+      {
+        "id": 5,
+        "title": "可持续物流：减少碳足迹",
+        "excerpt": "更环保供应链的具体解决方案。",
+        "category": "可持续性",
+        "readTime": "5分钟",
+        "featured": false
+      },
+      {
+        "id": 6,
+        "title": "亚洲电商：机遇与物流挑战",
+        "excerpt": "分析亚洲市场和成功电商物流的策略。",
+        "category": "电商",
+        "readTime": "9分钟",
+        "featured": false
+      }
+    ]
+  },
+  "industries": {
+    "title": "我们的行业",
+    "subtitle": "每个活动领域的专家物流解决方案",
+    "challenges": "行业挑战",
+    "solutions": "我们的解决方案",
+    "ctaTitle": "您的行业需要特定的专业知识吗？",
+    "ctaDescription": "我们的行业专家在此为您提供支持",
+    "ctaButton": "联系我们的专家",
+    "sectors": {
+      "energy": {
+        "description": "能源产品、石油和天然气的安全运输，符合国际法规",
+        "challenges": ["ADR法规", "最大安全", "完整追溯", "专业认证"],
+        "solutions": ["多式联运", "认证包装", "实时跟踪", "加强保险"]
+      },
+      "dangerous": {
+        "description": "危险品的完整专业知识，具有ADR、IATA DGR和IMDG认证",
+        "challenges": ["复杂分类", "特定文档", "强制培训", "严格控制"],
+        "solutions": ["认证专家", "验证程序", "持续培训", "质量审计"]
+      },
+      "aerospace": {
+        "description": "航空航天组件和国防设备的运输，具有最大安全性",
+        "challenges": ["高价值零件", "关键期限", "完全追溯", "加强安全"],
+        "solutions": ["专业包装", "优先运输", "GPS跟踪", "完整保险"]
+      },
+      "wine": {
+        "description": "葡萄酒和烈酒的专业物流，具有温度和湿度控制",
+        "challenges": ["温度控制", "最小振动", "酒精法规", "复杂海关"],
+        "solutions": ["冷藏容器", "缓冲运输", "海关专业", "气候储存"]
+      },
+      "automotive": {
+        "description": "汽车供应链，具有JIT流量管理和备件",
+        "challenges": ["紧张流程", "笨重零件", "紧迫期限", "持续质量"],
+        "solutions": ["JIT物流", "适应包装", "快递网络", "质量控制"]
+      },
+      "ecommerce": {
+        "description": "电商解决方案，具有履约、交叉装卸和最后一英里交付",
+        "challenges": ["可变数量", "短期限", "频繁退货", "季节性高峰"],
+        "solutions": ["灵活履约", "交叉装卸", "最后一英里网络", "退货管理"]
+      },
+      "medical": {
+        "description": "医疗设备运输，符合GDP标准和完整追溯",
+        "challenges": ["严格标准", "完全追溯", "温度控制", "关键期限"],
+        "solutions": ["GDP合规", "冷链", "序列化追溯", "优先运输"]
+      }
+    }
+  },
+  "footer": {
+    "tagline": "新一代货运代理",
+    "sitemap": "站点地图",
+    "contact": "联系",
+    "legal": "法律声明",
+    "cgv": "条款与条件",
+    "copyright": "© 2025 Noveo Logistics。保留所有权利。"
+  }
+} 
