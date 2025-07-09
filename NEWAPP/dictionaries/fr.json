@@ -14,7 +14,11 @@
     "title": "Commissionnaire de Transport Digital Europe-Asie",
     "subtitle": "Optimisez vos flux. Dépensez moins. Agissez mieux.",
     "description": "Noveo Logistics est un commissionnaire de transport nouvelle génération, alliant technologies digitales et expertise métier pour connecter l'Europe avec le reste du monde en toute fluidité.",
-    "cta": "Demandez une étude gratuite de vos flux logistiques"
+    "cta": "Demandez une étude gratuite de vos flux logistiques",
+    "certifications": {
+      "title": "Certifié",
+      "items": ["OEA", "IATA", "RDE"]
+    }
   },
   "expertise": {
     "title": "Nos expertises sectorielles",
@@ -27,12 +31,19 @@
       "automotive": "Automobile",
       "ecommerce": "E-commerce",
       "medical": "Dispositifs médicaux"
+    },
+    "learn_more": "En savoir plus",
+    "cta": {
+      "title": "Votre secteur nécessite une expertise spécifique ?",
+      "description": "Nos experts sectoriels comprennent les défis uniques de votre industrie et vous accompagnent avec des solutions sur-mesure.",
+      "button": "Contactez nos experts"
     }
   },
   "mission": {
     "title": "Rationalisez votre chaîne d'approvisionnement avec le meilleur de la technologie et de l'expertise humaine.",
     "tech": {
       "title": "Une plateforme digitale intuitive",
+      "description": "Notre plateforme digitale transforme votre expérience logistique en vous offrant une visibilité totale et un contrôle complet de vos flux.",
       "features": [
         "TMS intégré",
         "Visibilité temps réel",
@@ -42,6 +53,7 @@
     },
     "human": {
       "title": "Une équipe expérimentée",
+      "description": "Nos experts vous accompagnent à chaque étape avec leur expertise métier approfondie et leur connaissance des réglementations internationales.",
       "features": [
         "Expertise transport",
         "Dédouanement",
@@ -49,17 +61,47 @@
         "Support 24/7"
       ]
     },
-    "cta": "Découvrez nos solutions logistiques sur mesure"
+    "cta": "Découvrez nos solutions logistiques sur mesure",
+    "platform_name": "Noveo Platform"
   },
   "platform": {
     "title": "Bénéficiez d'une logistique fluide. Centralisez vos opérations, optimisez vos performances.",
     "cta": "Prenez rendez-vous avec un expert Noveo"
   },
   "kpis": {
-    "ports": "+500 Ports desservis dans le monde",
-    "freight": "+25 000 tonnes de fret aérien par an",
-    "response": "15 min de temps de réponse moyen",
-    "clients": "+250 chargeurs nous font confiance"
+    "title": "Noveo en chiffres",
+    "subtitle": "La performance au service de votre réussite",
+    "message": "Plus qu'un transitaire, Noveo Logistics est votre partenaire stratégique pour optimiser votre supply chain Europe-Asie",
+    "items": [
+      {
+        "value": 500,
+        "prefix": "+",
+        "suffix": "",
+        "label": "Ports desservis dans le monde",
+        "icon": "🚢"
+      },
+      {
+        "value": 25000,
+        "prefix": "+",
+        "suffix": "",
+        "label": "tonnes de fret aérien par an",
+        "icon": "✈️"
+      },
+      {
+        "value": 15,
+        "prefix": "",
+        "suffix": " min",
+        "label": "de temps de réponse moyen",
+        "icon": "⚡"
+      },
+      {
+        "value": 250,
+        "prefix": "+",
+        "suffix": "",
+        "label": "chargeurs nous font confiance",
+        "icon": "🤝"
+      }
+    ]
   },
   "testimonials": {
     "title": "Ils nous font confiance",
@@ -166,7 +208,9 @@
   },
   "final_cta": {
     "title": "Gagnez en fiabilité, en visibilité et en performance avec Noveo Logistics.",
-    "cta": "Demandez un audit gratuit de vos flux"
+    "description": "Prêt à optimiser votre supply chain Europe-Asie avec la puissance de notre plateforme digitale et l'expertise de nos équipes ?",
+    "cta": "Demandez un audit gratuit de vos flux",
+    "discover_solutions": "Découvrir nos solutions"
   },
   "about": {
     "title": "À propos de Noveo : un groupe né de la vision de ses fondateurs",

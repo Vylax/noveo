@@ -16,7 +16,7 @@ export function Footer({ dict, lang }: FooterProps) {
           <div className="md:col-span-2">
             <Link href={`/${lang}`} className="flex items-center mb-4">
               <Image
-                src="/images/logos/logo_long_for_white_bg.png"
+                src="/images/logos/logo_long_for_black_bg.png"
                 alt="Noveo Logistics"
                 width={150}
                 height={50}

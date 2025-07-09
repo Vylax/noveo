@@ -82,36 +82,7 @@ function AnimatedCounter({
 export function KPISection({ dict }: KPISectionProps) {
   const [sectionRef, isIntersecting] = useIntersectionObserver(0.3)
 
-  const kpis = [
-    {
-      value: 500,
-      prefix: '+',
-      suffix: '',
-      label: 'Ports desservis dans le monde',
-      icon: '🚢',
-    },
-    {
-      value: 25000,
-      prefix: '+',
-      suffix: '',
-      label: 'tonnes de fret aérien par an',
-      icon: '✈️',
-    },
-    {
-      value: 15,
-      prefix: '',
-      suffix: ' min',
-      label: 'de temps de réponse moyen',
-      icon: '⚡',
-    },
-    {
-      value: 250,
-      prefix: '+',
-      suffix: '',
-      label: 'chargeurs nous font confiance',
-      icon: '🤝',
-    },
-  ]
+  const kpis = dict.kpis.items
 
   return (
     <section className="py-20 bg-noveo-primary text-white relative overflow-hidden">
@@ -126,10 +97,10 @@ export function KPISection({ dict }: KPISectionProps) {
         {/* Titre de section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4">
-            Noveo en chiffres
+            {dict.kpis.title}
           </h2>
           <p className="text-xl text-noveo-secondary font-inter">
-            La performance au service de votre réussite
+            {dict.kpis.subtitle}
           </p>
         </div>
 
@@ -166,7 +137,7 @@ export function KPISection({ dict }: KPISectionProps) {
         {/* Message de confiance */}
         <div className="text-center mt-16">
           <p className="text-lg text-noveo-secondary font-inter max-w-2xl mx-auto">
-            Plus qu'un transitaire, Noveo Logistics est votre partenaire stratégique pour optimiser votre supply chain Europe-Asie
+            {dict.kpis.message}
           </p>
         </div>
       </div>

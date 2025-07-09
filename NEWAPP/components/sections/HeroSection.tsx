@@ -51,26 +51,16 @@ export function HeroSection({ dict, lang }: HeroSectionProps) {
 
           {/* Badge de confiance - certifications */}
           <div className="mt-12 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <p className="text-sm text-noveo-secondary/80 mb-4 font-sans">Certifié</p>
+            <p className="text-sm text-noveo-secondary/80 mb-4 font-sans">{dict.hero.certifications.title}</p>
             <div className="flex justify-center items-center space-x-8 text-xs text-white/70">
-              <span className="flex items-center space-x-2">
-                <div className="w-8 h-6 bg-noveo-secondary rounded flex items-center justify-center">
-                  <span className="text-noveo-primary text-xs font-bold">OEA</span>
-                </div>
-                <span>OEA</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <div className="w-8 h-6 bg-noveo-secondary rounded flex items-center justify-center">
-                  <span className="text-noveo-primary text-xs font-bold">IATA</span>
-                </div>
-                <span>IATA</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <div className="w-8 h-6 bg-noveo-secondary rounded flex items-center justify-center">
-                  <span className="text-noveo-primary text-xs font-bold">RDE</span>
-                </div>
-                <span>RDE</span>
-              </span>
+              {dict.hero.certifications.items.map((cert, index) => (
+                <span key={index} className="flex items-center space-x-2">
+                  <div className="w-8 h-6 bg-noveo-secondary rounded flex items-center justify-center">
+                    <span className="text-noveo-primary text-xs font-bold">{cert}</span>
+                  </div>
+                  <span>{cert}</span>
+                </span>
+              ))}
             </div>
           </div>
         </div>

@@ -14,7 +14,11 @@
     "title": "优化您的流程。减少开支。更高效行动。",
     "subtitle": "加速您的国际供应链",
     "description": "Noveo Logistics是新一代货运代理，结合数字技术和业务专长，无缝连接欧洲与世界其他地区。",
-    "cta": "申请免费物流流程研究"
+    "cta": "申请免费物流流程研究",
+    "certifications": {
+      "title": "我们的认证",
+      "items": ["AEO", "IATA", "RDE"]
+    }
   },
   "expertise": {
     "title": "我们的行业专长",
@@ -27,12 +31,19 @@
       "automotive": "汽车",
       "ecommerce": "电商",
       "medical": "医疗设备"
+    },
+    "learn_more": "了解更多",
+    "cta": {
+      "title": "您的行业需要特定专长吗？",
+      "description": "我们的行业专家了解您行业的独特挑战，并为您提供量身定制的解决方案。",
+      "button": "联系我们的专家"
     }
   },
   "mission": {
     "title": "通过最优的技术和人力专长简化您的供应链。",
     "tech": {
       "title": "直观的数字平台",
+      "description": "我们的数字平台通过提供完全的可见性和对您流程的完整控制来转变您的物流体验。",
       "features": [
         "集成TMS",
         "实时可见性",
@@ -42,6 +53,7 @@
     },
     "human": {
       "title": "经验丰富的团队",
+      "description": "我们的专家凭借深厚的行业专业知识和对国际法规的了解，在每个步骤为您提供支持。",
       "features": [
         "运输专长",
         "清关",
@@ -49,17 +61,47 @@
         "24/7支持"
       ]
     },
-    "cta": "发现我们的定制物流解决方案"
+    "cta": "发现我们的定制物流解决方案",
+    "platform_name": "Noveo平台"
   },
   "platform": {
     "title": "受益于流畅的物流。集中您的运营，优化您的性能。",
     "cta": "与Noveo专家安排会议"
   },
   "kpis": {
-    "ports": "+500个全球服务港口",
-    "freight": "每年+25,000吨航空货运",
-    "response": "15分钟平均响应时间",
-    "clients": "+250个承运人信任我们"
+    "title": "Noveo数据概览",
+    "subtitle": "绩效服务于您的成功",
+    "message": "不仅仅是货运代理，Noveo Logistics是您优化欧亚供应链的战略合作伙伴",
+    "items": [
+      {
+        "value": 500,
+        "prefix": "+",
+        "suffix": "",
+        "label": "全球服务港口",
+        "icon": "🚢"
+      },
+      {
+        "value": 25000,
+        "prefix": "+",
+        "suffix": "",
+        "label": "每年航空货运吨数",
+        "icon": "✈️"
+      },
+      {
+        "value": 15,
+        "prefix": "",
+        "suffix": " 分钟",
+        "label": "平均响应时间",
+        "icon": "⚡"
+      },
+      {
+        "value": 250,
+        "prefix": "+",
+        "suffix": "",
+        "label": "承运人信任我们",
+        "icon": "🤝"
+      }
+    ]
   },
   "testimonials": {
     "title": "他们信任我们",
@@ -166,7 +208,9 @@
   },
   "final_cta": {
     "title": "通过Noveo Logistics获得可靠性、可见性和性能。",
-    "cta": "申请免费流程审核"
+    "description": "准备好通过我们数字平台的力量和团队的专业知识优化您的欧亚供应链了吗？",
+    "cta": "申请免费流程审核",
+    "discover_solutions": "发现我们的解决方案"
   },
   "about": {
     "title": "关于Noveo：一个由创始人愿景诞生的集团",

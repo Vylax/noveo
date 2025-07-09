@@ -34,7 +34,7 @@ export function MissionSection({ dict, lang }: MissionSectionProps) {
                 {dict.mission.tech.title}
               </h3>
               <p className="text-noveo-text font-sans leading-relaxed mb-4">
-                Notre plateforme digitale transforme votre expérience logistique en vous offrant une visibilité totale et un contrôle complet de vos flux.
+                {dict.mission.tech.description}
               </p>
               <ul className="space-y-3">
                 {dict.mission.tech.features.map((feature, index) => (
@@ -55,7 +55,7 @@ export function MissionSection({ dict, lang }: MissionSectionProps) {
                 {dict.mission.human.title}
               </h3>
               <p className="text-noveo-text font-sans leading-relaxed mb-4">
-                Nos experts vous accompagnent à chaque étape avec leur expertise métier approfondie et leur connaissance des réglementations internationales.
+                {dict.mission.human.description}
               </p>
               <ul className="space-y-3">
                 {dict.mission.human.features.map((feature, index) => (
@@ -93,7 +93,7 @@ export function MissionSection({ dict, lang }: MissionSectionProps) {
                     <div className="w-3 h-3 bg-noveo-secondary rounded-full"></div>
                     <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
                   </div>
-                  <div className="text-white text-sm font-sans">Noveo Platform</div>
+                  <div className="text-white text-sm font-sans">{dict.mission.platform_name}</div>
                   <div className="w-8 h-6"></div>
                 </div>
                 

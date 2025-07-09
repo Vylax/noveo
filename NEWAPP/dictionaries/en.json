@@ -14,7 +14,11 @@
     "title": "Optimize your flows. Spend less. Act better.",
     "subtitle": "Accelerate your international supply chain",
     "description": "Noveo Logistics is a new generation freight forwarder, combining digital technologies and business expertise to connect Europe with the rest of the world seamlessly.",
-    "cta": "Request a free logistics flow study"
+    "cta": "Request a free logistics flow study",
+    "certifications": {
+      "title": "Certified",
+      "items": ["AEO", "IATA", "RDE"]
+    }
   },
   "expertise": {
     "title": "Our sectoral expertise",
@@ -27,12 +31,19 @@
       "automotive": "Automotive",
       "ecommerce": "E-commerce",
       "medical": "Medical devices"
+    },
+    "learn_more": "Learn more",
+    "cta": {
+      "title": "Does your sector require specific expertise?",
+      "description": "Our sector experts understand the unique challenges of your industry and support you with tailor-made solutions.",
+      "button": "Contact our experts"
     }
   },
   "mission": {
     "title": "Streamline your supply chain with the best of technology and human expertise.",
     "tech": {
       "title": "An intuitive digital platform",
+      "description": "Our digital platform transforms your logistics experience by providing total visibility and complete control of your flows.",
       "features": [
         "Integrated TMS",
         "Real-time visibility",
@@ -42,6 +53,7 @@
     },
     "human": {
       "title": "An experienced team",
+      "description": "Our experts support you at every step with their in-depth industry expertise and knowledge of international regulations.",
       "features": [
         "Transport expertise",
         "Customs clearance",
@@ -49,17 +61,47 @@
         "24/7 support"
       ]
     },
-    "cta": "Discover our tailor-made logistics solutions"
+    "cta": "Discover our tailor-made logistics solutions",
+    "platform_name": "Noveo Platform"
   },
   "platform": {
     "title": "Benefit from fluid logistics. Centralize your operations, optimize your performance.",
     "cta": "Schedule a meeting with a Noveo expert"
   },
   "kpis": {
-    "ports": "+500 Ports served worldwide",
-    "freight": "+25,000 tons of air freight per year",
-    "response": "15 min average response time",
-    "clients": "+250 shippers trust us"
+    "title": "Noveo in numbers",
+    "subtitle": "Performance at the service of your success",
+    "message": "More than a freight forwarder, Noveo Logistics is your strategic partner to optimize your Europe-Asia supply chain",
+    "items": [
+      {
+        "value": 500,
+        "prefix": "+",
+        "suffix": "",
+        "label": "Ports served worldwide",
+        "icon": "🚢"
+      },
+      {
+        "value": 25000,
+        "prefix": "+",
+        "suffix": "",
+        "label": "tons of air freight per year",
+        "icon": "✈️"
+      },
+      {
+        "value": 15,
+        "prefix": "",
+        "suffix": " min",
+        "label": "average response time",
+        "icon": "⚡"
+      },
+      {
+        "value": 250,
+        "prefix": "+",
+        "suffix": "",
+        "label": "shippers trust us",
+        "icon": "🤝"
+      }
+    ]
   },
   "testimonials": {
     "title": "They trust us",
@@ -166,7 +208,9 @@
   },
   "final_cta": {
     "title": "Gain reliability, visibility and performance with Noveo Logistics.",
-    "cta": "Request a free audit of your flows"
+    "description": "Ready to optimize your Europe-Asia supply chain with the power of our digital platform and the expertise of our teams?",
+    "cta": "Request a free audit of your flows",
+    "discover_solutions": "Discover our solutions"
   },
   "about": {
     "title": "About Noveo: a group born from the vision of its founders",

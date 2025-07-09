@@ -98,7 +98,7 @@ export function ExpertiseSection({ dict, lang }: ExpertiseSectionProps) {
                   
                   {/* Indicateur de lien */}
                   <div className="flex items-center justify-center text-noveo-secondary group-hover:text-noveo-accent transition-colors">
-                    <span className="text-sm font-inter mr-1">En savoir plus</span>
+                    <span className="text-sm font-inter mr-1">{dict.expertise.learn_more}</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </CardContent>
@@ -110,16 +110,16 @@ export function ExpertiseSection({ dict, lang }: ExpertiseSectionProps) {
         {/* CTA Section */}
         <div className="text-center bg-white rounded-2xl p-8 shadow-lg border border-noveo-border">
           <h3 className="text-2xl font-poppins font-bold text-noveo-primary mb-4">
-            Votre secteur nécessite une expertise spécifique ?
+            {dict.expertise.cta.title}
           </h3>
           <p className="text-noveo-text font-inter mb-6 max-w-2xl mx-auto">
-            Nos experts sectoriels comprennent les défis uniques de votre industrie et vous accompagnent avec des solutions sur-mesure.
+            {dict.expertise.cta.description}
           </p>
           <Link 
             href={`/${lang}/contact`}
             className="inline-flex items-center bg-noveo-accent hover:bg-noveo-accent/90 text-white font-poppins font-semibold px-6 py-3 rounded-lg transition-colors"
           >
-            Contactez nos experts
+            {dict.expertise.cta.button}
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>

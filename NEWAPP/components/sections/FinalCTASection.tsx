@@ -25,7 +25,7 @@ export function FinalCTASection({ dict, lang }: FinalCTASectionProps) {
           </h2>
           
           <p className="text-xl md:text-2xl text-noveo-secondary font-inter mb-8 max-w-3xl mx-auto">
-            Prêt à optimiser votre supply chain Europe-Asie avec la puissance de notre plateforme digitale et l'expertise de nos équipes ?
+            {dict.final_cta.description}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -47,7 +47,7 @@ export function FinalCTASection({ dict, lang }: FinalCTASectionProps) {
               className="border-noveo-secondary text-noveo-secondary hover:bg-noveo-secondary hover:text-noveo-primary font-poppins font-semibold text-lg px-8 py-4"
             >
               <Link href={`/${lang}/solutions`}>
-                Découvrir nos solutions
+                {dict.final_cta.discover_solutions}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
