@@ -66,7 +66,7 @@ export default async function ContactPage({
               {/* Office Locations */}
               <div className="space-y-6">
                 <h3 className="text-h3 font-display font-semibold text-noveo-blue">
-                  Nos bureaux
+                  {dict.contact.offices.title}
                 </h3>
                 
                 <div className="space-y-4">
@@ -75,9 +75,9 @@ export default async function ContactPage({
                       {dict.contact.offices.paris}
                     </h4>
                     <p className="text-dark-gray text-sm">
-                      123 Avenue des Champs-Élysées<br />
-                      75008 Paris, France<br />
-                      +33 1 23 45 67 89
+                      {dict.contact.offices.addresses.paris.street}<br />
+                      {dict.contact.offices.addresses.paris.city}<br />
+                      {dict.contact.offices.addresses.paris.phone}
                     </p>
                   </div>
                   
@@ -86,9 +86,9 @@ export default async function ContactPage({
                       {dict.contact.offices.hongkong}
                     </h4>
                     <p className="text-dark-gray text-sm">
-                      Central Plaza<br />
-                      Hong Kong<br />
-                      +852 1234 5678
+                      {dict.contact.offices.addresses.hongkong.street}<br />
+                      {dict.contact.offices.addresses.hongkong.city}<br />
+                      {dict.contact.offices.addresses.hongkong.phone}
                     </p>
                   </div>
                   
@@ -97,9 +97,9 @@ export default async function ContactPage({
                       {dict.contact.offices.guangzhou}
                     </h4>
                     <p className="text-dark-gray text-sm">
-                      Guangzhou International Finance Center<br />
-                      Guangzhou, China<br />
-                      +86 20 1234 5678
+                      {dict.contact.offices.addresses.guangzhou.street}<br />
+                      {dict.contact.offices.addresses.guangzhou.city}<br />
+                      {dict.contact.offices.addresses.guangzhou.phone}
                     </p>
                   </div>
                 </div>

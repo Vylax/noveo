@@ -57,18 +57,18 @@ export function ContactForm({ dict, lang }: ContactFormProps) {
   return (
     <div className="bg-off-white rounded-lg p-8">
       <h3 className="text-h3 font-display font-semibold text-noveo-blue mb-6">
-        Contactez-nous
+        {dict.contact.form.title}
       </h3>
       
       {submitStatus === 'success' && (
         <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
-          Votre message a été envoyé avec succès !
+          {dict.contact.form.success}
         </div>
       )}
       
       {submitStatus === 'error' && (
         <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
-          Une erreur s'est produite. Veuillez réessayer.
+          {dict.contact.form.error}
         </div>
       )}
 
@@ -166,7 +166,7 @@ export function ContactForm({ dict, lang }: ContactFormProps) {
 
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-dark-gray mb-2">
-            Message
+            {dict.contact.form.message}
           </label>
           <textarea
             id="message"
@@ -183,7 +183,7 @@ export function ContactForm({ dict, lang }: ContactFormProps) {
           disabled={isSubmitting}
           className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isSubmitting ? 'Envoi en cours...' : dict.contact.form.submit}
+          {isSubmitting ? dict.contact.form.submitting : dict.contact.form.submit}
         </button>
       </form>
     </div>

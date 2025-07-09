@@ -343,18 +343,41 @@
       "响应性"
     ],
     "form": {
+      "title": "联系我们",
       "firstname": "名字",
       "lastname": "姓氏",
       "email": "邮箱",
       "company": "公司",
       "phone": "电话",
       "merchandise": "商品类型",
-      "submit": "提交我的请求"
+      "message": "留言",
+      "submit": "提交我的请求",
+      "submitting": "发送中...",
+      "success": "您的消息已成功发送！",
+      "error": "发生错误，请重试。"
     },
     "offices": {
+      "title": "我们的办公室",
       "paris": "法国巴黎",
       "hongkong": "香港",
-      "guangzhou": "中国广州"
+      "guangzhou": "中国广州",
+      "addresses": {
+        "paris": {
+          "street": "香榭丽舍大街123号",
+          "city": "75008 巴黎，法国",
+          "phone": "+33 1 23 45 67 89"
+        },
+        "hongkong": {
+          "street": "中环广场",
+          "city": "香港",
+          "phone": "+852 1234 5678"
+        },
+        "guangzhou": {
+          "street": "广州国际金融中心",
+          "city": "中国广州",
+          "phone": "+86 20 1234 5678"
+        }
+      }
     }
   },
   "blog": {

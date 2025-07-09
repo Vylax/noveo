@@ -343,18 +343,41 @@
       "Réactivité"
     ],
     "form": {
+      "title": "Contactez-nous",
       "firstname": "Prénom",
       "lastname": "Nom",
       "email": "Email",
       "company": "Entreprise",
       "phone": "Téléphone",
       "merchandise": "Type de marchandise",
-      "submit": "Envoyer ma demande"
+      "message": "Message",
+      "submit": "Envoyer ma demande",
+      "submitting": "Envoi en cours...",
+      "success": "Votre message a été envoyé avec succès !",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
     },
     "offices": {
+      "title": "Nos bureaux",
       "paris": "Paris, France",
       "hongkong": "Hong Kong",
-      "guangzhou": "Guangzhou, Chine"
+      "guangzhou": "Guangzhou, Chine",
+      "addresses": {
+        "paris": {
+          "street": "123 Avenue des Champs-Élysées",
+          "city": "75008 Paris, France",
+          "phone": "+33 1 23 45 67 89"
+        },
+        "hongkong": {
+          "street": "Central Plaza",
+          "city": "Hong Kong",
+          "phone": "+852 1234 5678"
+        },
+        "guangzhou": {
+          "street": "Guangzhou International Finance Center",
+          "city": "Guangzhou, China",
+          "phone": "+86 20 1234 5678"
+        }
+      }
     }
   },
   "blog": {

@@ -343,18 +343,41 @@
       "Reactivity"
     ],
     "form": {
+      "title": "Contact us",
       "firstname": "First name",
       "lastname": "Last name",
       "email": "Email",
       "company": "Company",
       "phone": "Phone",
       "merchandise": "Type of merchandise",
-      "submit": "Send my request"
+      "message": "Message",
+      "submit": "Send my request",
+      "submitting": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred. Please try again."
     },
     "offices": {
+      "title": "Our offices",
       "paris": "Paris, France",
       "hongkong": "Hong Kong",
-      "guangzhou": "Guangzhou, China"
+      "guangzhou": "Guangzhou, China",
+      "addresses": {
+        "paris": {
+          "street": "123 Avenue des Champs-Élysées",
+          "city": "75008 Paris, France",
+          "phone": "+33 1 23 45 67 89"
+        },
+        "hongkong": {
+          "street": "Central Plaza",
+          "city": "Hong Kong",
+          "phone": "+852 1234 5678"
+        },
+        "guangzhou": {
+          "street": "Guangzhou International Finance Center",
+          "city": "Guangzhou, China",
+          "phone": "+86 20 1234 5678"
+        }
+      }
     }
   },
   "blog": {
