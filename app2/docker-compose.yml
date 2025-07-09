@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  # Next.js application
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: noveo-nextjs
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    volumes:
+      - ./public:/app/public:ro
+    networks:
+      - noveo-network
+    labels:
+      - "traefik.enable=false"
+
+  # Nginx reverse proxy
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: noveo-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./public:/var/www/html/public:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    networks:
+      - noveo-network
+    depends_on:
+      - nextjs
+    labels:
+      - "traefik.enable=false"
+
+networks:
+  noveo-network:
+    driver: bridge
+    name: noveo-network
+
+volumes:
+  nginx-conf:
+    driver: local
+  ssl-certs:
+    driver: local 
