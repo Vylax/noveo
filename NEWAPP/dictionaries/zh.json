@@ -433,6 +433,7 @@
   "contact": {
     "title": "联系我们",
     "subtitle": "我们在此回答您的问题",
+    "heroTitle": "我们在此回答您的问题。",
     "reassurance": [
       "专家",
       "认证",
@@ -451,7 +452,39 @@
       "submit": "提交我的请求",
       "submitting": "发送中...",
       "success": "您的消息已成功发送！",
-      "error": "发生错误，请重试。"
+      "error": "发生错误，请重试。",
+      "successMessage": "我们将尽快回复您。",
+      "anotherMessage": "发送另一条消息",
+      "requiredFields": "* 必填字段",
+      "placeholders": {
+        "firstname": "您的名字",
+        "lastname": "您的姓氏",
+        "email": "your.email@company.com",
+        "company": "您的公司名称",
+        "phone": "+33 1 23 45 67 89",
+        "message": "描述您的物流项目、具体需求、体积、目的地...",
+        "merchandise": "选择商品类型"
+      },
+      "merchandiseOptions": {
+        "general": "一般货物",
+        "dangerous": "危险品",
+        "aerospace": "航空航天与国防",
+        "automotive": "汽车",
+        "energy": "能源与石油",
+        "wine": "葡萄酒与烈酒",
+        "medical": "医疗设备",
+        "ecommerce": "电子商务",
+        "other": "其他"
+      }
+    },
+    "general": {
+      "title": "一般联系",
+      "email": "邮箱：",
+      "emailValue": "contact@noveo-logistics.com",
+      "hours": "营业时间：",
+      "hoursValue": "周一至周五 9am-6pm (CET)",
+      "response": "回复：",
+      "responseValue": "平均15分钟内"
     },
     "offices": {
       "title": "我们的办公室",

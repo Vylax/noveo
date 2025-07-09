@@ -433,6 +433,7 @@
   "contact": {
     "title": "Nous contacter",
     "subtitle": "Nous sommes ici pour répondre à vos questions",
+    "heroTitle": "Nous sommes ici pour répondre à vos questions.",
     "reassurance": [
       "Spécialiste",
       "Certifié",
@@ -451,7 +452,39 @@
       "submit": "Envoyer ma demande",
       "submitting": "Envoi en cours...",
       "success": "Votre message a été envoyé avec succès !",
-      "error": "Une erreur s'est produite. Veuillez réessayer."
+      "error": "Une erreur s'est produite. Veuillez réessayer.",
+      "successMessage": "Nous vous répondrons dans les plus brefs délais.",
+      "anotherMessage": "Envoyer un autre message",
+      "requiredFields": "* Champs obligatoires",
+      "placeholders": {
+        "firstname": "Votre prénom",
+        "lastname": "Votre nom",
+        "email": "votre.email@entreprise.com",
+        "company": "Nom de votre entreprise",
+        "phone": "+33 1 23 45 67 89",
+        "message": "Décrivez votre projet logistique, vos besoins spécifiques, les volumes, destinations...",
+        "merchandise": "Sélectionnez le type de marchandise"
+      },
+      "merchandiseOptions": {
+        "general": "Marchandises générales",
+        "dangerous": "Marchandises dangereuses",
+        "aerospace": "Aéronautique & Défense",
+        "automotive": "Automobile",
+        "energy": "Énergie & Pétrole",
+        "wine": "Vins & Spiritueux",
+        "medical": "Dispositifs médicaux",
+        "ecommerce": "E-commerce",
+        "other": "Autre"
+      }
+    },
+    "general": {
+      "title": "Contact général",
+      "email": "Email :",
+      "emailValue": "contact@noveo-logistics.com",
+      "hours": "Horaires :",
+      "hoursValue": "Lun-Ven 9h-18h (CET)",
+      "response": "Réponse :",
+      "responseValue": "Sous 15 minutes en moyenne"
     },
     "offices": {
       "title": "Nos bureaux",
