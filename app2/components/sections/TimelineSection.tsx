@@ -29,48 +29,15 @@ export function TimelineSection({ dict, lang }: TimelineSectionProps) {
     return () => observer.disconnect()
   }, [])
 
-  const timelineEvents = [
-    {
-      year: '2020',
-      title: 'Fondation de Noveo Logistics',
-      description: 'Benjamin Tapiero fonde Noveo Logistics avec une vision claire : révolutionner la logistique Europe-Asie.',
-      image: '/images/timeline/foundation.jpg',
-    },
-    {
-      year: '2021',
-      title: 'Expansion en Asie',
-      description: 'Ouverture des bureaux de Hong Kong et Guangzhou pour ancrer notre présence en Asie.',
-      image: '/images/timeline/expansion.jpg',
-    },
-    {
-      year: '2022',
-      title: 'Lancement de la plateforme digitale',
-      description: 'Développement et déploiement de notre TMS propriétaire pour une logistique augmentée.',
-      image: '/images/timeline/platform.jpg',
-    },
-    {
-      year: '2023',
-      title: 'Certifications internationales',
-      description: 'Obtention des certifications OEA, IATA CASS et RDE pour une expertise reconnue.',
-      image: '/images/timeline/certifications.jpg',
-    },
-    {
-      year: '2024',
-      title: 'Leadership sectorial',
-      description: 'Noveo devient leader sur plusieurs niches industrielles stratégiques.',
-      image: '/images/timeline/leadership.jpg',
-    },
-  ]
-
   return (
     <section className="section-padding bg-off-white">
       <div className="container-max mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-h2 font-display font-bold text-noveo-blue mb-4">
-            Notre Histoire
+            {dict.about.timeline.title}
           </h2>
           <p className="text-lg text-dark-gray max-w-3xl mx-auto">
-            Découvrez les étapes clés de notre évolution depuis notre création
+            {dict.about.timeline.description}
           </p>
         </div>
 
@@ -78,7 +45,7 @@ export function TimelineSection({ dict, lang }: TimelineSectionProps) {
           {/* Timeline line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-light-gray"></div>
 
-          {timelineEvents.map((event, index) => (
+          {dict.about.timeline.events.map((event, index) => (
             <div
               key={index}
               className={`timeline-item relative mb-12 ${

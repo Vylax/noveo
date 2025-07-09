@@ -49,6 +49,7 @@ export default async function HomePage({
       <JsonLd
         type="faq"
         lang={params.lang}
+        dict={dict}
         data={{ questions: dict.faq.questions }}
       />
     </>

@@ -117,6 +117,7 @@ export default async function ContactPage({
       <JsonLd
         type="local-business"
         lang={params.lang}
+        dict={dict}
         data={{
           location: 'Paris',
           telephone: '+33-1-23-45-67-89',

@@ -98,7 +98,7 @@ export default async function LangLayout({
         {children}
       </main>
       <Footer dict={dict} lang={params.lang} />
-      <JsonLd type="organization" lang={params.lang} />
+      <JsonLd type="organization" lang={params.lang} dict={dict} />
     </div>
   )
 } 

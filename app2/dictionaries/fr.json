@@ -203,7 +203,66 @@
         "guangzhou": "Guangzhou"
       }
     },
-    "final_cta": "Contactez-nous dès maintenant pour bâtir ensemble votre chaîne d'approvisionnement"
+    "timeline": {
+      "title": "Notre Histoire",
+      "description": "Découvrez les étapes clés de notre évolution depuis notre création",
+      "events": [
+        {
+          "year": "2020",
+          "title": "Fondation de Noveo Logistics",
+          "description": "Benjamin Tapiero fonde Noveo Logistics avec une vision claire : révolutionner la logistique Europe-Asie."
+        },
+        {
+          "year": "2021",
+          "title": "Expansion en Asie",
+          "description": "Ouverture des bureaux de Hong Kong et Guangzhou pour ancrer notre présence en Asie."
+        },
+        {
+          "year": "2022",
+          "title": "Lancement de la plateforme digitale",
+          "description": "Développement et déploiement de notre TMS propriétaire pour une logistique augmentée."
+        },
+        {
+          "year": "2023",
+          "title": "Certifications internationales",
+          "description": "Obtention des certifications OEA, IATA CASS et RDE pour une expertise reconnue."
+        },
+        {
+          "year": "2024",
+          "title": "Leadership sectorial",
+          "description": "Noveo devient leader sur plusieurs niches industrielles stratégiques."
+        }
+      ]
+    },
+    "final_cta": "Contactez-nous dès maintenant pour bâtir ensemble votre chaîne d'approvisionnement",
+    "seo": {
+      "description": "Commissionnaire de transport nouvelle génération, spécialisé dans la logistique Europe-Asie",
+      "serviceArea": "Couloir logistique Europe-Asie",
+      "services": {
+        "international": "Logistique internationale",
+        "description": "Services de transport et logistique Europe-Asie",
+        "catalogue": "Services logistiques",
+        "air": "Transport aérien",
+        "sea": "Transport maritime",
+        "customs": "Dédouanement"
+      },
+      "expertise": [
+        "Commissionnaire de transport",
+        "Logistique internationale",
+        "Fret aérien",
+        "Fret maritime",
+        "Dédouanement",
+        "Gestion de la chaîne d'approvisionnement",
+        "Transport de marchandises dangereuses",
+        "Logistique de dispositifs médicaux",
+        "Logistique aéronautique"
+      ],
+      "certifications": {
+        "customs": "Certification douanière",
+        "air": "Certification transport aérien",
+        "representative": "Représentant en douane"
+      }
+    }
   },
   "solutions": {
     "title": "Nos solutions",

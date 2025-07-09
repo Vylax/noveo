@@ -1,12 +1,13 @@
-import { Locale } from '@/lib/get-dictionary'
+import { Locale, Dictionary } from '@/lib/get-dictionary'
 
 interface JsonLdProps {
   type: 'organization' | 'service' | 'article' | 'faq' | 'local-business'
   lang: Locale
+  dict: Dictionary
   data?: any
 }
 
-export function JsonLd({ type, lang, data }: JsonLdProps) {
+export function JsonLd({ type, lang, dict, data }: JsonLdProps) {
   const getOrganizationSchema = () => ({
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -14,7 +15,7 @@ export function JsonLd({ type, lang, data }: JsonLdProps) {
     alternateName: 'Noveo',
     url: `https://noveo-logistics.com/${lang}`,
     logo: 'https://noveo-logistics.com/images/logo-noveo.svg',
-    description: 'Commissionnaire de transport nouvelle génération, spécialisé dans la logistique Europe-Asie',
+    description: dict.about.seo.description,
     foundingDate: '2020',
     founder: {
       '@type': 'Person',
@@ -53,34 +54,24 @@ export function JsonLd({ type, lang, data }: JsonLdProps) {
     ],
     serviceArea: {
       '@type': 'Place',
-      name: 'Europe-Asia logistics corridor',
+      name: dict.about.seo.serviceArea,
     },
-    knowsAbout: [
-      'Freight forwarding',
-      'International logistics',
-      'Air freight',
-      'Sea freight',
-      'Customs clearance',
-      'Supply chain management',
-      'Dangerous goods transport',
-      'Medical devices logistics',
-      'Aerospace logistics',
-    ],
+    knowsAbout: dict.about.seo.expertise,
     hasCredential: [
       {
         '@type': 'EducationalOccupationalCredential',
         name: 'OEA (Operateur Economique Agréé)',
-        credentialCategory: 'Customs certification',
+        credentialCategory: dict.about.seo.certifications.customs,
       },
       {
         '@type': 'EducationalOccupationalCredential',
         name: 'IATA CASS',
-        credentialCategory: 'Air transport certification',
+        credentialCategory: dict.about.seo.certifications.air,
       },
       {
         '@type': 'EducationalOccupationalCredential',
         name: 'RDE (Représentant en Douane Enregistré)',
-        credentialCategory: 'Customs representative',
+        credentialCategory: dict.about.seo.certifications.representative,
       },
     ],
   })
@@ -88,40 +79,40 @@ export function JsonLd({ type, lang, data }: JsonLdProps) {
   const getServiceSchema = () => ({
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: data?.name || 'Logistique internationale',
-    description: data?.description || 'Services de transport et logistique Europe-Asie',
+    name: data?.name || dict.about.seo.services.international,
+    description: data?.description || dict.about.seo.services.description,
     provider: {
       '@type': 'Organization',
       name: 'Noveo Logistics',
     },
-    serviceType: data?.serviceType || 'Freight forwarding',
+    serviceType: data?.serviceType || dict.about.seo.expertise[0],
     areaServed: {
       '@type': 'Place',
       name: 'Europe-Asia',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Logistics services',
+      name: dict.about.seo.services.catalogue,
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Transport aérien',
+            name: dict.about.seo.services.air,
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Transport maritime',
+            name: dict.about.seo.services.sea,
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Dédouanement',
+            name: dict.about.seo.services.customs,
           },
         },
       ],

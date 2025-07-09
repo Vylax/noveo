@@ -203,7 +203,66 @@
         "guangzhou": "广州"
       }
     },
-    "final_cta": "立即联系我们，共同构建您的供应链"
+    "timeline": {
+      "title": "我们的历史",
+      "description": "了解我们自创立以来发展的关键里程碑",
+      "events": [
+        {
+          "year": "2020",
+          "title": "Noveo Logistics成立",
+          "description": "Benjamin Tapiero创立Noveo Logistics，愿景明确：革新欧亚物流。"
+        },
+        {
+          "year": "2021",
+          "title": "亚洲扩张",
+          "description": "香港和广州办事处开业，巩固我们在亚洲的存在。"
+        },
+        {
+          "year": "2022",
+          "title": "数字平台启动",
+          "description": "开发并部署我们专有的TMS，实现增强型物流。"
+        },
+        {
+          "year": "2023",
+          "title": "国际认证",
+          "description": "获得AEO、IATA CASS和RCR认证，专业知识得到认可。"
+        },
+        {
+          "year": "2024",
+          "title": "行业领导地位",
+          "description": "Noveo在多个战略性工业细分领域成为领导者。"
+        }
+      ]
+    },
+    "final_cta": "立即联系我们，共同构建您的供应链",
+    "seo": {
+      "description": "新一代货运代理，专业从事欧亚物流",
+      "serviceArea": "欧亚物流走廊",
+      "services": {
+        "international": "国际物流",
+        "description": "欧亚运输和物流服务",
+        "catalogue": "物流服务",
+        "air": "航空运输",
+        "sea": "海运",
+        "customs": "清关"
+      },
+      "expertise": [
+        "货运代理",
+        "国际物流",
+        "航空货运",
+        "海运货运",
+        "清关",
+        "供应链管理",
+        "危险品运输",
+        "医疗设备物流",
+        "航空航天物流"
+      ],
+      "certifications": {
+        "customs": "海关认证",
+        "air": "航空运输认证",
+        "representative": "海关代表"
+      }
+    }
   },
   "solutions": {
     "title": "我们的解决方案",

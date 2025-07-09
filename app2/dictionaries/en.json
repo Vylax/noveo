@@ -203,7 +203,66 @@
         "guangzhou": "Guangzhou"
       }
     },
-    "final_cta": "Contact us now to build your supply chain together"
+    "timeline": {
+      "title": "Our History",
+      "description": "Discover the key milestones of our evolution since our creation",
+      "events": [
+        {
+          "year": "2020",
+          "title": "Foundation of Noveo Logistics",
+          "description": "Benjamin Tapiero founds Noveo Logistics with a clear vision: revolutionizing Europe-Asia logistics."
+        },
+        {
+          "year": "2021",
+          "title": "Expansion in Asia",
+          "description": "Opening of Hong Kong and Guangzhou offices to anchor our presence in Asia."
+        },
+        {
+          "year": "2022",
+          "title": "Launch of digital platform",
+          "description": "Development and deployment of our proprietary TMS for enhanced logistics."
+        },
+        {
+          "year": "2023",
+          "title": "International certifications",
+          "description": "Obtaining AEO, IATA CASS and RCR certifications for recognized expertise."
+        },
+        {
+          "year": "2024",
+          "title": "Sectoral leadership",
+          "description": "Noveo becomes leader in several strategic industrial niches."
+        }
+      ]
+    },
+    "final_cta": "Contact us now to build your supply chain together",
+    "seo": {
+      "description": "New generation freight forwarder, specialized in Europe-Asia logistics",
+      "serviceArea": "Europe-Asia logistics corridor",
+      "services": {
+        "international": "International logistics",
+        "description": "Transport and logistics services Europe-Asia",
+        "catalogue": "Logistics services",
+        "air": "Air transport",
+        "sea": "Sea transport",
+        "customs": "Customs clearance"
+      },
+      "expertise": [
+        "Freight forwarding",
+        "International logistics",
+        "Air freight",
+        "Sea freight",
+        "Customs clearance",
+        "Supply chain management",
+        "Dangerous goods transport",
+        "Medical devices logistics",
+        "Aerospace logistics"
+      ],
+      "certifications": {
+        "customs": "Customs certification",
+        "air": "Air transport certification",
+        "representative": "Customs representative"
+      }
+    }
   },
   "solutions": {
     "title": "Our solutions",

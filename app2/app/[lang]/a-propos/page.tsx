@@ -74,7 +74,7 @@ export default async function AboutPage({
         </div>
       </section>
 
-      <JsonLd type="organization" lang={params.lang} />
+      <JsonLd type="organization" lang={params.lang} dict={dict} />
     </div>
   )
 } 
