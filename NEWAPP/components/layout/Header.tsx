@@ -40,7 +40,7 @@ export function Header({ dict, lang }: HeaderProps) {
           {/* Logo */}
           <Link href={`/${lang}`} className="flex items-center">
             <Image
-              src="/images/logos/logo_long_for_black_bg.png"
+              src="/images/logos/logo_long_for_white_bg.png"
               alt="Noveo Logistics"
               width={120}
               height={40}

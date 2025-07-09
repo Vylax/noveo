@@ -10,40 +10,68 @@ interface HeroSectionProps {
 
 export function HeroSection({ dict, lang }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-ovrsea-navy to-ovrsea-navy/90 flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-noveo-primary to-noveo-primary/90 flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-ovrsea-mint to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(164,223,210,0.1),transparent_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-noveo-secondary to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(150,194,184,0.1),transparent_70%)]" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center text-white max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold mb-6 animate-fade-in-up">
+          {/* H1 Principal selon guidelines */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in-up">
             {dict.hero.title}
           </h1>
           
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-poppins font-semibold mb-6 text-ovrsea-mint animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          {/* Sous-titre avec accent */}
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-display font-semibold mb-6 text-noveo-secondary animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             {dict.hero.subtitle}
           </h2>
           
-          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          {/* Description */}
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200 font-sans animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             {dict.hero.description}
           </p>
           
+          {/* CTA Principal avec couleur orange accent selon guidelines */}
           <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <Button 
               asChild 
-              variant="noveo_mint" 
               size="lg"
-              className="text-lg px-8 py-4 hover:scale-105 transition-transform duration-200"
+              className="bg-noveo-accent hover:bg-noveo-accent/90 text-white font-display font-semibold text-lg px-8 py-4 rounded-lg hover:scale-105 transition-all duration-200 shadow-lg"
             >
               <Link href={`/${lang}/contact`}>
                 {dict.hero.cta}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
+          </div>
+
+          {/* Badge de confiance - certifications */}
+          <div className="mt-12 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+            <p className="text-sm text-noveo-secondary/80 mb-4 font-sans">Certifié</p>
+            <div className="flex justify-center items-center space-x-8 text-xs text-white/70">
+              <span className="flex items-center space-x-2">
+                <div className="w-8 h-6 bg-noveo-secondary rounded flex items-center justify-center">
+                  <span className="text-noveo-primary text-xs font-bold">OEA</span>
+                </div>
+                <span>OEA</span>
+              </span>
+              <span className="flex items-center space-x-2">
+                <div className="w-8 h-6 bg-noveo-secondary rounded flex items-center justify-center">
+                  <span className="text-noveo-primary text-xs font-bold">IATA</span>
+                </div>
+                <span>IATA</span>
+              </span>
+              <span className="flex items-center space-x-2">
+                <div className="w-8 h-6 bg-noveo-secondary rounded flex items-center justify-center">
+                  <span className="text-noveo-primary text-xs font-bold">RDE</span>
+                </div>
+                <span>RDE</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>

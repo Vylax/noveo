@@ -61,6 +61,15 @@ module.exports = {
           orange: "#a64723",
           neutral: "#f4f9f8",
           darkgray: "#4a5568",
+        },
+        // Noveo Logistics colors
+        noveo: {
+          primary: "#1D2F4E",    // Bleu foncé principal
+          secondary: "#96C2B8",   // Vert/turquoise secondaire
+          accent: "#EE9323",      // Orange accent
+          text: "#4A5568",        // Gris foncé pour le texte
+          neutral: "#F7FAFC",     // Gris très clair pour les fonds
+          border: "#E2E8F0",      // Gris clair pour les bordures
         }
       },
       borderRadius: {

@@ -4,6 +4,7 @@ import { ExpertiseSection } from '@/components/sections/ExpertiseSection'
 import { MissionSection } from '@/components/sections/MissionSection'
 import { KPISection } from '@/components/sections/KPISection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
+import { FAQSection } from '@/components/sections/FAQSection'
 import { FinalCTASection } from '@/components/sections/FinalCTASection'
 
 interface PageProps {
@@ -18,8 +19,9 @@ export default async function HomePage({ params }: PageProps) {
       <HeroSection dict={dict} lang={params.lang} />
       <ExpertiseSection dict={dict} lang={params.lang} />
       <MissionSection dict={dict} lang={params.lang} />
-      <KPISection dict={dict} lang={params.lang} />
+      <KPISection dict={dict} />
       <TestimonialsSection dict={dict} lang={params.lang} />
+      <FAQSection dict={dict} lang={params.lang} />
       <FinalCTASection dict={dict} lang={params.lang} />
     </>
   )

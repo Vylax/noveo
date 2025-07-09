@@ -1,7 +1,23 @@
+import { Inter, Poppins } from 'next/font/google'
 import { getDictionary, type Locale } from '@/lib/get-dictionary'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { JsonLd } from '@/components/seo/JsonLd'
 import { Metadata } from 'next'
+
+// Configure fonts like CURRAPP
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const poppins = Poppins({ 
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
 
 export async function generateMetadata({
   params,
@@ -14,7 +30,7 @@ export async function generateMetadata({
     metadataBase: new URL('https://noveo-logistics.com'),
     title: {
       template: '%s | Noveo Logistics',
-      default: 'Noveo Logistics - Commissionnaire de Transport Digital Europe-Asie',
+      default: 'Commissionnaire de Transport Digital Europe-Asie | Noveo Logistics',
     },
     description: dict.hero.description,
     keywords: [
@@ -26,6 +42,10 @@ export async function generateMetadata({
       'fret maritime',
       'douane',
       'supply chain',
+      'transport digital',
+      'dédouanement',
+      'OEA',
+      'IATA',
     ],
     authors: [{ name: 'Noveo Logistics' }],
     creator: 'Noveo Logistics',
@@ -43,7 +63,7 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: 'Noveo Logistics - Commissionnaire de Transport Digital Europe-Asie',
+      title: 'Commissionnaire de Transport Digital Europe-Asie | Noveo Logistics',
       description: dict.hero.description,
       url: `https://noveo-logistics.com/${params.lang}`,
       siteName: 'Noveo Logistics',
@@ -52,7 +72,7 @@ export async function generateMetadata({
           url: '/images/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: 'Noveo Logistics - Logistique Europe-Asie',
+          alt: 'Noveo Logistics - Commissionnaire de Transport Digital Europe-Asie',
         },
       ],
       locale: params.lang,
@@ -60,7 +80,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Noveo Logistics - Commissionnaire de Transport Digital Europe-Asie',
+      title: 'Commissionnaire de Transport Digital Europe-Asie | Noveo Logistics',
       description: dict.hero.description,
       images: ['/images/og-image.jpg'],
     },
@@ -78,6 +98,9 @@ export async function generateMetadata({
     verification: {
       google: 'your-google-verification-code',
     },
+    other: {
+      'theme-color': '#1D2F4E',
+    },
   }
 }
 
@@ -91,12 +114,22 @@ export default async function LangLayout({
   const dict = await getDictionary(params.lang)
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header dict={dict} lang={params.lang} />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer dict={dict} lang={params.lang} />
-    </div>
+    <html lang={params.lang} className={`${inter.variable} ${poppins.variable} scroll-smooth`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#1D2F4E" />
+      </head>
+      <body className="font-sans antialiased bg-noveo-neutral text-noveo-text">
+        <div className="min-h-screen flex flex-col">
+          <Header dict={dict} lang={params.lang} />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer dict={dict} lang={params.lang} />
+          <JsonLd type="organization" lang={params.lang} dict={dict} />
+        </div>
+      </body>
+    </html>
   )
 } 
