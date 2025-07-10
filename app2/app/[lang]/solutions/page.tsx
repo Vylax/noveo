@@ -118,15 +118,15 @@ export default async function SolutionsPage({
               <div className="space-y-4">
                 {dict.solutions.customs.features.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-noveo-teal rounded-full flex items-center justify-center mt-1">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <div>
+                  <div className="w-6 h-6 bg-noveo-teal rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
                       <h4 className="font-semibold text-noveo-blue">{feature.title}</h4>
                       <p className="text-dark-gray">{feature.description}</p>
-                    </div>
+                </div>
                   </div>
                 ))}
               </div>
@@ -137,9 +137,9 @@ export default async function SolutionsPage({
                 <div className="space-y-3">
                   {dict.solutions.certifications.items.map((certification, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                        <span className="text-sm font-bold">✓</span>
-                      </div>
+                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold">✓</span>
+                    </div>
                       <span>{certification}</span>
                     </div>
                   ))}

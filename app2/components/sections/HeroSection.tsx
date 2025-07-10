@@ -26,7 +26,7 @@ export function HeroSection({ dict, lang }: HeroSectionProps) {
       {/* Content */}
       <div className="relative z-10 container-max mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in-up">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in-up" style={{ color: '#ffffff' }}>
             {dict.hero.title}
           </h1>
           
