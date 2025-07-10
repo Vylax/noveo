@@ -33,6 +33,21 @@ export function HeroSection({ dict, lang }: HeroSectionProps) {
               {dict.hero.subtitle}
             </h2>
             
+            {/* Mobile Image - Only visible on mobile, positioned between title/subtitle and description */}
+            <div key="hero-image-mobile" className="block lg:hidden mb-8 animate-fade-in-up [animation-delay:0.3s]">
+              <div className="relative">
+                <Image 
+                  src="/images/temp3.webp" 
+                  alt="Noveo Logistics Supply Chain" 
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="w-full h-auto"
+                  priority
+                />
+              </div>
+            </div>
+            
             {/* Description */}
             <p key="hero-description" className="text-lg md:text-xl mb-8 text-gray-200 font-sans animate-fade-in-up [animation-delay:0.4s]">
               {dict.hero.description}
@@ -68,15 +83,15 @@ export function HeroSection({ dict, lang }: HeroSectionProps) {
             </div>
           </div>
 
-          {/* Right Column - Hero Image */}
-          <div key="hero-image" className="order-first lg:order-last animate-fade-in-up [animation-delay:0.3s]">
+          {/* Right Column - Hero Image (Desktop only) */}
+          <div key="hero-image" className="order-first lg:order-last hidden lg:block animate-fade-in-up [animation-delay:0.3s]">
             <div className="relative">
               <Image 
-                src="/images/temp.webp" 
+                src="/images/temp3.webp" 
                 alt="Noveo Logistics Supply Chain" 
                 width={0}
                 height={0}
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="50vw"
                 className="w-full h-auto"
                 priority
               />
