@@ -60,7 +60,11 @@ export function TimelineSection({ dict, lang }: TimelineSectionProps) {
                 index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
               }`}>
                 <div className="flex items-center mb-4">
-                  <div className="bg-gradient-to-r from-noveo-primary to-noveo-primary/80 text-white px-4 py-2 rounded-lg">
+                  <div className={`text-white px-4 py-2 rounded-lg ${
+                    index % 2 === 0 
+                      ? 'bg-[#95c2b8]' 
+                      : 'bg-gradient-to-r from-noveo-primary to-noveo-primary/80'
+                  }`}>
                     <span className="text-2xl font-poppins font-bold">
                       {event.year}
                     </span>
