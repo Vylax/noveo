@@ -1,129 +1,81 @@
 import React from 'react';
 import Link from 'next/link';
+import { Linkedin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 export default function Footer() {
+  const socialLinks = [
+    { href: "#", icon: <Linkedin size={20} /> },
+    { href: "#", icon: <Facebook size={20} /> },
+    { href: "#", icon: <Twitter size={20} /> },
+    { href: "#", icon: <Instagram size={20} /> },
+    { href: "#", icon: <Youtube size={20} /> },
+  ];
+
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Online tools */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Online tools</h3>
-            <ul className="space-y-3">
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Book</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Get a Quote</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Track & Trace</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Self services</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Subscribe to our newsletter</Link></li>
+    <footer className="bg-dsv-blue-dark text-white">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Column 1: Online tools */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Online tools</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li><Link href="#" className="hover:text-white">Book</Link></li>
+              <li><Link href="#" className="hover:text-white">Get a Quote</Link></li>
+              <li><Link href="#" className="hover:text-white">Track & Trace</Link></li>
+              <li><Link href="#" className="hover:text-white">Self-services</Link></li>
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
-            <ul className="space-y-3">
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Legal notice</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Data privacy</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Cookies</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Terms and conditions</Link></li>
-            </ul>
-            <div className="mt-6">
-              <div className="flex items-center space-x-2 text-sm">
-                <span>US / EN</span>
-                <span>Change</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Our solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Our solutions</h3>
-            <ul className="space-y-3">
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Industry solutions</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Air Freight</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Sea Freight</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Road Freight</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Project transport</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Contract Logistics</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">All solutions</Link></li>
+          {/* Column 2: Our solutions */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Our solutions</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li><Link href="#" className="hover:text-white">Industry solutions</Link></li>
+              <li><Link href="#" className="hover:text-white">Air Freight</Link></li>
+              <li><Link href="#" className="hover:text-white">Sea Freight</Link></li>
+              <li><Link href="#" className="hover:text-white">Road Freight</Link></li>
+              <li><Link href="#" className="hover:text-white">All solutions</Link></li>
             </ul>
           </div>
 
-          {/* DSV */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">DSV</h3>
-            <ul className="space-y-3">
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Contact us</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">About DSV</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Investor</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Press</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Sustainability</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Support</Link></li>
+          {/* Column 3: DSV */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">DSV</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li><Link href="#" className="hover:text-white">About DSV</Link></li>
+              <li><Link href="#" className="hover:text-white">Careers</Link></li>
+              <li><Link href="#" className="hover:text-white">Investor</Link></li>
+              <li><Link href="#" className="hover:text-white">Press</Link></li>
+              <li><Link href="#" className="hover:text-white">Sustainability</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact & Support */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Contact & Support</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li><Link href="#" className="hover:text-white">Contact us</Link></li>
+              <li><Link href="#" className="hover:text-white">Support</Link></li>
+              <li><Link href="#" className="hover:text-white">Subscribe to newsletter</Link></li>
             </ul>
           </div>
         </div>
 
-        {/* Social media and additional info */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center">
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
-                </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Facebook
-                </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  X
-                </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Instagram
-                </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  YouTube
-                </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Newsletter
-                </Link>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Social Media House Rules
-                </Link>
-              </div>
-            </div>
-
-            <div className="mt-6 lg:mt-0">
-              <h4 className="text-lg font-semibold mb-4">Stock quote prices</h4>
-              <div className="text-gray-300">
-                Retrieving Stock Quotes...
-              </div>
-            </div>
+        <div className="mt-16 border-t border-blue-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex space-x-4">
+            {socialLinks.map((link, index) => (
+              <a key={index} href={link.href} className="text-gray-400 hover:text-white">
+                {link.icon}
+              </a>
+            ))}
+          </div>
+          <div className="text-sm text-gray-400 mt-8 md:mt-0">
+            <Link href="#" className="hover:text-white">Legal notice</Link> | <Link href="#" className="hover:text-white">Data privacy</Link> | <Link href="#" className="hover:text-white">Cookies</Link> | <Link href="#" className="hover:text-white">Terms and conditions</Link>
           </div>
         </div>
-
-        {/* Newsletter signup */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="max-w-md">
-            <h4 className="text-lg font-semibold mb-4">Sign up for our e-newsletter!</h4>
-            <p className="text-gray-300 mb-4">Stay up-to-date with our latest news & info.</p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 text-gray-900 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-md transition-colors">
-                Sign up today
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">© DSV - All rights reserved</p>
+        
+        <div className="mt-8 text-center text-xs text-gray-500">
+          <p>© DSV - All rights reserved</p>
         </div>
       </div>
     </footer>

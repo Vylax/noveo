@@ -2,200 +2,173 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { Search, Globe, User, X, Menu, ChevronDown } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBannerOpen, setIsBannerOpen] = useState(true);
+  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
+
+  const navLinks = [
+    { 
+      name: 'Why DSV', 
+      dropdown: true,
+      items: [
+        { name: 'About DSV', href: '#' },
+        { name: 'Our history', href: '#' },
+        { name: 'Leadership team', href: '#' },
+        { name: 'ESG & sustainability', href: '#' },
+        { name: 'Innovation & technology', href: '#' },
+        { name: 'Awards & recognition', href: '#' },
+      ]
+    },
+    { 
+      name: 'Our solutions', 
+      dropdown: true,
+      items: [
+        { name: 'Air transport', href: '#' },
+        { name: 'Sea transport', href: '#' },
+        { name: 'Road transport', href: '#' },
+        { name: 'Rail transport', href: '#' },
+        { name: 'Contract logistics', href: '#' },
+        { name: 'eCommerce solutions', href: '#' },
+        { name: 'Healthcare & life sciences', href: '#' },
+        { name: 'Fashion & lifestyle', href: '#' },
+      ]
+    },
+    { name: 'Insights', dropdown: false },
+    { name: 'Sustainability', dropdown: false },
+    { name: 'Careers', dropdown: false },
+    { name: 'About DSV', dropdown: false },
+    { name: 'Support', dropdown: false },
+  ];
+
+  const getDropdownItems = (navName: string) => {
+    const navItem = navLinks.find(link => link.name === navName);
+    return navItem?.items || [];
+  };
 
   return (
     <>
       {/* DSV x Schenker Banner */}
-      <div className="bg-blue-900 text-white text-sm py-2 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center">
-          <span className="mr-2">📢</span>
-          <span className="font-medium">DSV x Schenker</span>
-          <span className="ml-2">DSV and Schenker have joined forces, forming a world-leading player in transport and logistics.</span>
-          <Link href="#" className="ml-2 underline hover:no-underline">
-            Click here to read more
-          </Link>
-        </div>
-      </div>
-
-      {/* Main Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Link href="/" className="flex items-center space-x-2">
-                <div className="text-2xl font-bold text-blue-600">DSV</div>
-                <div className="text-sm text-gray-600 hidden md:block">
-                  Global Transport and Logistics
-                </div>
-              </Link>
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>Why DSV</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Innovation</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Solid and reliable partner</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Connectivity</Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>Our solutions</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Industries</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Modes of transport</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contract logistics</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Lead logistics</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Decarbonizing Logistics</Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>Insights</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Expert opinions</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Supply chain case studies</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Reports</Link>
-                  </div>
-                </div>
-              </div>
-
-              <Link href="#" className="text-gray-700 hover:text-blue-600">Sustainability</Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600">Careers</Link>
-
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>About DSV</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Winning As One</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Company structure</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Management</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Purpose and strategy</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Values</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Press</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Investor</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Data privacy</Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>Support</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Find your local DSV office</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Self services</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQ</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Glossary</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help and contact</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Quote request</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Digital solutions</Link>
-                  </div>
-                </div>
-              </div>
-            </nav>
-
-            {/* Right side controls */}
-            <div className="flex items-center space-x-4">
-              {/* Search */}
-              <button className="p-2 text-gray-600 hover:text-blue-600">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </button>
-
-              {/* Country/Language selector */}
-              <div className="hidden lg:flex items-center space-x-2 text-sm">
-                <span>US / EN</span>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </div>
-
-              {/* MyDSV */}
-              <div className="relative group hidden lg:block">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>myDSV</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Login</Link>
-                    <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign up</Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Mobile menu button */}
-              <button
-                className="lg:hidden p-2 text-gray-600 hover:text-blue-600"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
+      {isBannerOpen && (
+        <div className="bg-dsv-blue-light text-dsv-blue-dark text-center py-3 px-4 text-sm relative">
+          <div className="max-w-screen-xl mx-auto flex items-center justify-center">
+            <span className="font-bold mr-2">DSV x Schenker</span>
+            <span>DSV and Schenker have joined forces, forming a world-leading player in transport and logistics.</span>
+            <Link href="#" className="underline hover:text-dsv-blue ml-2 font-medium">
+              Click here to read more
+            </Link>
           </div>
+          <button onClick={() => setIsBannerOpen(false)} className="absolute top-1/2 right-4 -translate-y-1/2">
+            <X size={20} />
+          </button>
+        </div>
+      )}
 
-          {/* Mobile menu */}
-          {isMenuOpen && (
-            <div className="lg:hidden py-4 border-t">
-              <div className="space-y-4">
-                <Link href="#" className="block text-gray-700 hover:text-blue-600">Why DSV</Link>
-                <Link href="#" className="block text-gray-700 hover:text-blue-600">Our solutions</Link>
-                <Link href="#" className="block text-gray-700 hover:text-blue-600">Insights</Link>
-                <Link href="#" className="block text-gray-700 hover:text-blue-600">Sustainability</Link>
-                <Link href="#" className="block text-gray-700 hover:text-blue-600">Careers</Link>
-                <Link href="#" className="block text-gray-700 hover:text-blue-600">About DSV</Link>
-                <Link href="#" className="block text-gray-700 hover:text-blue-600">Support</Link>
-                <div className="pt-4 border-t">
-                  <Link href="#" className="block text-gray-700 hover:text-blue-600">myDSV Login</Link>
-                  <Link href="#" className="block text-gray-700 hover:text-blue-600">Sign up</Link>
-                </div>
+      {/* Main Header with Dropdown Container */}
+      <div 
+        className="relative"
+        onMouseLeave={() => setHoveredNav(null)}
+      >
+        <header className="bg-white shadow-md sticky top-0 z-50">
+          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-20">
+              {/* Logo */}
+              <div className="flex-shrink-0">
+                <Link href="/" aria-label="DSV Home">
+                  <svg
+                    className="h-8 w-auto"
+                    viewBox="0 0 153 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M33.815.35h12.87v31.91h-12.87V.35Z" fill="currentColor" className="text-dsv-blue"></path>
+                    <path d="M51.845.35h17.9c10.32 0 15.63 5.43 15.63 15.42 0 10.2-5.7 15.84-15.63 15.84h-17.9V.35Zm12.87 26.13c3.54 0 4.95-2.58 4.95-6.75s-1.4-6.81-4.95-6.81h-8.1v13.56h8.1Z" fill="currentColor" className="text-dsv-blue"></path>
+                    <path d="M101.445 15.11c0-8.85-4.47-14.76-12.39-14.76-8.67 0-12.63 6.09-12.63 14.28 0 8.79 4.29 14.58 12.66 14.58 4.62 0 8.4-1.83 10.38-5.31l-5.1-2.85c-.99 2.1-2.46 3.03-4.95 3.03-3.21 0-4.59-1.83-5.34-4.2h15.39v-4.83Zm-15.21-3.12c.33-2.67 1.68-4.5 4.05-4.5s3.51 1.95 3.84 4.5h-7.89Z" fill="currentColor" className="text-dsv-blue"></path>
+                    <path d="M125.135 32.26 112.985.35h5.88l8.16 22.29 8.13-22.29h5.88l-12.15 31.91-4.65-13.62-4.62 13.62Z" fill="currentColor" className="text-dsv-blue"></path>
+                    <path d="M152.015 20.96V.35h4.77v31.91h-4.98l-11.85-15.3V.35h-4.77v31.91h4.29l12.54-16.29Z" fill="currentColor" className="text-dsv-blue"></path>
+                  </svg>
+                </Link>
+              </div>
+
+              {/* Desktop Navigation */}
+              <nav className="hidden lg:flex items-center space-x-8">
+                {navLinks.map(link => (
+                  <div 
+                    key={link.name} 
+                    className="relative"
+                    onMouseEnter={() => link.dropdown && setHoveredNav(link.name)}
+                  >
+                    <button className="flex items-center text-sm font-medium text-gray-700 hover:text-dsv-blue py-2 transition-colors duration-200">
+                      <span>{link.name}</span>
+                      {link.dropdown && <ChevronDown className="ml-1 h-4 w-4 text-gray-500" />}
+                    </button>
+                  </div>
+                ))}
+              </nav>
+
+              {/* Right side controls */}
+              <div className="flex items-center space-x-6">
+                <button className="flex flex-col items-center text-gray-600 hover:text-dsv-blue">
+                  <Search size={20} />
+                  <span className="text-xs mt-1">Search</span>
+                </button>
+                <button className="hidden sm:flex flex-col items-center text-gray-600 hover:text-dsv-blue">
+                  <Globe size={20} />
+                  <span className="text-xs mt-1">Global</span>
+                </button>
+                <button className="hidden sm:flex flex-col items-center text-gray-600 hover:text-dsv-blue">
+                  <User size={20} />
+                  <span className="text-xs mt-1">myDSV</span>
+                </button>
+                
+                {/* Mobile menu button */}
+                <button
+                  className="lg:hidden p-2 text-gray-600 hover:text-dsv-blue"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
+                  <Menu size={28} />
+                </button>
+              </div>
+            </div>
+
+            {/* Mobile menu */}
+            {isMenuOpen && (
+              <div className="lg:hidden py-4 border-t">
+                <nav className="flex flex-col space-y-4">
+                  {navLinks.map(link => (
+                     <Link key={link.name} href="#" className="text-gray-700 hover:text-dsv-blue">{link.name}</Link>
+                  ))}
+                </nav>
+              </div>
+            )}
+          </div>
+        </header>
+
+        {/* Dropdown Navigation Bar */}
+        <div 
+          className={`overflow-hidden transition-all duration-300 ease-in-out bg-gray-50 border-t border-gray-200 ${
+            hoveredNav ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          {hoveredNav && (
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+              <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+                {getDropdownItems(hoveredNav).map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.href}
+                    className="text-sm text-gray-600 hover:text-dsv-blue font-medium transition-colors duration-200 whitespace-nowrap"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </div>
             </div>
           )}
         </div>
-      </header>
+      </div>
     </>
   );
 } 
