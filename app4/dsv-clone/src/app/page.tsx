@@ -414,7 +414,7 @@ export default function Home() {
       <TestimonialsSection />
       <StatsSection />
       <ContactSection />
-    </main>
+      </main>
   );
 }
 
