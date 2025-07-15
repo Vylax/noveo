@@ -81,7 +81,14 @@ export default function Header() {
                   <div 
                     key={link.name} 
                     className="relative"
-                    onMouseEnter={() => link.dropdown && setHoveredNav(link.name)}
+                    onMouseEnter={() => {
+                      if (link.dropdown) {
+                        setHoveredNav(link.name);
+                      } else {
+                        // Close dropdown when hovering over non-dropdown items
+                        setHoveredNav(null);
+                      }
+                    }}
                   >
                     <button className="flex items-center text-sm font-medium text-gray-700 hover:text-noveo-blue py-2 transition-colors duration-200">
                       <span>{link.name}</span>
