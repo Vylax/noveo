@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import { Truck, Ship, Plane, Cpu, Zap, ShoppingBag, FlaskConical, Snowflake, Gem, HeartPulse } from 'lucide-react';
 
 const IconWrapper = ({ children }: { children: React.ReactNode }) => (
@@ -6,13 +8,93 @@ const IconWrapper = ({ children }: { children: React.ReactNode }) => (
 );
 
 function Hero() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoError, setVideoError] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handleChange = () => setPrefersReducedMotion(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+    
+    // Start loading video immediately but with timeout fallback
+    if (!mediaQuery.matches) {
+      setShouldLoadVideo(true);
+      
+      // Fallback timeout - if video doesn't load in 3 seconds, show static background
+      const timeoutId = setTimeout(() => {
+        if (!videoLoaded) {
+          setVideoError(true);
+          console.log('Video loading timeout - falling back to static background');
+        }
+      }, 3000);
+
+      return () => {
+        mediaQuery.removeEventListener('change', handleChange);
+        clearTimeout(timeoutId);
+      };
+    }
+    
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [videoLoaded]);
+
+  const handleVideoLoad = () => {
+    setVideoLoaded(true);
+    setVideoError(false);
+  };
+
+  const handleVideoError = () => {
+    setVideoError(true);
+    setVideoLoaded(false);
+    console.log('Video failed to load - using static background');
+  };
+
+  // Show video only if it loaded successfully and user doesn't prefer reduced motion
+  const showVideo = !prefersReducedMotion && videoLoaded && !videoError;
+
   return (
-    <section 
-      className="relative h-[85vh] bg-cover bg-center text-white flex flex-col items-center justify-center"
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1559403838-80f0a78d5e6e?q=80&w=2070&auto=format&fit=crop')" }}
-    >
-      <div className="absolute inset-0 bg-black opacity-40"></div>
-      <div className="relative z-10 text-center px-4 max-w-4xl flex-1 flex flex-col justify-center">
+    <section className="relative h-[85vh] overflow-hidden text-white flex flex-col items-center justify-center">
+      {/* Video Background - with aggressive optimization */}
+      {!prefersReducedMotion && shouldLoadVideo && !videoError ? (
+        <video
+          ref={videoRef}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+            showVideo ? 'opacity-100' : 'opacity-0'
+          }`}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect width='100%25' height='100%25' fill='%23444'/%3E%3C/svg%3E"
+          aria-label="Background video showing logistics operations"
+          onLoadedData={handleVideoLoad}
+          onCanPlayThrough={handleVideoLoad}
+          onError={handleVideoError}
+          onLoadStart={() => console.log('Video loading started')}
+        >
+          <source src="/videos/bg.mp4" type="video/mp4" />
+        </video>
+      ) : null}
+      
+      {/* Static fallback background - always available for instant loading */}
+      <div 
+        className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-700 ${
+          showVideo ? 'opacity-0' : 'opacity-100'
+        }`}
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1559403838-80f0a78d5e6e?q=80&w=2070&auto=format&fit=crop')" }}
+      />
+      
+      {/* Video Overlay */}
+      <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
+      
+      {/* Content */}
+      <div className="relative z-20 text-center px-4 max-w-4xl flex-1 flex flex-col justify-center">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
           Connect your business with the world
         </h1>
@@ -30,7 +112,7 @@ function Hero() {
       </div>
       
       {/* Service buttons positioned at bottom of hero */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto mb-0">
+      <div className="relative z-20 w-full max-w-4xl mx-auto mb-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           <div className="p-8 text-center bg-gray-300 hover:bg-gray-400 cursor-pointer transition-colors border-r border-gray-400">
             <h3 className="font-bold text-gray-800 text-lg">Get a quote</h3>
@@ -40,6 +122,13 @@ function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Optional: Video loading indicator for debugging */}
+      {shouldLoadVideo && !videoLoaded && !videoError && !prefersReducedMotion && (
+        <div className="absolute top-4 right-4 z-30 bg-black bg-opacity-50 text-white px-3 py-1 rounded text-sm">
+          Loading video...
+        </div>
+      )}
     </section>
   );
 }
