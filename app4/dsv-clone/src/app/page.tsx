@@ -96,29 +96,24 @@ function Hero() {
       {/* Content */}
       <div className="relative z-20 text-center px-4 max-w-4xl flex-1 flex flex-col justify-center">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-          Connect your business with the world
+          Optimisez vos flux. Dépensez moins. Agissez mieux.
         </h1>
-        <p className="text-xl md:text-2xl mb-8 font-light">
-          It doesn't matter if you run a global powerhouse or local startup. We're here to help your business grow.
+        <h2 className="text-2xl md:text-3xl mb-6 font-light">
+          Accélérez votre supply chain internationale
+        </h2>
+        <p className="text-xl md:text-2xl mb-8 font-light max-w-3xl mx-auto">
+          Noveo Logistics est un commissionnaire de transport nouvelle génération, alliant technologies digitales et expertise métier pour connecter l'Europe avec le reste du monde en toute fluidité.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-4 bg-dsv-blue text-white font-bold text-lg hover:bg-dsv-blue-dark transition-colors duration-300">
-            Explore our solutions
-          </button>
-          <button className="px-8 py-4 bg-white text-dsv-blue font-bold text-lg hover:bg-gray-100 transition-colors duration-300">
-            Get a quote
-          </button>
-        </div>
       </div>
       
       {/* Service buttons positioned at bottom of hero */}
       <div className="relative z-20 w-full max-w-4xl mx-auto mb-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-          <div className="p-8 text-center bg-gray-300 hover:bg-gray-400 cursor-pointer transition-colors border-r border-gray-400">
-            <h3 className="font-bold text-gray-800 text-lg">Get a quote</h3>
+          <div className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors border-r border-white">
+            <h3 className="font-bold text-noveo-blue text-lg">Demander un devis</h3>
           </div>
-          <div className="p-8 text-center bg-gray-300 hover:bg-gray-400 cursor-pointer transition-colors">
-            <h3 className="font-bold text-gray-800 text-lg">Contract Logistics</h3>
+          <div className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors">
+            <h3 className="font-bold text-noveo-blue text-lg">Solutions logistiques</h3>
           </div>
         </div>
       </div>
@@ -422,3 +417,4 @@ export default function Home() {
     </main>
   );
 }
+

@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dsv-blue: #003f8a;
-  --color-dsv-blue-dark: #002c5f; 
-  --color-dsv-blue-light: #e6f0ff;
+  --color-noveo-blue: #1D2F4E;
+  --color-noveo-blue-dark: #152843; 
+  --color-noveo-teal: #96C2B8;
+  --color-noveo-teal-light: #B8D5CE;
 }
 
 body {
