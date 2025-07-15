@@ -8,11 +8,11 @@ const IconWrapper = ({ children }: { children: React.ReactNode }) => (
 function Hero() {
   return (
     <section 
-      className="relative h-[70vh] bg-cover bg-center text-white flex flex-col items-center justify-center"
+      className="relative h-[85vh] bg-cover bg-center text-white flex flex-col items-center justify-center"
       style={{ backgroundImage: "url('https://images.unsplash.com/photo-1559403838-80f0a78d5e6e?q=80&w=2070&auto=format&fit=crop')" }}
     >
       <div className="absolute inset-0 bg-black opacity-40"></div>
-      <div className="relative z-10 text-center px-4 max-w-4xl">
+      <div className="relative z-10 text-center px-4 max-w-4xl flex-1 flex flex-col justify-center">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
           Connect your business with the world
         </h1>
@@ -28,34 +28,25 @@ function Hero() {
           </button>
         </div>
       </div>
+      
+      {/* Service buttons positioned at bottom of hero */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto mb-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+          <div className="p-8 text-center bg-gray-300 hover:bg-gray-400 cursor-pointer transition-colors border-r border-gray-400">
+            <h3 className="font-bold text-gray-800 text-lg">Get a quote</h3>
+          </div>
+          <div className="p-8 text-center bg-gray-300 hover:bg-gray-400 cursor-pointer transition-colors">
+            <h3 className="font-bold text-gray-800 text-lg">Contract Logistics</h3>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
 
 function ServiceBar() {
-  const services = [
-    { name: "Get a quote" },
-    { name: "Contract Logistics" },
-    { name: "Book" },
-    { name: "Track & Trace" },
-  ];
-  
-  return (
-    <section className="bg-gray-300">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-4">
-        {services.map((service, index) => (
-          <div 
-            key={service.name} 
-            className={`p-8 text-center hover:bg-gray-400 cursor-pointer transition-colors ${
-              index < services.length - 1 ? 'border-r border-gray-400' : ''
-            }`}
-          >
-            <h3 className="font-bold text-gray-800 text-lg">{service.name}</h3>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+  // This component is no longer needed as service buttons are now in Hero
+  return null;
 }
 
 function LogisticsSolutionsSection() {
@@ -329,7 +320,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <ServiceBar />
       <LogisticsSolutionsSection />
       <SpecialDriveSection />
       <PrecisionSection />
