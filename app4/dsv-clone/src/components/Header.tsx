@@ -40,7 +40,7 @@ export default function Header() {
     <>
       {/* Noveo Banner */}
       {isBannerOpen && (
-        <div className="bg-noveo-teal text-noveo-blue text-center py-3 px-4 text-sm relative">
+        <div className="bg-noveo-teal text-noveo-blue text-center py-3 px-4 text-sm fixed top-0 left-0 right-0 z-[60]">
           <div className="max-w-screen-xl mx-auto flex items-center justify-center">
             <span className="font-bold mr-2">Noveo Logistics</span>
             <span>Commissionnaire de transport nouvelle génération - Solutions logistiques digitales et expertes</span>
@@ -59,7 +59,9 @@ export default function Header() {
         className="relative"
         onMouseLeave={() => setHoveredNav(null)}
       >
-        <header className="bg-white shadow-md sticky top-0 z-50">
+        <header className={`bg-white shadow-md fixed left-0 right-0 z-50 transition-all duration-300 ${
+          isBannerOpen ? 'top-[40px]' : 'top-0'
+        }`}>
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-20">
               {/* Logo */}
@@ -132,9 +134,9 @@ export default function Header() {
 
         {/* Dropdown Navigation Bar */}
         <div 
-          className={`overflow-hidden transition-all duration-300 ease-in-out bg-gray-50 border-t border-gray-200 ${
-            hoveredNav ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'
-          }`}
+          className={`overflow-hidden transition-all duration-300 ease-in-out bg-gray-50 border-t border-gray-200 fixed left-0 right-0 z-40 ${
+            isBannerOpen ? 'top-[120px]' : 'top-[80px]'
+          } ${hoveredNav ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'}`}
         >
           {hoveredNav && (
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

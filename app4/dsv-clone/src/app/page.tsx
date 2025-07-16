@@ -108,8 +108,8 @@ function Hero() {
       
       {/* Service buttons positioned at bottom of hero */}
       <div className="relative z-20 w-full max-w-4xl mx-auto mb-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-          <div className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors border-r border-white">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+          <div className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors">
             <h3 className="font-bold text-noveo-blue text-lg">Demander un devis</h3>
           </div>
           <div className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors">
@@ -402,7 +402,7 @@ function ContactSection() {
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <LogisticsSolutionsSection />
       <SpecialDriveSection />
@@ -414,7 +414,7 @@ export default function Home() {
       <TestimonialsSection />
       <StatsSection />
       <ContactSection />
-      </main>
+    </>
   );
 }
 

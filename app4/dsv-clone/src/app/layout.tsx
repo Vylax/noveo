@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
         <Header />
-        <main>{children}</main>
+        <main className="pt-[80px]">{children}</main>
         <Footer />
       </body>
     </html>
