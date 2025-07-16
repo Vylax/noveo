@@ -7,7 +7,7 @@ const IconWrapper = ({ children }: { children: React.ReactNode }) => (
   <div className="text-dsv-blue mb-4">{children}</div>
 );
 
-function Hero() {
+function Hero({ onSectionChange }: { onSectionChange: (section: 'quote' | 'logistics') => void }) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -109,10 +109,16 @@ function Hero() {
       {/* Service buttons positioned at bottom of hero */}
       <div className="relative z-20 w-full max-w-4xl mx-auto mb-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
-          <div className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors">
+          <div 
+            className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors"
+            onClick={() => onSectionChange('quote')}
+          >
             <h3 className="font-bold text-noveo-blue text-lg">Demander un devis</h3>
           </div>
-          <div className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors">
+          <div 
+            className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors"
+            onClick={() => onSectionChange('logistics')}
+          >
             <h3 className="font-bold text-noveo-blue text-lg">Solutions logistiques</h3>
           </div>
         </div>
@@ -133,7 +139,47 @@ function ServiceBar() {
   return null;
 }
 
-function LogisticsSolutionsSection() {
+function DynamicSection({ activeSection }: { activeSection: 'quote' | 'logistics' }) {
+  const [selectedOption, setSelectedOption] = useState('');
+
+  if (activeSection === 'quote') {
+    return (
+      <section className="bg-white py-16">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-8">
+            Tell us what you need
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-6 items-end">
+              <div className="flex-1">
+                <div className="relative">
+                  <select 
+                    value={selectedOption}
+                    onChange={(e) => setSelectedOption(e.target.value)}
+                    className="w-full p-4 border border-gray-300 text-left bg-white appearance-none cursor-pointer text-gray-700"
+                  >
+                    <option value="">Choose</option>
+                    <option value="spot">Spot quote - for your single shipment.</option>
+                    <option value="tariff">Tariff quote - for multiple or frequent shipments.</option>
+                    <option value="offer">Offer - To start a dialogue on Logistics solutions</option>
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300 whitespace-nowrap">
+                Request
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="bg-white py-16">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -141,30 +187,12 @@ function LogisticsSolutionsSection() {
           Would you like to know more about our logistics solutions?
         </h2>
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <button className="px-8 py-4 bg-dsv-blue text-white font-bold text-lg hover:bg-dsv-blue-dark transition-colors duration-300">
+          <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300">
             Contract Logistics offer
           </button>
-          <button className="px-8 py-4 bg-dsv-blue text-white font-bold text-lg hover:bg-dsv-blue-dark transition-colors duration-300">
+          <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300">
             Learn more about Contract Logistics
           </button>
-        </div>
-        
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="text-left">
-            <h3 className="text-xl font-semibold mb-4">Book your next shipment directly</h3>
-            <div className="space-y-2">
-              <button className="block text-dsv-blue font-medium hover:underline">New to DSV</button>
-              <button className="block text-dsv-blue font-medium hover:underline">Already a customer</button>
-            </div>
-          </div>
-          <div className="text-left">
-            <h3 className="text-xl font-semibold mb-4">Enter Track & Trace ID</h3>
-            <input 
-              type="text" 
-              placeholder="Enter Track & Trace ID"
-              className="w-full p-3 border border-gray-300 rounded-md"
-            />
-          </div>
         </div>
       </div>
     </section>
@@ -401,10 +429,12 @@ function ContactSection() {
 }
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState<'quote' | 'logistics'>('logistics');
+
   return (
     <>
-      <Hero />
-      <LogisticsSolutionsSection />
+      <Hero onSectionChange={setActiveSection} />
+      <DynamicSection activeSection={activeSection} />
       <SpecialDriveSection />
       <PrecisionSection />
       <IndustrySolutions />
