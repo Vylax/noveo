@@ -1,9 +1,42 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Head from 'next/head';
 import { Truck, Ship, Plane, Cpu, Zap, ShoppingBag, FlaskConical, Snowflake, Gem, HeartPulse, Search, User, Globe } from 'lucide-react';
+import { useTranslation } from '@/contexts/TranslationContext';
 
-
+// SEO Structured Data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FreightCompany",
+  "name": "Noveo Logistics",
+  "description": "Commissionnaire de transport nouvelle génération, alliant technologies digitales et expertise métier pour connecter l'Europe avec le reste du monde en toute fluidité.",
+  "url": "https://noveo-logistics.com",
+  "logo": "https://noveo-logistics.com/images/logo_long_for_white_bg.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+33-1-00-00-00-00",
+    "contactType": "Customer Service",
+    "availableLanguage": ["French", "English"]
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Europe and Asia"
+  },
+  "service": [
+    {
+      "@type": "Service",
+      "name": "Transport international",
+      "description": "Transport aérien, maritime, multimodal"
+    },
+    {
+      "@type": "Service", 
+      "name": "Dédouanement",
+      "description": "Conformité douanière et formalités"
+    }
+  ]
+};
 
 function Hero({ onSectionChange }: { onSectionChange: (section: 'quote' | 'logistics') => void }) {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -11,6 +44,7 @@ function Hero({ onSectionChange }: { onSectionChange: (section: 'quote' | 'logis
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const videoRef = React.useRef<HTMLVideoElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Check for reduced motion preference
@@ -94,13 +128,13 @@ function Hero({ onSectionChange }: { onSectionChange: (section: 'quote' | 'logis
       {/* Content */}
       <div className="relative z-20 text-center px-4 max-w-4xl flex-1 flex flex-col justify-center">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
-          Optimisez vos flux. Dépensez moins. Agissez mieux.
+          {t('hero.title')}
         </h1>
         <h2 className="text-2xl md:text-3xl mb-6 font-light text-white">
-          Accélérez votre supply chain internationale
+          {t('hero.subtitle')}
         </h2>
         <p className="text-xl md:text-2xl mb-8 font-light max-w-3xl mx-auto text-white">
-          Noveo Logistics est un commissionnaire de transport nouvelle génération, alliant technologies digitales et expertise métier pour connecter l'Europe avec le reste du monde en toute fluidité.
+          {t('hero.description')}
         </p>
       </div>
       
@@ -111,41 +145,30 @@ function Hero({ onSectionChange }: { onSectionChange: (section: 'quote' | 'logis
             className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors"
             onClick={() => onSectionChange('quote')}
           >
-            <h3 className="font-bold text-noveo-blue text-lg">Demander un devis</h3>
+            <h3 className="font-bold text-noveo-blue text-lg">{t('hero.requestQuote')}</h3>
           </div>
           <div 
             className="p-8 text-center bg-noveo-teal hover:bg-noveo-teal-light cursor-pointer transition-colors"
             onClick={() => onSectionChange('logistics')}
           >
-            <h3 className="font-bold text-noveo-blue text-lg">Solutions logistiques</h3>
+            <h3 className="font-bold text-noveo-blue text-lg">{t('hero.logisticsSolutions')}</h3>
           </div>
         </div>
       </div>
-
-      {/* Optional: Video loading indicator for debugging */}
-      {shouldLoadVideo && !videoLoaded && !videoError && !prefersReducedMotion && (
-        <div className="absolute top-4 right-4 z-30 bg-black bg-opacity-50 text-white px-3 py-1 rounded text-sm">
-          Loading video...
-        </div>
-      )}
     </section>
   );
 }
 
-function ServiceBar() {
-  // This component is no longer needed as service buttons are now in Hero
-  return null;
-}
-
 function DynamicSection({ activeSection }: { activeSection: 'quote' | 'logistics' }) {
   const [selectedOption, setSelectedOption] = useState('');
+  const { t } = useTranslation();
 
   if (activeSection === 'quote') {
     return (
       <section className="bg-white py-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-8">
-            Tell us what you need
+            {t('dynamic.quote.title')}
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-6 items-end">
@@ -156,10 +179,10 @@ function DynamicSection({ activeSection }: { activeSection: 'quote' | 'logistics
                     onChange={(e) => setSelectedOption(e.target.value)}
                     className="w-full p-4 border border-noveo-teal text-left bg-white appearance-none cursor-pointer text-noveo-blue"
                   >
-                    <option value="">Choose</option>
-                    <option value="spot">Spot quote - for your single shipment.</option>
-                    <option value="tariff">Tariff quote - for multiple or frequent shipments.</option>
-                    <option value="offer">Offer - To start a dialogue on Logistics solutions</option>
+                    <option value="">{t('dynamic.quote.choose')}</option>
+                    <option value="spot">{t('dynamic.quote.spotQuote')}</option>
+                    <option value="tariff">{t('dynamic.quote.tariffQuote')}</option>
+                    <option value="offer">{t('dynamic.quote.offer')}</option>
                   </select>
                   <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                     <svg className="w-4 h-4 text-noveo-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,7 +192,7 @@ function DynamicSection({ activeSection }: { activeSection: 'quote' | 'logistics
                 </div>
               </div>
               <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300 whitespace-nowrap">
-                Request
+                {t('dynamic.quote.request')}
               </button>
             </div>
           </div>
@@ -182,14 +205,14 @@ function DynamicSection({ activeSection }: { activeSection: 'quote' | 'logistics
     <section className="bg-white py-16">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-8">
-          Would you like to know more about our logistics solutions?
+          {t('dynamic.logistics.title')}
         </h2>
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300">
-            Contract Logistics offer
+            {t('dynamic.logistics.contractOffer')}
           </button>
           <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300">
-            Learn more about Contract Logistics
+            {t('dynamic.logistics.learnMore')}
           </button>
         </div>
       </div>
@@ -197,35 +220,121 @@ function DynamicSection({ activeSection }: { activeSection: 'quote' | 'logistics
   );
 }
 
-function SpecialDriveSection() {
+function ExpertiseSection() {
+  const { t } = useTranslation();
+  
   return (
     <section className="bg-noveo-teal-light py-20">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-4">A special kind of drive</h2>
-        <p className="max-w-2xl mx-auto text-noveo-blue mb-8 text-lg">
-          Keeping supply chains flowing in a world of change
+        <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-4">{t('expertise.title')}</h2>
+        <p className="max-w-2xl mx-auto text-noveo-blue mb-4 text-lg">
+          {t('expertise.description')}
         </p>
+        <p className="max-w-2xl mx-auto text-noveo-blue mb-8 text-lg font-semibold">
+          {t('expertise.subtitle')}
+        </p>
+        <div className="mb-8">
+          <h3 className="text-xl font-bold text-noveo-blue">{t('expertise.transitaire')}</h3>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="relative h-48 overflow-hidden rounded-lg">
+            <Image
+              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop"
+              alt="Fret aérien"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+              className="object-cover"
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-noveo-blue bg-opacity-20 flex items-center justify-center">
+              <h4 className="text-white font-bold text-lg">Fret aérien</h4>
+            </div>
+          </div>
+          <div className="relative h-48 overflow-hidden rounded-lg">
+            <Image
+              src="https://images.unsplash.com/photo-1565365354813-b0b6cd12cd4c?w=400&h=300&fit=crop"
+              alt="Fret maritime"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+              className="object-cover"
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-noveo-blue bg-opacity-20 flex items-center justify-center">
+              <h4 className="text-white font-bold text-lg">Fret maritime</h4>
+            </div>
+          </div>
+          <div className="relative h-48 overflow-hidden rounded-lg">
+            <Image
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=300&fit=crop"
+              alt="Plateforme digitale"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+              className="object-cover"
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-noveo-blue bg-opacity-20 flex items-center justify-center">
+              <h4 className="text-white font-bold text-lg">Plateforme digitale</h4>
+            </div>
+          </div>
+        </div>
         <button className="px-8 py-3 bg-transparent text-noveo-blue font-semibold border border-noveo-blue hover:bg-noveo-blue hover:text-white transition-colors duration-300">
-          Discover how
+          {t('expertise.cta')}
         </button>
       </div>
     </section>
   );
 }
 
-function PrecisionSection() {
+function MissionSection() {
+  const { t } = useTranslation();
+  
   return (
     <section className="bg-white py-20">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-6">
-            When precision matter most, talk to us
+            {t('mission.title')}
           </h2>
-          <p className="text-lg text-noveo-blue mb-8 leading-relaxed">
-            Supply chain success with cloud computing and data center infrastructure requires attention to detail from the initial site survey to final validation. DSV understands the critical and challenging nature of the data center environment and offers a range of flexible and best-in-class logistics solutions. We keep your critical cloud solutions running smoothly with secure, scalable and sustainable logistics solutions for data center operations.
+          <h3 className="text-xl md:text-2xl text-noveo-blue mb-8 font-semibold">
+            {t('mission.subtitle')}
+          </h3>
+          <p className="text-lg text-noveo-blue mb-8">
+            {t('mission.description')}
           </p>
+          <div className="text-left max-w-2xl mx-auto mb-8">
+            <ul className="space-y-3 text-noveo-blue">
+              <li className="flex items-start">
+                <span className="text-noveo-teal mr-2">•</span>
+                <span>{t('mission.feature1')}</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-noveo-teal mr-2">•</span>
+                <div className="flex-1">
+                  <span>{t('mission.feature2')}</span>
+                  <ul className="space-y-2 mt-2 ml-4">
+                    <li className="flex items-start">
+                      <span className="text-noveo-teal mr-2">◦</span>
+                      <span>{t('mission.feature3')}</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-noveo-teal mr-2">◦</span>
+                      <span>{t('mission.feature4')}</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-noveo-teal mr-2">◦</span>
+                      <span>{t('mission.feature5')}</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-noveo-teal mr-2">◦</span>
+                      <span>{t('mission.feature6')}</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
           <button className="px-8 py-3 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300">
-            Learn more
+            {t('mission.cta')}
           </button>
         </div>
       </div>
@@ -234,12 +343,16 @@ function PrecisionSection() {
 }
 
 function IndustrySolutions() {
-  const industries = [
-    { name: 'Automotive', description: 'Transportation and logistics services to optimise supply chains and meet tighter production schedules.', image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=300&h=200&fit=crop&crop=center' },
-    { name: 'Technology', description: 'End-to-end, integrated and reliable supply chain solutions to link production sites with distribution channels across the world.', image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=300&h=200&fit=crop&crop=center' },
-    { name: 'Healthcare', description: 'Dedicated teams and a wide range of solutions to ensure compliance with quality standards and regulations.', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=200&fit=crop&crop=center' },
-    { name: 'Industrial', description: 'Tailor-made solutions to manage complex demands and make supply chains leaner and more agile.', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=200&fit=crop&crop=center' },
-    { name: 'Consumer', description: 'Transport to warehouse, distribution centre or direct-to-store so goods can reach the retailers directly.', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop&crop=center' },
+  const { t } = useTranslation();
+  
+  const sectors = [
+    { key: 'energy', icon: '⛽', color: 'bg-orange-100' },
+    { key: 'dangerous', icon: '☣️', color: 'bg-red-100' },
+    { key: 'aeronautic', icon: '✈️', color: 'bg-blue-100' },
+    { key: 'wines', icon: '🍷', color: 'bg-purple-100' },
+    { key: 'automotive', icon: '🚗', color: 'bg-green-100' },
+    { key: 'ecommerce', icon: '🛒', color: 'bg-yellow-100' },
+    { key: 'medical', icon: '🦷', color: 'bg-pink-100' },
   ];
 
   return (
@@ -247,141 +360,78 @@ function IndustrySolutions() {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-4">
-            Whatever your industry, we are your global freight forwarder
+            {t('industries.title')}
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {industries.map((industry) => (
-            <div key={industry.name} className="text-center group cursor-pointer">
-              <div className="mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src={industry.image} 
-                  alt={industry.name}
-                  className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sectors.map((sector) => (
+            <div key={sector.key} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+              <div className={`w-12 h-12 ${sector.color} rounded-full flex items-center justify-center text-2xl mb-4`}>
+                {sector.icon}
               </div>
-              <h3 className="font-bold text-lg text-noveo-blue mb-2">{industry.name}</h3>
-              <p className="text-sm text-noveo-blue">{industry.description}</p>
+              <h3 className="font-bold text-lg text-noveo-blue mb-3">
+                {t(`industries.sectors.${sector.key}.title`)}
+              </h3>
+              <p className="text-sm text-noveo-blue">
+                {t(`industries.sectors.${sector.key}.description`)}
+              </p>
             </div>
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <p className="text-noveo-blue mb-4">In a different industry?</p>
-          <button className="text-noveo-blue font-semibold hover:underline">
-            See our tailor-made solutions
-          </button>
         </div>
       </div>
     </section>
   );
 }
 
-function SelfServiceSection() {
-  const services = [
-    { name: 'Track & Trace', icon: <Search size={32} /> },
-    { name: 'Get a quote or contact us', icon: <User size={32} /> },
-    { name: 'Supply Chain Management Services', icon: <Truck size={32} /> },
-    { name: 'Online booking', icon: <Globe size={32} /> },
-    { name: 'Warehouse management', icon: <FlaskConical size={32} /> },
-    { name: 'LCL Sailing Schedule', icon: <Ship size={32} /> },
-    { name: 'Schenker customers', icon: <Cpu size={32} /> },
-    { name: 'Other services', icon: <Zap size={32} /> },
-  ];
-
-  return (
-    <section className="py-20 bg-noveo-blue">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-light text-white mb-4">Self service</h2>
-          <p className="text-xl text-noveo-teal">Manage your shipments</p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-          {services.map((service) => (
-            <div key={service.name} className="text-center p-6 bg-white rounded-lg hover:bg-noveo-teal-light cursor-pointer transition-colors shadow-md">
-              <div className="text-noveo-blue mb-4 flex justify-center">{service.icon}</div>
-              <h3 className="font-semibold text-noveo-blue">{service.name}</h3>
-            </div>
-          ))}
-        </div>
-        <div className="text-center">
-          <button className="text-noveo-teal font-semibold hover:text-white transition-colors">
-            Self Service Tools
-          </button>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function LatestNewsSection() {
-  const news = [
-    { 
-      date: '26-05-2025', 
-      title: 'DSV and UNICEF expand their partnership with an increased focus on humanitarian action for children',
-      description: 'An expansion of the partnership between DSV and UNICEF will provide more in-kind flights during emergencies and increase access to essential supplies for children worldwide.'
-    },
-    { 
-      date: '30-04-2025', 
-      title: 'DSV completes acquisition of Schenker',
-      description: 'After all conditions and requirements for the approx. DKK 106.7 billion (approx. EUR 14.3 billion) acquisition of Schenker from Deutsche Bahn have been met, DSV has formally completed the acquisition of Schenker.'
-    },
-    { 
-      date: '15-04-2025', 
-      title: 'DSV announces changes to its executive management',
-      description: 'After obtaining all regulatory clearances for DSV\'s acquisition of Schenker, DSV announces the first executive leadership appointments to maintain momentum.'
-    },
-  ];
-
-  return (
-    <section className="py-20 bg-noveo-teal-light">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-12">Latest news</h2>
-        <div className="space-y-8">
-          {news.map((item) => (
-            <div key={item.title} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-              <p className="text-sm text-noveo-blue font-medium mb-2">{item.date}</p>
-              <h3 className="text-xl font-semibold text-noveo-blue mb-3">{item.title}</h3>
-              <p className="text-noveo-blue mb-4">{item.description}</p>
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-12">
-          <button className="text-noveo-blue font-semibold hover:underline">
-            More news
-          </button>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ContractsSection() {
+function FluidLogisticsSection() {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-6">
-          Navigate logistics contracts with expert guidance
-        </h2>
-        <p className="text-lg text-noveo-blue mb-8 max-w-4xl mx-auto">
-          Are you ready to improve your skills in logistics contract negotiations? Setting up a service contract involves several critical clauses that can impact the success of your partnership. Understanding the components can enhance your long-term collaborations and improve customer satisfaction. Curious to learn more?
-        </p>
-        <button className="px-8 py-3 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300">
-          Access our full expert guide here
-        </button>
-      </div>
-    </section>
-  );
-}
-
-function TestimonialsSection() {
-  return (
-    <section className="py-20 bg-noveo-blue text-white">
-      <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="mb-12">
-          <blockquote className="text-2xl lg:text-3xl font-light mb-6 text-white">
-            "The people at DSV listen to our dreams and help us turn them into reality. It's a relationship worth an incredible amount, at all levels"
-          </blockquote>
-          <cite className="font-semibold not-italic text-lg text-white">Morten Fullerton, CEO of Rawbite</cite>
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-6">
+              {t('fluidLogistics.title')}
+            </h2>
+            <h3 className="text-xl text-noveo-blue mb-6 font-semibold">
+              {t('fluidLogistics.subtitle')}
+            </h3>
+            <p className="text-lg text-noveo-blue mb-6">
+              {t('fluidLogistics.description')}
+            </p>
+            <ul className="space-y-4 text-noveo-blue mb-8">
+              <li className="flex items-start">
+                <span className="text-noveo-teal mr-3 mt-1">✓</span>
+                <span>{t('fluidLogistics.feature1')}</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-noveo-teal mr-3 mt-1">✓</span>
+                <span>{t('fluidLogistics.feature2')}</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-noveo-teal mr-3 mt-1">✓</span>
+                <span>{t('fluidLogistics.feature3')}</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-noveo-teal mr-3 mt-1">✓</span>
+                <span>{t('fluidLogistics.feature4')}</span>
+              </li>
+            </ul>
+            <button className="px-8 py-3 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300">
+              {t('fluidLogistics.cta')}
+            </button>
+          </div>
+          <div className="relative h-96">
+            <Image
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
+              alt="Plateforme logistique connectée"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover rounded-lg"
+              priority={false}
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -389,45 +439,92 @@ function TestimonialsSection() {
 }
 
 function StatsSection() {
-  const stats = [
-    { number: '3,000+', label: 'Offices and logistics facilities' },
-    { number: '90+', label: 'Countries worldwide' },
-    { number: '160,000~', label: 'Employees' },
-  ];
-
+  const { t } = useTranslation();
+  
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-noveo-blue text-white">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-light text-center text-noveo-blue mb-12">DSV in numbers</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {stats.map((stat) => (
-            <div key={stat.label}>
-              <p className="text-6xl lg:text-7xl font-light text-noveo-blue mb-4">{stat.number}</p>
-              <p className="text-lg text-noveo-blue">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-12">
-          <button className="text-noveo-blue font-semibold hover:underline">
-            See our global network
-          </button>
+        <h2 className="text-3xl md:text-4xl font-light text-center mb-12">{t('stats.title')}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div>
+            <p className="text-4xl lg:text-5xl font-light text-noveo-teal mb-4">
+              {t('stats.items.ports.number')}
+            </p>
+            <p className="text-lg">{t('stats.items.ports.label')}</p>
+          </div>
+          <div>
+            <p className="text-4xl lg:text-5xl font-light text-noveo-teal mb-4">
+              {t('stats.items.volumes.number')}
+            </p>
+            <p className="text-lg">{t('stats.items.volumes.label')}</p>
+          </div>
+          <div>
+            <p className="text-4xl lg:text-5xl font-light text-noveo-teal mb-4">
+              {t('stats.items.response.number')}
+            </p>
+            <p className="text-lg">{t('stats.items.response.label')}</p>
+          </div>
+          <div>
+            <p className="text-4xl lg:text-5xl font-light text-noveo-teal mb-4">
+              {t('stats.items.clients.number')}
+            </p>
+            <p className="text-lg">{t('stats.items.clients.label')}</p>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function ContactSection() {
+function TestimonialsSection() {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-20 bg-noveo-teal-light">
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-4">Any questions?</h2>
-        <p className="text-lg text-noveo-blue mb-8">
-          Our experts are ready to help. Get in touch and we'll find the solution you need.
-        </p>
-        <button className="px-8 py-3 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300">
-          Contact us online
+        <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-8">{t('testimonials.title')}</h2>
+        <div className="mb-12">
+          <blockquote className="text-2xl lg:text-3xl font-light mb-6 text-noveo-blue">
+            {t('testimonials.quote')}
+          </blockquote>
+          <cite className="font-semibold not-italic text-lg text-noveo-blue">
+            {t('testimonials.profiles')}
+          </cite>
+        </div>
+        <div className="text-center">
+          <p className="text-noveo-blue font-semibold">{t('testimonials.moreTestimonials')}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FinalCTASection() {
+  const { t } = useTranslation();
+  
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-8">
+          {t('finalCTA.title')}
+        </h2>
+        <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300 rounded-lg">
+          {t('finalCTA.cta')}
         </button>
+      </div>
+    </section>
+  );
+}
+
+function FAQSection() {
+  const { t } = useTranslation();
+  
+  return (
+    <section className="py-20 bg-noveo-teal-light">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-8">{t('faq.title')}</h2>
+        <p className="text-lg text-noveo-blue">{t('faq.description')}</p>
+        {/* FAQ content can be expanded later */}
       </div>
     </section>
   );
@@ -438,17 +535,24 @@ export default function Home() {
 
   return (
     <>
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+      
       <Hero onSectionChange={setActiveSection} />
       <DynamicSection activeSection={activeSection} />
-      <SpecialDriveSection />
-      <PrecisionSection />
+      <ExpertiseSection />
+      <MissionSection />
       <IndustrySolutions />
-      <SelfServiceSection />
-      <LatestNewsSection />
-      <ContractsSection />
-      <TestimonialsSection />
+      <FluidLogisticsSection />
       <StatsSection />
-      <ContactSection />
+      <TestimonialsSection />
+      <FinalCTASection />
+      <FAQSection />
     </>
   );
 }

@@ -1,0 +1,184 @@
+{
+  "header": {
+    "banner": {
+      "company": "Noveo Logistics",
+      "description": "Commissionnaire de transport nouvelle génération - Solutions logistiques digitales et expertes",
+      "learnMore": "En savoir plus"
+    },
+    "nav": {
+      "home": "Accueil",
+      "aboutUs": "Qui sommes-nous ?",
+      "solutions": "Solutions",
+      "industries": "Industries",
+      "blog": "Blog",
+      "contact": "Contact",
+      "requestStudy": "Demander une étude gratuite"
+    },
+    "industriesDropdown": {
+      "energy": "Énergies, Oil & Gas",
+      "dangerous": "Marchandises dangereuses",
+      "aeronautic": "Aéronautique & défense",
+      "wines": "Vins & spiritueux",
+      "automotive": "Automobile",
+      "ecommerce": "E-commerce",
+      "medical": "Dispositifs médicaux"
+    }
+  },
+  "hero": {
+    "title": "Optimisez vos flux. Dépensez moins. Agissez mieux.",
+    "subtitle": "Accélérez votre supply chain internationale",
+    "description": "Noveo Logistics est un commissionnaire de transport nouvelle génération, alliant technologies digitales et expertise métier pour connecter l'Europe avec le reste du monde en toute fluidité.",
+    "requestQuote": "Demander un devis",
+    "logisticsSolutions": "Solutions logistiques"
+  },
+  "dynamic": {
+    "quote": {
+      "title": "Dites-nous ce dont vous avez besoin",
+      "choose": "Choisir",
+      "spotQuote": "Devis ponctuel - pour votre envoi unique.",
+      "tariffQuote": "Devis tarifaire - pour des envois multiples ou fréquents.",
+      "offer": "Offre - Pour commencer un dialogue sur les solutions logistiques",
+      "request": "Demander"
+    },
+    "logistics": {
+      "title": "Souhaitez-vous en savoir plus sur nos solutions logistiques ?",
+      "contractOffer": "Offre Logistique Contractuelle",
+      "learnMore": "En savoir plus sur la Logistique Contractuelle"
+    }
+  },
+  "expertise": {
+    "title": "Nos expertises sectorielles",
+    "description": "Noveo Logistics accompagne des acteurs exigeants dans des secteurs complexes, réglementés ou stratégiques.",
+    "subtitle": "Notre force : adapter nos solutions de transport, de douane et de logistique aux spécificités de chaque industrie.",
+    "transitaire": "Transitaire – Commissionnaire en douane agréé OEA",
+    "cta": "Découvrez nos solutions logistiques sur mesure"
+  },
+  "mission": {
+    "title": "Notre mission.",
+    "subtitle": "Rationalisez votre chaîne d'approvisionnement avec le meilleur de la technologie et de l'expertise humaine",
+    "description": "Nos solutions de transport de fret combinent :",
+    "feature1": "Une plateforme digitale intuitive (TMS, visibilité, booking, GED)",
+    "feature2": "Une équipe expérimentée, à vos côtés pour gérer :",
+    "feature3": "transport international (aérien, maritime, multimodal)",
+    "feature4": "dédouanement & conformité douanière",
+    "feature5": "assurance ad valorem & risques logistiques",
+    "feature6": "gestion des stocks & coordination fournisseurs",
+    "cta": "Découvrez nos solutions logistiques sur mesure"
+  },
+  "industries": {
+    "title": "Les secteurs que nous servons au quotidien",
+    "sectors": {
+      "energy": {
+        "title": "Énergies, Oil & Gas",
+        "description": "Transport de pièces lourdes, équipements offshore, pipelines, pompes, avec gestion des formalités spécifiques (IMO, ADR)."
+      },
+      "dangerous": {
+        "title": "Marchandises dangereuses",
+        "description": "Chimie, pharmaceutique, batteries lithium… Conformité totale avec les réglementations IATA, IMDG et ADR."
+      },
+      "aeronautic": {
+        "title": "Aéronautique & défense",
+        "description": "Pièces détachées, outillages, moteurs, composants critiques. Solutions express, tracking temps réel et confidentialité maximale."
+      },
+      "wines": {
+        "title": "Vins, spiritueux & produits sensibles",
+        "description": "Gestion fine de la température, transport certifié, logistique haut de gamme pour produits sous accises."
+      },
+      "automotive": {
+        "title": "Automobile et mobilité",
+        "description": "Pièces détachées, composants électroniques, logistique séquencée, livraisons J+1 en Europe, coordination depuis l'Asie."
+      },
+      "ecommerce": {
+        "title": "E-commerce & distribution B2C",
+        "description": "Import/export cross-border, dédouanement rapide, logistique B2B2C, intégration marketplace, transport urgent et suivi digitalisé."
+      },
+      "medical": {
+        "title": "Dispositifs médicaux & santé",
+        "description": "Transport réglementé de dispositifs médicaux, implants, consommables dentaires, avec expertise ISO, marquage CE et douane médicale."
+      }
+    }
+  },
+  "fluidLogistics": {
+    "title": "Bénéficiez d'une logistique fluide",
+    "subtitle": "Centralisez vos opérations, optimisez vos performances",
+    "description": "Grâce à notre plateforme connectée :",
+    "feature1": "Visualisez l'ensemble de vos flux (Europe ↔ Asie)",
+    "feature2": "Recevez des alertes proactives sur vos expéditions",
+    "feature3": "Accédez à vos données logistiques et documents",
+    "feature4": "Collaborez efficacement avec vos partenaires",
+    "cta": "Prenez rendez-vous avec un expert Noveo"
+  },
+  "stats": {
+    "title": "KPI Dynamique",
+    "items": {
+      "ports": {
+        "number": "500+",
+        "label": "Ports dans le monde entier"
+      },
+      "volumes": {
+        "number": "25.000",
+        "label": "tonnes de fret aérien par an"
+      },
+      "response": {
+        "number": "15",
+        "label": "Minutes de temps de réponse moyen"
+      },
+      "clients": {
+        "number": "250",
+        "label": "chargeurs qui nous font confiance"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Ils nous font confiance",
+    "quote": "\"Expédition rapide, support client réactif, interface claire. Une vraie solution de bout en bout pour notre chaîne logistique.\"",
+    "profiles": "Responsable logistique, industrie médicale, Directeur des achats, e-commerce",
+    "moreTestimonials": "+10 témoignages clients"
+  },
+  "finalCTA": {
+    "title": "Gagnez en fiabilité, en visibilité et en performance avec Noveo Logistics.",
+    "cta": "Demandez un audit gratuit de vos flux"
+  },
+  "faq": {
+    "title": "FAQ",
+    "description": "Questions fréquemment posées"
+  },
+  "footer": {
+    "onlineTools": {
+      "title": "Outils en ligne",
+      "book": "Réserver",
+      "getQuote": "Obtenir un devis",
+      "trackTrace": "Suivi & Traçabilité",
+      "selfServices": "Libre-services"
+    },
+    "solutions": {
+      "title": "Nos solutions",
+      "industrySolutions": "Solutions sectorielles",
+      "airFreight": "Fret aérien",
+      "seaFreight": "Fret maritime",
+      "roadFreight": "Fret routier",
+      "allSolutions": "Toutes les solutions"
+    },
+    "company": {
+      "title": "Noveo",
+      "about": "À propos de Noveo",
+      "careers": "Carrières",
+      "investor": "Investisseur",
+      "press": "Presse",
+      "sustainability": "Durabilité"
+    },
+    "contactSupport": {
+      "title": "Contact & Support",
+      "contact": "Nous contacter",
+      "support": "Support",
+      "newsletter": "S'abonner à la newsletter"
+    },
+    "legal": {
+      "legalNotice": "Mentions légales",
+      "dataPrivacy": "Confidentialité des données",
+      "cookies": "Cookies",
+      "termsConditions": "Conditions générales"
+    },
+    "copyright": "© Noveo Logistics - Tous droits réservés"
+  }
+} 

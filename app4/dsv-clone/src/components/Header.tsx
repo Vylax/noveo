@@ -4,31 +4,34 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Search, Globe, User, X, Menu, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslation } from '@/contexts/TranslationContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBannerOpen, setIsBannerOpen] = useState(true);
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
+  const { t } = useTranslation();
 
   const navLinks = [
-    { name: 'Accueil', dropdown: false },
-    { name: 'Qui sommes-nous ?', dropdown: false },
-    { name: 'Solutions', dropdown: false },
+    { name: t('header.nav.home'), dropdown: false },
+    { name: t('header.nav.aboutUs'), dropdown: false },
+    { name: t('header.nav.solutions'), dropdown: false },
     { 
-      name: 'Industries', 
+      name: t('header.nav.industries'), 
       dropdown: true,
       items: [
-        { name: 'Énergies, Oil & Gas', href: '#' },
-        { name: 'Marchandises dangereuses', href: '#' },
-        { name: 'Aéronautique & défense', href: '#' },
-        { name: 'Vins & spiritueux', href: '#' },
-        { name: 'Automobile', href: '#' },
-        { name: 'E-commerce', href: '#' },
-        { name: 'Dispositifs médicaux', href: '#' },
+        { name: t('header.industriesDropdown.energy'), href: '#' },
+        { name: t('header.industriesDropdown.dangerous'), href: '#' },
+        { name: t('header.industriesDropdown.aeronautic'), href: '#' },
+        { name: t('header.industriesDropdown.wines'), href: '#' },
+        { name: t('header.industriesDropdown.automotive'), href: '#' },
+        { name: t('header.industriesDropdown.ecommerce'), href: '#' },
+        { name: t('header.industriesDropdown.medical'), href: '#' },
       ]
     },
-    { name: 'Blog', dropdown: false },
-    { name: 'Contact', dropdown: false },
+    { name: t('header.nav.blog'), dropdown: false },
+    { name: t('header.nav.contact'), dropdown: false },
   ];
 
   const getDropdownItems = (navName: string) => {
@@ -42,10 +45,10 @@ export default function Header() {
       {isBannerOpen && (
         <div className="bg-noveo-teal text-noveo-blue text-center py-3 px-4 text-sm fixed top-0 left-0 right-0 z-[60]">
           <div className="max-w-screen-xl mx-auto flex items-center justify-center">
-            <span className="font-bold mr-2">Noveo Logistics</span>
-            <span>Commissionnaire de transport nouvelle génération - Solutions logistiques digitales et expertes</span>
+            <span className="font-bold mr-2">{t('header.banner.company')}</span>
+            <span>{t('header.banner.description')}</span>
             <Link href="#" className="underline hover:text-noveo-blue-dark ml-2 font-medium">
-              En savoir plus
+              {t('header.banner.learnMore')}
             </Link>
           </div>
           <button onClick={() => setIsBannerOpen(false)} className="absolute top-1/2 right-4 -translate-y-1/2">
@@ -102,8 +105,9 @@ export default function Header() {
 
               {/* Right side controls */}
               <div className="flex items-center space-x-6">
+                <LanguageSwitcher />
                 <button className="px-6 py-2 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300 rounded">
-                  Demander une étude gratuite
+                  {t('header.nav.requestStudy')}
                 </button>
                 
                 {/* Mobile menu button */}
@@ -124,7 +128,7 @@ export default function Header() {
                      <Link key={link.name} href="#" className="text-gray-700 hover:text-noveo-blue">{link.name}</Link>
                   ))}
                   <button className="mt-4 px-6 py-2 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300 rounded text-left">
-                    Demander une étude gratuite
+                    {t('header.nav.requestStudy')}
                   </button>
                 </nav>
               </div>
