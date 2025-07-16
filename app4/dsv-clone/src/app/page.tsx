@@ -381,11 +381,11 @@ function IndustrySolutions() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + sectors.length) % sectors.length);
   };
 
-  // Auto-rotation
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  // Auto-rotation disabled
+  // useEffect(() => {
+  //   const interval = setInterval(nextSlide, 5000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <section className="py-20 bg-noveo-teal-light overflow-hidden">
@@ -480,7 +480,7 @@ function IndustrySolutions() {
           >
             <ChevronRight size={24} />
           </button>
-        </div>
+            </div>
 
         {/* Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
@@ -508,7 +508,7 @@ function IndustrySolutions() {
 
 function FluidLogisticsSection() {
   const { t } = useTranslation();
-  
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -544,7 +544,7 @@ function FluidLogisticsSection() {
             <button className="px-8 py-3 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300">
               {t('fluidLogistics.cta')}
             </button>
-          </div>
+        </div>
           <div className="relative h-96">
             <Image
               src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
@@ -554,7 +554,7 @@ function FluidLogisticsSection() {
               className="object-cover rounded-lg"
               priority={false}
             />
-          </div>
+        </div>
         </div>
       </div>
     </section>
@@ -622,7 +622,7 @@ function AnimatedCounter({ end, duration = 2000, suffix = '' }: { end: number; d
 
 function StatsSection() {
   const { t } = useTranslation();
-  
+
   return (
     <section className="py-20 bg-noveo-blue text-white">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -639,11 +639,11 @@ function StatsSection() {
           <div>
             <AnimatedCounter end={15} duration={1500} />
             <p className="text-lg">{t('stats.items.response.label')}</p>
-          </div>
+            </div>
           <div>
             <AnimatedCounter end={250} duration={2000} />
             <p className="text-lg">{t('stats.items.clients.label')}</p>
-          </div>
+        </div>
         </div>
       </div>
     </section>
@@ -675,7 +675,7 @@ function TestimonialsSection() {
 
 function FinalCTASection() {
   const { t } = useTranslation();
-  
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -684,7 +684,7 @@ function FinalCTASection() {
         </h2>
         <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300 rounded-lg">
           {t('finalCTA.cta')}
-        </button>
+          </button>
       </div>
     </section>
   );
