@@ -308,51 +308,64 @@ function MissionSection() {
   return (
     <section className="bg-noveo-teal-light py-20">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-6">
-            {t('mission.title')}
-          </h2>
-          <h3 className="text-xl md:text-2xl text-noveo-blue mb-8 font-semibold">
-            {t('mission.subtitle')}
-          </h3>
-          <p className="text-lg text-noveo-blue mb-8">
-            {t('mission.description')}
-          </p>
-          <div className="text-left max-w-2xl mx-auto mb-8">
-            <ul className="space-y-3 text-noveo-blue">
-              <li className="flex items-start">
-                <span className="text-noveo-teal mr-2">•</span>
-                <span>{t('mission.feature1')}</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-noveo-teal mr-2">•</span>
-                <div className="flex-1">
-                  <span>{t('mission.feature2')}</span>
-                  <ul className="space-y-2 mt-2 ml-4">
-                    <li className="flex items-start">
-                      <span className="text-noveo-teal mr-2">◦</span>
-                      <span>{t('mission.feature3')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-noveo-teal mr-2">◦</span>
-                      <span>{t('mission.feature4')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-noveo-teal mr-2">◦</span>
-                      <span>{t('mission.feature5')}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-noveo-teal mr-2">◦</span>
-                      <span>{t('mission.feature6')}</span>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-6">
+              {t('mission.title')}
+            </h2>
+            <h3 className="text-xl md:text-2xl text-noveo-blue mb-8 font-semibold">
+              {t('mission.subtitle')}
+            </h3>
+            <p className="text-lg text-noveo-blue mb-8">
+              {t('mission.description')}
+            </p>
+            <div className="text-left mb-8">
+              <ul className="space-y-3 text-noveo-blue">
+                <li className="flex items-start">
+                  <span className="text-noveo-teal mr-2">•</span>
+                  <span>{t('mission.feature1')}</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-noveo-teal mr-2">•</span>
+                  <div className="flex-1">
+                    <span>{t('mission.feature2')}</span>
+                    <ul className="space-y-2 mt-2 ml-4">
+                      <li className="flex items-start">
+                        <span className="text-noveo-teal mr-2">◦</span>
+                        <span>{t('mission.feature3')}</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-noveo-teal mr-2">◦</span>
+                        <span>{t('mission.feature4')}</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-noveo-teal mr-2">◦</span>
+                        <span>{t('mission.feature5')}</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-noveo-teal mr-2">◦</span>
+                        <span>{t('mission.feature6')}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button className="px-8 py-3 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300">
+              {t('mission.cta')}
+            </button>
           </div>
-          <button className="px-8 py-3 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300">
-            {t('mission.cta')}
-          </button>
+          <div className="relative h-96 lg:h-[500px]">
+            <Image
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=500&fit=crop"
+              alt="Notre mission - expertise logistique et technologie"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover rounded-lg shadow-lg"
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-noveo-blue/10 to-transparent rounded-lg"></div>
+          </div>
         </div>
       </div>
     </section>
