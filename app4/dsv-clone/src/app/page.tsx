@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
-import { Truck, Ship, Plane, Cpu, Zap, ShoppingBag, FlaskConical, Snowflake, Gem, HeartPulse, Search, User, Globe, ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { Truck, Ship, Plane, Cpu, Zap, ShoppingBag, FlaskConical, Snowflake, Gem, HeartPulse, Search, User, Globe, ChevronLeft, ChevronRight, Check, ArrowRight, Fuel, Shield, Wine, Car, Package, Stethoscope } from 'lucide-react';
 import { useTranslation } from '@/contexts/TranslationContext';
 
 // SEO Structured Data
@@ -374,143 +374,148 @@ function MissionSection() {
 
 function IndustrySolutions() {
   const { t } = useTranslation();
-  const [currentIndex, setCurrentIndex] = useState(0);
   
   const sectors = [
-    { key: 'energy', iconImage: 'https://images.unsplash.com/photo-1578503797131-63a17c1bb15d?w=64&h=64&fit=crop', image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=300&fit=crop' },
-    { key: 'dangerous', iconImage: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=64&h=64&fit=crop', image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop' },
-    { key: 'aeronautic', iconImage: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=64&h=64&fit=crop', image: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=400&h=300&fit=crop' },
-    { key: 'wines', iconImage: 'https://images.unsplash.com/photo-1553657685-43f96170c78c?w=64&h=64&fit=crop', image: 'https://images.unsplash.com/photo-1571104508999-893933ded431?w=400&h=300&fit=crop' },
-    { key: 'automotive', iconImage: 'https://images.unsplash.com/photo-1493238792000-8113da705763?w=64&h=64&fit=crop', image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop' },
-    { key: 'ecommerce', iconImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=64&h=64&fit=crop', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop' },
-    { key: 'medical', iconImage: 'https://images.unsplash.com/photo-1494883759339-0b042055a4ee?w=64&h=64&fit=crop', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop' },
+    { 
+      key: 'energy', 
+      icon: Fuel, 
+      gradient: 'from-orange-500 to-red-600',
+      bgGradient: 'from-orange-100 to-red-100',
+      index: '01'
+    },
+    { 
+      key: 'dangerous', 
+      icon: Shield, 
+      gradient: 'from-red-500 to-pink-600',
+      bgGradient: 'from-red-100 to-pink-100',
+      index: '02'
+    },
+    { 
+      key: 'aeronautic', 
+      icon: Plane, 
+      gradient: 'from-blue-500 to-indigo-600',
+      bgGradient: 'from-blue-100 to-indigo-100',
+      index: '03'
+    },
+    { 
+      key: 'wines', 
+      icon: Wine, 
+      gradient: 'from-purple-500 to-pink-600',
+      bgGradient: 'from-purple-100 to-pink-100',
+      index: '04'
+    },
+    { 
+      key: 'automotive', 
+      icon: Car, 
+      gradient: 'from-gray-600 to-gray-800',
+      bgGradient: 'from-gray-100 to-gray-200',
+      index: '05'
+    },
+    { 
+      key: 'ecommerce', 
+      icon: Package, 
+      gradient: 'from-green-500 to-emerald-600',
+      bgGradient: 'from-green-100 to-emerald-100',
+      index: '06'
+    },
+    { 
+      key: 'medical', 
+      icon: Stethoscope, 
+      gradient: 'from-teal-500 to-cyan-600',
+      bgGradient: 'from-teal-100 to-cyan-100',
+      index: '07'
+    },
   ];
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % sectors.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + sectors.length) % sectors.length);
-  };
-
-  // Auto-rotation disabled
-  // useEffect(() => {
-  //   const interval = setInterval(nextSlide, 5000);
-  //   return () => clearInterval(interval);
-  // }, []);
-
   return (
-    <section className="py-20 bg-white overflow-hidden">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-white relative overflow-hidden">
+      {/* Geometric Background Elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-noveo-blue transform rotate-45" style={{ clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))' }}></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 bg-noveo-teal transform -rotate-12" style={{ clipPath: 'polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)' }}></div>
+      </div>
+
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-4">
             {t('industries.title')}
           </h2>
           <p className="text-lg text-noveo-blue max-w-2xl mx-auto">
-            Découvrez nos secteurs d'expertise avec navigation interactive
+            Découvrez nos secteurs d'expertise avec des solutions sur mesure
           </p>
         </div>
         
-        {/* Carousel 3D Container */}
-        <div className="relative h-[500px] flex items-center justify-center">
-          <div 
-            className="relative w-full h-full"
-            style={{ perspective: '1000px' }}
-          >
-            {sectors.map((sector, index) => {
-              const offset = index - currentIndex;
-              const absOffset = Math.abs(offset);
-              const isCenter = offset === 0;
-              const isVisible = absOffset <= 2;
-              
-              if (!isVisible) return null;
-
-              return (
-                <div
-                  key={sector.key}
-                  className={`absolute top-1/2 left-1/2 w-80 h-96 transition-all duration-700 ease-in-out cursor-pointer ${
-                    isCenter ? 'z-30' : 'z-10'
-                  }`}
-                  style={{
-                    transform: `
-                      translate(-50%, -50%)
-                      translateX(${offset * 200}px)
-                      translateZ(${isCenter ? '0px' : '-150px'})
-                      rotateY(${offset * 25}deg)
-                      scale(${isCenter ? 1 : 0.8})
-                    `,
-                    opacity: isCenter ? 1 : 0.6,
-                  }}
-                  onClick={() => setCurrentIndex(index)}
-                >
-                                      <div className="bg-white shadow-2xl overflow-hidden h-full group hover:shadow-3xl transition-shadow duration-500">
-                    <div className="relative h-48">
-                      <Image
-                        src={sector.image}
-                        alt={t(`industries.sectors.${sector.key}.title`)}
-                        fill
-                        sizes="320px"
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        priority={isCenter}
-                      />
-                      <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all duration-300"></div>
-                      <div className="absolute top-4 left-4 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center overflow-hidden z-10">
-                        <Image
-                          src={sector.iconImage}
-                          alt={`${t(`industries.sectors.${sector.key}.title`)} icon`}
-                          width={48}
-                          height={48}
-                          sizes="48px"
-                          className="object-cover rounded-full"
-                        />
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="font-bold text-xl text-noveo-blue mb-3">
-                        {t(`industries.sectors.${sector.key}.title`)}
-                      </h3>
-                      <p className="text-sm text-noveo-blue leading-relaxed line-clamp-4">
-                        {t(`industries.sectors.${sector.key}.description`)}
-                      </p>
-                    </div>
+        {/* Industries Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
+          {sectors.map((sector) => {
+            const IconComponent = sector.icon;
+            
+            return (
+              <div
+                key={sector.key}
+                className="group relative bg-white hover:-translate-y-4 transition-all duration-500 ease-out hover:shadow-2xl"
+                style={{ 
+                  clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                }}
+              >
+                {/* Card Content */}
+                <div className="relative p-8 h-full flex flex-col">
+                  {/* Index Number */}
+                  <div className="absolute top-4 right-6 text-3xl font-bold text-gray-200 group-hover:text-gray-300 transition-colors duration-300">
+                    {sector.index}
                   </div>
+
+                  {/* Icon Container */}
+                  <div 
+                    className={`w-16 h-16 bg-gradient-to-br ${sector.gradient} mb-6 flex items-center justify-center text-white relative`}
+                    style={{ 
+                      clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)',
+                    }}
+                  >
+                    <IconComponent size={28} />
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-grow">
+                    <h3 className="font-bold text-xl text-noveo-blue mb-4 group-hover:text-noveo-blue-dark transition-colors duration-300">
+                      {t(`industries.sectors.${sector.key}.title`)}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed mb-6 text-sm">
+                      {t(`industries.sectors.${sector.key}.description`)}
+                    </p>
+                  </div>
+
+                  {/* Learn More Link */}
+                  <div className="flex items-center text-noveo-blue group-hover:text-noveo-blue-dark transition-colors duration-300">
+                    <span className="text-sm font-semibold mr-2">En savoir plus</span>
+                    <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+
+                  {/* Hover Gradient Overlay */}
+                  <div 
+                    className={`absolute inset-0 bg-gradient-to-br ${sector.bgGradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none`}
+                    style={{ 
+                      clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                    }}
+                  ></div>
                 </div>
-              );
-            })}
-          </div>
-
-          {/* Navigation Arrows */}
-          <button 
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-40 w-12 h-12 bg-noveo-blue/80 hover:bg-noveo-blue text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-          >
-            <ChevronLeft size={24} />
-          </button>
-          <button 
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-40 w-12 h-12 bg-noveo-blue/80 hover:bg-noveo-blue text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-          >
-            <ChevronRight size={24} />
-          </button>
-            </div>
-
-        {/* Indicators */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {sectors.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-noveo-blue scale-125' : 'bg-noveo-blue/30 hover:bg-noveo-blue/60'
-              }`}
-            />
-          ))}
+              </div>
+            );
+          })}
         </div>
         
-        <div className="text-center mt-12">
-          <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300">
-            Découvrez nos solutions sur mesure
+        {/* Call to Action */}
+        <div className="text-center">
+          <button 
+            className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl relative group"
+            style={{ 
+              clipPath: 'polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px))',
+            }}
+          >
+            <span className="relative z-10">Découvrez nos solutions sur mesure</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-noveo-blue-dark to-noveo-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ 
+              clipPath: 'polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px))',
+            }}></div>
           </button>
         </div>
       </div>
