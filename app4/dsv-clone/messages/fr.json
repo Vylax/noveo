@@ -137,9 +137,78 @@
   },
   "testimonials": {
     "title": "Ils nous font confiance",
-    "quote": "\"Expédition rapide, support client réactif, interface claire. Une vraie solution de bout en bout pour notre chaîne logistique.\"",
-    "profiles": "Responsable logistique, industrie médicale, Directeur des achats, e-commerce",
-    "moreTestimonials": "+10 témoignages clients"
+    "items": [
+      {
+        "quote": "Noveo Logistics a révolutionné notre chaîne d'approvisionnement Asie-Europe. Leur plateforme digitale offre une visibilité complète et leurs équipes sont exceptionnellement réactives.",
+        "name": "Marie Dubois",
+        "role": "Directrice Supply Chain",
+        "company": "TechCorp Europe",
+        "category": "Technology"
+      },
+      {
+        "quote": "Pour nos expéditions de vin vers la Chine, Noveo maîtrise parfaitement les contraintes douanières et la gestion de la chaîne du froid. Un partenaire de confiance depuis 3 ans.",
+        "name": "Jean-Pierre Martin",
+        "role": "Responsable Export",
+        "company": "Bordeaux Grands Crus",
+        "category": "Wine & Spirits"
+      },
+      {
+        "quote": "La conformité GDP et la traçabilité sérialisée sont cruciales pour nos dispositifs médicaux. Noveo dépasse nos attentes avec un service impeccable.",
+        "name": "Sophie Chen",
+        "role": "Responsable Logistique",
+        "company": "MedDevice Solutions",
+        "category": "Medical Devices"
+      },
+      {
+        "quote": "Service express pour nos pièces aéronautiques critiques. Noveo garantit les délais les plus serrés avec une sécurité maximale.",
+        "name": "Carlos Rodriguez",
+        "role": "Directeur Logistique",
+        "company": "AeroSpace International",
+        "category": "Aerospace"
+      },
+      {
+        "quote": "Transport de marchandises dangereuses en conformité totale IATA/IMDG. Expertise technique remarquable et conseils précieux.",
+        "name": "Fatima Al-Rashid",
+        "role": "Responsable HSE",
+        "company": "ChemiCorp Industries",
+        "category": "Chemical"
+      },
+      {
+        "quote": "Livraisons J+1 en Europe pour notre e-commerce. La plateforme de tracking en temps réel rassure nos clients et optimise notre service client.",
+        "name": "Thomas Mueller",
+        "role": "Directeur des Opérations",
+        "company": "EuroShop Direct",
+        "category": "E-commerce"
+      },
+      {
+        "quote": "Transport de pièces lourdes pour nos projets offshore. Noveo coordonne parfaitement les opérations multimodales les plus complexes.",
+        "name": "Anna Petersen",
+        "role": "Chef de Projet",
+        "company": "Nordic Energy Solutions",
+        "category": "Energy"
+      },
+      {
+        "quote": "Gestion sur mesure de nos approvisionnements automobiles depuis l'Asie. Interface intuitive et réactivité exemplaire de l'équipe.",
+        "name": "Giuseppe Romano",
+        "role": "Supply Chain Manager",
+        "company": "AutoParts Europa",
+        "category": "Automotive"
+      },
+      {
+        "quote": "Solutions logistiques flexibles pour nos lancements produits. Noveo s'adapte à nos besoins changeants avec une agilité remarquable.",
+        "name": "Lisa Thompson",
+        "role": "Directrice Logistique",
+        "company": "Innovation Labs",
+        "category": "Technology"
+      },
+      {
+        "quote": "Partenaire de confiance pour nos expéditions internationales. Service personnalisé et expertise métier qui font toute la différence.",
+        "name": "Ahmed Ben Salah",
+        "role": "Responsable Import-Export",
+        "company": "Mediterranean Trading",
+        "category": "Trading"
+      }
+    ]
   },
   "finalCTA": {
     "title": "Gagnez en fiabilité, en visibilité et en performance avec Noveo Logistics.",

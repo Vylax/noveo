@@ -664,18 +664,164 @@ function StatsSection() {
 
 function TestimonialsSection() {
   const { t } = useTranslation();
+  const [currentIndex, setCurrentIndex] = useState(0);
   
+  const testimonials = [
+    {
+      quote: t('testimonials.items.0.quote'),
+      name: t('testimonials.items.0.name'),
+      role: t('testimonials.items.0.role'),
+      company: t('testimonials.items.0.company'),
+      category: t('testimonials.items.0.category')
+    },
+    {
+      quote: t('testimonials.items.1.quote'),
+      name: t('testimonials.items.1.name'),
+      role: t('testimonials.items.1.role'),
+      company: t('testimonials.items.1.company'),
+      category: t('testimonials.items.1.category')
+    },
+    {
+      quote: t('testimonials.items.2.quote'),
+      name: t('testimonials.items.2.name'),
+      role: t('testimonials.items.2.role'),
+      company: t('testimonials.items.2.company'),
+      category: t('testimonials.items.2.category')
+    },
+    {
+      quote: t('testimonials.items.3.quote'),
+      name: t('testimonials.items.3.name'),
+      role: t('testimonials.items.3.role'),
+      company: t('testimonials.items.3.company'),
+      category: t('testimonials.items.3.category')
+    },
+    {
+      quote: t('testimonials.items.4.quote'),
+      name: t('testimonials.items.4.name'),
+      role: t('testimonials.items.4.role'),
+      company: t('testimonials.items.4.company'),
+      category: t('testimonials.items.4.category')
+    },
+    {
+      quote: t('testimonials.items.5.quote'),
+      name: t('testimonials.items.5.name'),
+      role: t('testimonials.items.5.role'),
+      company: t('testimonials.items.5.company'),
+      category: t('testimonials.items.5.category')
+    },
+    {
+      quote: t('testimonials.items.6.quote'),
+      name: t('testimonials.items.6.name'),
+      role: t('testimonials.items.6.role'),
+      company: t('testimonials.items.6.company'),
+      category: t('testimonials.items.6.category')
+    },
+    {
+      quote: t('testimonials.items.7.quote'),
+      name: t('testimonials.items.7.name'),
+      role: t('testimonials.items.7.role'),
+      company: t('testimonials.items.7.company'),
+      category: t('testimonials.items.7.category')
+    },
+    {
+      quote: t('testimonials.items.8.quote'),
+      name: t('testimonials.items.8.name'),
+      role: t('testimonials.items.8.role'),
+      company: t('testimonials.items.8.company'),
+      category: t('testimonials.items.8.category')
+    },
+    {
+      quote: t('testimonials.items.9.quote'),
+      name: t('testimonials.items.9.name'),
+      role: t('testimonials.items.9.role'),
+      company: t('testimonials.items.9.company'),
+      category: t('testimonials.items.9.category')
+    }
+  ];
+  
+  const itemsPerPage = 3;
+  const totalPages = Math.ceil(testimonials.length / itemsPerPage);
+  
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const getCurrentTestimonials = () => {
+    const start = currentIndex * itemsPerPage;
+    return testimonials.slice(start, start + itemsPerPage);
+  };
+
   return (
     <section className="py-20 bg-noveo-teal-light">
-      <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-8">{t('testimonials.title')}</h2>
-        <div className="mb-12">
-          <blockquote className="text-2xl lg:text-3xl font-light mb-6 text-noveo-blue">
-            {t('testimonials.quote')}
-          </blockquote>
-          <cite className="font-semibold not-italic text-lg text-noveo-blue">
-            {t('testimonials.profiles')}
-          </cite>
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-12 text-center">{t('testimonials.title')}</h2>
+        
+        <div className="relative">
+          {/* Navigation Arrows */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-noveo-blue/80 hover:bg-noveo-blue text-white flex items-center justify-center transition-all duration-300 hover:scale-110"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button 
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-noveo-blue/80 hover:bg-noveo-blue text-white flex items-center justify-center transition-all duration-300 hover:scale-110"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-16">
+            {getCurrentTestimonials().map((testimonial, index) => (
+              <div 
+                key={currentIndex * itemsPerPage + index}
+                className="bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col"
+              >
+                {/* Quote Icon */}
+                <div className="text-4xl text-noveo-teal mb-4 font-serif">"</div>
+                
+                {/* Category */}
+                <div className="text-sm text-noveo-blue font-semibold mb-4 uppercase tracking-wide">
+                  {testimonial.category}
+                </div>
+                
+                {/* Quote */}
+                <blockquote className="text-gray-700 font-light leading-relaxed mb-6 flex-grow italic">
+                  {testimonial.quote}
+                </blockquote>
+                
+                {/* Attribution */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="font-bold text-noveo-blue text-lg">{testimonial.name}</div>
+                  <div className="text-noveo-blue font-medium">{testimonial.role}</div>
+                  <div className="text-noveo-teal text-sm">{testimonial.company}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Pagination */}
+        <div className="flex justify-center items-center mt-8 space-x-4">
+          <div className="flex space-x-2">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 transition-all duration-300 ${
+                  index === currentIndex ? 'bg-noveo-blue scale-125' : 'bg-noveo-blue/30 hover:bg-noveo-blue/60'
+                }`}
+              />
+            ))}
+          </div>
+          <div className="text-gray-600 text-sm ml-4">
+            {currentIndex * itemsPerPage + 1}-{Math.min((currentIndex + 1) * itemsPerPage, testimonials.length)} of {testimonials.length} testimonials
+          </div>
         </div>
       </div>
     </section>
