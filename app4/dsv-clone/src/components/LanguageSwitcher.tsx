@@ -15,7 +15,7 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-noveo-blue transition-colors duration-200 border border-gray-300 rounded"
+      className="flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-noveo-blue transition-colors duration-200 border border-gray-300"
       aria-label={`Switch to ${locale === 'fr' ? 'English' : 'French'}`}
     >
       <Globe size={16} />

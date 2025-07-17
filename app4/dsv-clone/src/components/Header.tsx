@@ -115,7 +115,7 @@ export default function Header() {
               {/* Right side controls */}
               <div className="flex items-center space-x-6">
                 <LanguageSwitcher />
-                <button className="px-6 py-2 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300 rounded">
+                <button className="px-6 py-2 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300">
                   {t('header.nav.requestStudy')}
                 </button>
                 
@@ -137,14 +137,14 @@ export default function Header() {
                      <Link 
                        key={link.name} 
                        href="#" 
-                       className="relative group text-gray-700 hover:text-noveo-blue transition-all duration-300 py-2 px-4 rounded-md hover:bg-gray-50"
+                       className="relative group text-gray-700 hover:text-noveo-blue transition-all duration-300 py-2 px-4 hover:bg-gray-50"
                      >
                        <span className="relative z-10">{link.name}</span>
                        {/* Mobile hover effect */}
                        <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-noveo-blue via-noveo-teal to-noveo-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></div>
                      </Link>
                   ))}
-                  <button className="mt-4 px-6 py-2 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-all duration-300 rounded text-left transform hover:scale-105">
+                  <button className="mt-4 px-6 py-2 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-all duration-300 text-left transform hover:scale-105">
                     {t('header.nav.requestStudy')}
                   </button>
                 </nav>
@@ -166,7 +166,7 @@ export default function Header() {
                   <Link
                     key={index}
                     href={item.href}
-                    className="relative group text-sm text-gray-600 hover:text-noveo-blue font-medium transition-all duration-300 whitespace-nowrap py-1 px-2 rounded-md hover:bg-gray-50/50"
+                    className="relative group text-sm text-gray-600 hover:text-noveo-blue font-medium transition-all duration-300 whitespace-nowrap py-1 px-2 hover:bg-gray-50/50"
                   >
                     <span className="relative z-10">{item.name}</span>
                     {/* Dropdown item hover underline */}

@@ -294,7 +294,7 @@ function ExpertiseSection() {
             <div className="absolute top-4 right-4 w-2 h-2 bg-noveo-teal rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
           </div>
         </div>
-        <button className="px-8 py-3 bg-transparent text-noveo-blue font-semibold border border-noveo-blue hover:bg-noveo-blue hover:text-white transition-colors duration-300">
+        <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300">
           {t('expertise.cta')}
         </button>
       </div>
@@ -362,7 +362,7 @@ function MissionSection() {
                 </li>
               </ul>
             </div>
-            <button className="px-8 py-3 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300">
+            <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300">
               {t('mission.cta')}
             </button>
           </div>
@@ -509,8 +509,7 @@ function IndustrySolutions() {
         </div>
         
         <div className="text-center mt-12">
-          <p className="text-noveo-blue mb-4">Votre secteur n'est pas listé ?</p>
-          <button className="text-noveo-blue font-semibold hover:text-noveo-blue-dark hover:underline transition-colors duration-300">
+          <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300">
             Découvrez nos solutions sur mesure
           </button>
         </div>
@@ -678,9 +677,6 @@ function TestimonialsSection() {
             {t('testimonials.profiles')}
           </cite>
         </div>
-        <div className="text-center">
-          <p className="text-noveo-blue font-semibold">{t('testimonials.moreTestimonials')}</p>
-        </div>
       </div>
     </section>
   );
@@ -695,7 +691,7 @@ function FinalCTASection() {
         <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-8">
           {t('finalCTA.title')}
         </h2>
-        <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300 rounded-lg">
+        <button className="px-8 py-4 bg-noveo-blue text-white font-bold text-lg hover:bg-noveo-blue-dark transition-colors duration-300">
           {t('finalCTA.cta')}
           </button>
       </div>
