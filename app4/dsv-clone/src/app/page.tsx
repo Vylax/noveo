@@ -237,7 +237,7 @@ function ExpertiseSection() {
           <h3 className="text-xl font-bold text-noveo-blue">{t('expertise.transitaire')}</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <div className="group relative h-48 overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
+          <div className="group relative h-48 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
             <Image
               src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=400&h=300&fit=crop"
               alt="Fret aérien"
@@ -251,7 +251,7 @@ function ExpertiseSection() {
             </div>
             <div className="absolute top-4 right-4 w-2 h-2 bg-noveo-teal rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
           </div>
-          <div className="group relative h-48 overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
+          <div className="group relative h-48 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
             <Image
               src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=400&h=300&fit=crop"
               alt="Fret maritime"
@@ -265,7 +265,7 @@ function ExpertiseSection() {
             </div>
             <div className="absolute top-4 right-4 w-2 h-2 bg-noveo-teal rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
           </div>
-          <div className="group relative h-48 overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
+          <div className="group relative h-48 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
             <Image
               src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400&h=300&fit=crop"
               alt="Fret routier"
@@ -279,7 +279,7 @@ function ExpertiseSection() {
             </div>
             <div className="absolute top-4 right-4 w-2 h-2 bg-noveo-teal rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
           </div>
-          <div className="group relative h-48 overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
+          <div className="group relative h-48 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
             <Image
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"
               alt="Plateforme digitale"
@@ -315,10 +315,10 @@ function MissionSection() {
               alt="Notre mission - expertise logistique et technologie"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover rounded-lg shadow-lg"
+              className="object-cover shadow-lg"
               priority={false}
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-noveo-blue/10 to-transparent rounded-lg"></div>
+            <div className="absolute inset-0 bg-gradient-to-l from-noveo-blue/10 to-transparent"></div>
           </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-6">
@@ -444,7 +444,7 @@ function IndustrySolutions() {
                   }}
                   onClick={() => setCurrentIndex(index)}
                 >
-                  <div className="bg-white rounded-xl shadow-2xl overflow-hidden h-full group hover:shadow-3xl transition-shadow duration-500">
+                                      <div className="bg-white shadow-2xl overflow-hidden h-full group hover:shadow-3xl transition-shadow duration-500">
                     <div className="relative h-48">
                       <Image
                         src={sector.image}
@@ -564,7 +564,7 @@ function FluidLogisticsSection() {
               alt="Plateforme logistique connectée"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover rounded-lg"
+              className="object-cover"
               priority={false}
             />
         </div>
