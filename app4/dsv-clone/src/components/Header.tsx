@@ -85,7 +85,7 @@ export default function Header() {
                 {navLinks.map(link => (
                   <div 
                     key={link.name} 
-                    className="relative"
+                    className="relative group"
                     onMouseEnter={() => {
                       if (link.dropdown) {
                         setHoveredNav(link.name);
@@ -95,9 +95,18 @@ export default function Header() {
                       }
                     }}
                   >
-                    <button className="flex items-center text-sm font-medium text-gray-700 hover:text-noveo-blue py-2 transition-colors duration-200">
-                      <span>{link.name}</span>
-                      {link.dropdown && <ChevronDown className="ml-1 h-4 w-4 text-gray-500" />}
+                    <button className="relative flex items-center text-sm font-medium text-gray-700 hover:text-noveo-blue py-2 px-1 transition-all duration-300 group">
+                      <span className="relative z-10">{link.name}</span>
+                      {link.dropdown && <ChevronDown className="ml-1 h-4 w-4 text-gray-500 transition-transform duration-300 group-hover:rotate-180" />}
+                      
+                      {/* Hover underline with gradient */}
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-noveo-blue via-noveo-teal to-noveo-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></div>
+                      
+                      {/* Active/current section underline (you can conditionally show this) */}
+                      {/* For demo, showing on first item - you'd want to track active page */}
+                      {link.name === navLinks[0]?.name && (
+                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-noveo-blue via-noveo-teal to-noveo-blue"></div>
+                      )}
                     </button>
                   </div>
                 ))}
@@ -125,9 +134,17 @@ export default function Header() {
               <div className="lg:hidden py-4 border-t">
                 <nav className="flex flex-col space-y-4">
                   {navLinks.map(link => (
-                     <Link key={link.name} href="#" className="text-gray-700 hover:text-noveo-blue">{link.name}</Link>
+                     <Link 
+                       key={link.name} 
+                       href="#" 
+                       className="relative group text-gray-700 hover:text-noveo-blue transition-all duration-300 py-2 px-4 rounded-md hover:bg-gray-50"
+                     >
+                       <span className="relative z-10">{link.name}</span>
+                       {/* Mobile hover effect */}
+                       <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-noveo-blue via-noveo-teal to-noveo-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></div>
+                     </Link>
                   ))}
-                  <button className="mt-4 px-6 py-2 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-colors duration-300 rounded text-left">
+                  <button className="mt-4 px-6 py-2 bg-noveo-blue text-white font-semibold hover:bg-noveo-blue-dark transition-all duration-300 rounded text-left transform hover:scale-105">
                     {t('header.nav.requestStudy')}
                   </button>
                 </nav>
@@ -138,7 +155,7 @@ export default function Header() {
 
         {/* Dropdown Navigation Bar */}
         <div 
-          className={`overflow-hidden transition-all duration-300 ease-in-out bg-gray-50 border-t border-gray-200 fixed left-0 right-0 z-40 ${
+          className={`overflow-hidden transition-all duration-500 ease-in-out bg-white/95 backdrop-blur-sm border-t border-gray-200 shadow-lg fixed left-0 right-0 z-40 ${
             isBannerOpen ? 'top-[120px]' : 'top-[80px]'
           } ${hoveredNav ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'}`}
         >
@@ -149,9 +166,11 @@ export default function Header() {
                   <Link
                     key={index}
                     href={item.href}
-                    className="text-sm text-gray-600 hover:text-noveo-blue font-medium transition-colors duration-200 whitespace-nowrap"
+                    className="relative group text-sm text-gray-600 hover:text-noveo-blue font-medium transition-all duration-300 whitespace-nowrap py-1 px-2 rounded-md hover:bg-gray-50/50"
                   >
-                    {item.name}
+                    <span className="relative z-10">{item.name}</span>
+                    {/* Dropdown item hover underline */}
+                    <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-noveo-teal via-noveo-blue to-noveo-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></div>
                   </Link>
                 ))}
               </div>
