@@ -306,7 +306,7 @@ function MissionSection() {
   const { t } = useTranslation();
   
   return (
-    <section className="bg-white py-20">
+    <section className="bg-noveo-teal-light py-20">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-6">
@@ -388,7 +388,7 @@ function IndustrySolutions() {
   // }, []);
 
   return (
-    <section className="py-20 bg-noveo-teal-light overflow-hidden">
+    <section className="py-20 bg-white overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light text-noveo-blue mb-4">
@@ -720,8 +720,8 @@ export default function Home() {
       <Hero onSectionChange={setActiveSection} />
       <DynamicSection activeSection={activeSection} />
       <ExpertiseSection />
-      <MissionSection />
       <IndustrySolutions />
+      <MissionSection />
       <FluidLogisticsSection />
       <StatsSection />
       <TestimonialsSection />
