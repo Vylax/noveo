@@ -665,6 +665,7 @@ function StatsSection() {
 function TestimonialsSection() {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   
   const testimonials = [
     {
@@ -738,8 +739,25 @@ function TestimonialsSection() {
       category: t('testimonials.items.9.category')
     }
   ];
+
+  // Check screen size and set responsive items per page
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1024); // lg breakpoint
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  // Reset to first page when switching between mobile/desktop
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [isMobile]);
   
-  const itemsPerPage = 3;
+  const itemsPerPage = isMobile ? 1 : 3;
   const totalPages = Math.ceil(testimonials.length / itemsPerPage);
   
   const nextSlide = () => {
@@ -776,11 +794,11 @@ function TestimonialsSection() {
           </button>
 
           {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-16">
+          <div className={`grid gap-8 px-16 ${isMobile ? 'grid-cols-1 h-[500px]' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'}`}>
             {getCurrentTestimonials().map((testimonial, index) => (
               <div 
                 key={currentIndex * itemsPerPage + index}
-                className="bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col"
+                className={`bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col ${isMobile ? 'h-full' : 'h-full'}`}
               >
                 {/* Quote Icon */}
                 <div className="text-4xl text-noveo-teal mb-4 font-serif">"</div>
@@ -791,7 +809,7 @@ function TestimonialsSection() {
                 </div>
                 
                 {/* Quote */}
-                <blockquote className="text-gray-700 font-light leading-relaxed mb-6 flex-grow italic">
+                <blockquote className={`text-gray-700 font-light leading-relaxed mb-6 flex-grow italic ${isMobile ? 'text-base' : ''}`}>
                   {testimonial.quote}
                 </blockquote>
                 
@@ -819,9 +837,12 @@ function TestimonialsSection() {
               />
             ))}
           </div>
-          <div className="text-gray-600 text-sm ml-4">
-            {currentIndex * itemsPerPage + 1}-{Math.min((currentIndex + 1) * itemsPerPage, testimonials.length)} of {testimonials.length} testimonials
-          </div>
+                     <div className="text-gray-600 text-sm ml-4">
+             {isMobile 
+               ? `${currentIndex + 1} of ${testimonials.length} testimonials`
+               : `${currentIndex * itemsPerPage + 1}-${Math.min((currentIndex + 1) * itemsPerPage, testimonials.length)} of ${testimonials.length} testimonials`
+             }
+           </div>
         </div>
       </div>
     </section>
