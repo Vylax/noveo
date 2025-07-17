@@ -240,56 +240,56 @@ function ExpertiseSection() {
           <div className="group relative h-48 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
             <Image
               src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=400&h=300&fit=crop"
-              alt="Fret aérien"
+              alt={t('expertise.services.airFreight')}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               priority={false}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-noveo-blue/80 via-noveo-blue/30 to-transparent transition-all duration-500 group-hover:from-noveo-blue/90 group-hover:via-noveo-blue/40 flex items-end justify-center pb-4">
-              <h4 className="text-white font-bold text-lg text-center transform transition-all duration-500 group-hover:scale-110 group-hover:translate-y-[-4px]">Fret aérien</h4>
+              <h4 className="text-white font-bold text-lg text-center transform transition-all duration-500 group-hover:scale-110 group-hover:translate-y-[-4px]">{t('expertise.services.airFreight')}</h4>
             </div>
             <div className="absolute top-4 right-4 w-2 h-2 bg-noveo-teal rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
           </div>
           <div className="group relative h-48 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
             <Image
               src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=400&h=300&fit=crop"
-              alt="Fret maritime"
+              alt={t('expertise.services.seaFreight')}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               priority={false}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-noveo-blue/80 via-noveo-blue/30 to-transparent transition-all duration-500 group-hover:from-noveo-blue/90 group-hover:via-noveo-blue/40 flex items-end justify-center pb-4">
-              <h4 className="text-white font-bold text-lg text-center transform transition-all duration-500 group-hover:scale-110 group-hover:translate-y-[-4px]">Fret maritime</h4>
+              <h4 className="text-white font-bold text-lg text-center transform transition-all duration-500 group-hover:scale-110 group-hover:translate-y-[-4px]">{t('expertise.services.seaFreight')}</h4>
             </div>
             <div className="absolute top-4 right-4 w-2 h-2 bg-noveo-teal rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
           </div>
           <div className="group relative h-48 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
             <Image
               src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400&h=300&fit=crop"
-              alt="Fret routier"
+              alt={t('expertise.services.roadFreight')}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               priority={false}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-noveo-blue/80 via-noveo-blue/30 to-transparent transition-all duration-500 group-hover:from-noveo-blue/90 group-hover:via-noveo-blue/40 flex items-end justify-center pb-4">
-              <h4 className="text-white font-bold text-lg text-center transform transition-all duration-500 group-hover:scale-110 group-hover:translate-y-[-4px]">Fret routier</h4>
+              <h4 className="text-white font-bold text-lg text-center transform transition-all duration-500 group-hover:scale-110 group-hover:translate-y-[-4px]">{t('expertise.services.roadFreight')}</h4>
             </div>
             <div className="absolute top-4 right-4 w-2 h-2 bg-noveo-teal rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
           </div>
           <div className="group relative h-48 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
             <Image
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"
-              alt="Plateforme digitale"
+              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop"
+              alt={t('expertise.services.multimodal')}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               priority={false}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-noveo-blue/80 via-noveo-blue/30 to-transparent transition-all duration-500 group-hover:from-noveo-blue/90 group-hover:via-noveo-blue/40 flex items-end justify-center pb-4">
-              <h4 className="text-white font-bold text-lg text-center transform transition-all duration-500 group-hover:scale-110 group-hover:translate-y-[-4px]">Plateforme digitale</h4>
+              <h4 className="text-white font-bold text-lg text-center transform transition-all duration-500 group-hover:scale-110 group-hover:translate-y-[-4px]">{t('expertise.services.multimodal')}</h4>
             </div>
             <div className="absolute top-4 right-4 w-2 h-2 bg-noveo-teal rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
           </div>

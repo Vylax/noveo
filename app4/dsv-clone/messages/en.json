@@ -50,8 +50,14 @@
     "title": "Our sector expertise",
     "description": "Noveo Logistics supports demanding players in complex, regulated or strategic sectors.",
     "subtitle": "Our strength: adapting our transport, customs and logistics solutions to the specificities of each industry.",
-    "transitaire": "Freight forwarder – AEO approved customs agent",
-    "cta": "Discover our tailor-made logistics solutions"
+    "transitaire": "Freight Forwarder – AEO Approved Customs Broker",
+    "cta": "Discover our tailor-made logistics solutions",
+    "services": {
+      "airFreight": "Air Freight",
+      "seaFreight": "Sea Freight",
+      "roadFreight": "Road Freight", 
+      "multimodal": "Multimodal"
+    }
   },
   "mission": {
     "title": "Our mission.",

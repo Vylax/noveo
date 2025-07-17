@@ -51,7 +51,13 @@
     "description": "Noveo Logistics accompagne des acteurs exigeants dans des secteurs complexes, réglementés ou stratégiques.",
     "subtitle": "Notre force : adapter nos solutions de transport, de douane et de logistique aux spécificités de chaque industrie.",
     "transitaire": "Transitaire – Commissionnaire en douane agréé OEA",
-    "cta": "Découvrez nos solutions logistiques sur mesure"
+    "cta": "Découvrez nos solutions logistiques sur mesure",
+    "services": {
+      "airFreight": "Fret aérien",
+      "seaFreight": "Fret maritime", 
+      "roadFreight": "Fret routier",
+      "multimodal": "Multimodal"
+    }
   },
   "mission": {
     "title": "Notre mission.",
